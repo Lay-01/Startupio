@@ -1,0 +1,1077 @@
+[
+  {
+    "id": "anakin",
+    "name": "Anakin",
+    "sector": "FinTech / Commerce",
+    "address": "Floor 4, 168, 19th Main Road, Sector 4, HSR Layout, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "HSR Layout",
+    "description": "Automated e-commerce pricing intelligence and market data extraction platform.",
+    "employees": "11–50",
+    "founders": [],
+    "foundedYear": 2019,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn explicitly lists the HSR Layout Sector 4 address. Anakin is YC S21.",
+    "verificationSources": [
+      "https://www.linkedin.com/company/anakintech",
+      "https://www.ycombinator.com/companies/anakin"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/anakintech",
+    "websiteUrl": "https://anakin.io/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.915,
+    "longitude": 77.648,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn & Y Combinator (Sector 4, HSR Layout)",
+    "dataSource": [
+      {
+        "type": "ycombinator",
+        "url": "https://www.ycombinator.com/companies/anakin"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/anakintech"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "udaan",
+    "name": "Udaan",
+    "sector": "B2B E-commerce",
+    "address": "12th Main Road, HSR Layout, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "HSR Layout",
+    "description": "B2B trade platform designed for small and medium businesses in India across electronics, lifestyle, food, and FMCG.",
+    "employees": "1001–5000",
+    "founders": [
+      "Sujeet Kumar",
+      "Amod Malviya",
+      "Vaibhav Gupta"
+    ],
+    "foundedYear": 2016,
+    "confidence": "medium",
+    "evidenceNotes": "Multiple sources identify Udaan with HSR Layout and describe its startup origins/location there.",
+    "verificationSources": [
+      "https://myhq.in/blog/office-space/startups-in-hsr-layout/",
+      "https://yourstory.com/2021/11/bengalurus-hsr-layout-emerged-startup-capital-india"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/udaan-com",
+    "websiteUrl": "https://udaan.com/",
+    "careersUrl": "https://udaan.com/careers",
+    "applyUrl": "https://udaan.com/careers",
+    "latitude": 12.9165,
+    "longitude": 77.639,
+    "locationPrecision": "approximate",
+    "locationSource": "Public Startup Directories (12th Main Road, HSR Layout)",
+    "dataSource": [
+      {
+        "type": "website",
+        "url": "https://udaan.com/"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "reachifyme",
+    "name": "ReachifyMe",
+    "sector": "Technology / SaaS",
+    "address": "L-148, 5th Main Road, Sector 6, HSR Layout, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "HSR Layout",
+    "description": "B2B SaaS outreach and customer engagement technology platform.",
+    "employees": "1–10",
+    "founders": [],
+    "foundedYear": 2023,
+    "confidence": "high",
+    "evidenceNotes": "Tracxn identifies ReachifyMe as a Bengaluru company founded in 2023 and gives a specific Sector 6, HSR Layout address.",
+    "verificationSources": [
+      "https://tracxn.com/d/companies/reachifyme/__ZiqI4L-PI3R4RdGSoFWuy_0N8SfMQFRA2Z8OkPxBBgU"
+    ],
+    "linkedinUrl": "",
+    "websiteUrl": "",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.914,
+    "longitude": 77.636,
+    "locationPrecision": "exact",
+    "locationSource": "Tracxn (L-148, 5th Main Rd, Sector 6, HSR Layout)",
+    "dataSource": [
+      {
+        "type": "tracxn",
+        "url": "https://tracxn.com"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "pronto",
+    "name": "Pronto",
+    "sector": "Quick Commerce",
+    "address": "HSR Layout, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "HSR Layout",
+    "description": "Next-gen instant delivery and quick commerce startup headquartered in HSR Layout.",
+    "employees": "11–50",
+    "founders": [
+      "Anjali Sardana"
+    ],
+    "foundedYear": null,
+    "confidence": "medium",
+    "evidenceNotes": "The source reports that Pronto shifted its headquarters to Bengaluru's HSR Layout.",
+    "verificationSources": [
+      "https://www.linkedin.com/posts/startupfox_pronto-quickcommerce-startupindia-activity-7396097210637021184-iMKD"
+    ],
+    "linkedinUrl": "",
+    "websiteUrl": "",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.912,
+    "longitude": 77.644,
+    "locationPrecision": "approximate",
+    "locationSource": "Industry Reports (HSR Layout)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "appriffy",
+    "name": "Appriffy",
+    "sector": "Technology / AI / Software",
+    "address": "BTM 2nd Stage, Bengaluru, Karnataka 560076, India",
+    "city": "Bengaluru",
+    "area": "BTM Layout",
+    "description": "Developer marketplace and tech talent sourcing platform providing AI software development.",
+    "employees": "11–50",
+    "founders": [],
+    "foundedYear": 2015,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn identifies Appriffy as founded in 2015 and gives a BTM 2nd Stage location.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/appriffygcc"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/appriffygcc",
+    "websiteUrl": "https://appriffy.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9145,
+    "longitude": 77.6085,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (BTM 2nd Stage)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/appriffygcc"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "zintlr",
+    "name": "Zintlr",
+    "sector": "Sales Intelligence / SaaS",
+    "address": "BTM Layout area (Exact office unconfirmed), Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "BTM Layout",
+    "description": "B2B lead generation, sales intelligence, and revenue data platform.",
+    "employees": "11–50",
+    "founders": [],
+    "foundedYear": 2022,
+    "confidence": "medium",
+    "evidenceNotes": "Zintlr is a Bengaluru startup founded in 2022. Location detail in BTM pending verification.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/zintlr"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/zintlr",
+    "websiteUrl": "https://zintlr.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": null,
+    "longitude": null,
+    "locationPrecision": "unavailable",
+    "locationSource": "LinkedIn (Location pending street-level verification)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/zintlr"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "jodo",
+    "name": "Jodo",
+    "sector": "FinTech / Education Finance",
+    "address": "3rd Floor, Incubex INR4, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560008, India",
+    "city": "Bengaluru",
+    "area": "Indiranagar",
+    "description": "Financial tech solution simplifying fee payments and financial options for educational institutions and parents.",
+    "employees": "51–200",
+    "founders": [],
+    "foundedYear": 2020,
+    "confidence": "high",
+    "evidenceNotes": "The source specifically gives Jodo's Indiranagar address at Incubex INR4.",
+    "verificationSources": [
+      "https://www.guvi.in/blog/top-tech-startups-in-bangalore/"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/jodo-pay",
+    "websiteUrl": "https://jodo.in/",
+    "careersUrl": "https://jodo.in/careers",
+    "applyUrl": "https://jodo.in/careers",
+    "latitude": 12.9715,
+    "longitude": 77.6412,
+    "locationPrecision": "exact",
+    "locationSource": "Public Directory (Incubex INR4, 100 Feet Road, Indiranagar)",
+    "dataSource": [
+      {
+        "type": "website",
+        "url": "https://jodo.in/"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "yourstory",
+    "name": "YourStory",
+    "sector": "Media / Startup Ecosystem",
+    "address": "259, 6th Cross, 2nd Main, 1st Stage, Indiranagar, Bengaluru, Karnataka 560038, India",
+    "city": "Bengaluru",
+    "area": "Indiranagar",
+    "description": "Leading digital media platform covering India's startup ecosystem, founders, and innovation stories.",
+    "employees": "51–200",
+    "founders": [
+      "Shradha Sharma"
+    ],
+    "foundedYear": 2008,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn gives a specific Indiranagar 1st Stage address.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/yourstory-com"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/yourstory-com",
+    "websiteUrl": "https://yourstory.com/",
+    "careersUrl": "https://yourstory.com/careers",
+    "applyUrl": "https://yourstory.com/careers",
+    "latitude": 12.979,
+    "longitude": 77.6425,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (259, 6th Cross, 2nd Main, Indiranagar 1st Stage)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/yourstory-com"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "startup-movers",
+    "name": "Startup Movers",
+    "sector": "Business Services",
+    "address": "Indira Nagar 1st Stage, H Colony, Indiranagar, Bengaluru, Karnataka 560038, India",
+    "city": "Bengaluru",
+    "area": "Indiranagar",
+    "description": "Legal, compliance, corporate advisory, and business setup firm for emerging startups.",
+    "employees": "11–50",
+    "founders": [],
+    "foundedYear": 2014,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn lists the Indiranagar 1st Stage address and a 2014 founding date.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/startup-movers-pvtltd"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/startup-movers-pvtltd",
+    "websiteUrl": "",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9775,
+    "longitude": 77.644,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (Indiranagar 1st Stage, H Colony)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/startup-movers-pvtltd"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "juspay-technologies",
+    "name": "Juspay Technologies Private Limited",
+    "sector": "FinTech / Payments",
+    "address": "444, 18th Main Road, 6th Block, Koramangala, Bengaluru, Karnataka 560095, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Payment infrastructure and financial technology platform providing high-scale digital payment gateway tech for e-commerce.",
+    "employees": "501–1000",
+    "founders": [
+      "Vimal Kumar"
+    ],
+    "foundedYear": 2012,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists the Koramangala 6th Block location. Juspay's official website confirms its India office at 444, 18th Main Road, 6th Block, Koramangala.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/juspay-technologies",
+      "https://juspay.io/about"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/juspay-technologies",
+    "websiteUrl": "https://juspay.io/",
+    "careersUrl": "https://juspay.io/careers",
+    "applyUrl": "https://juspay.io/careers",
+    "latitude": 12.9372,
+    "longitude": 77.6258,
+    "locationPrecision": "exact",
+    "locationSource": "Official Website & LinkedIn (444, 18th Main Rd, Koramangala 6th Block)",
+    "dataSource": [
+      {
+        "type": "website",
+        "url": "https://juspay.io/about"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/juspay-technologies"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "superkalam",
+    "name": "SuperKalam",
+    "sector": "EdTech / AI",
+    "address": "4th Block, Koramangala, Bengaluru, Karnataka 560034, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "AI-powered personal mentor for competitive exams like UPSC, offering instant doubt solving, analytics, and tailored guidance.",
+    "employees": "11–50",
+    "founders": [
+      "Vimal Singh Rathore",
+      "Aseem Gupta"
+    ],
+    "foundedYear": 2023,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists the primary location as 4th Block, Koramangala. SuperKalam is YC W23 and was founded in 2023.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/superkalam",
+      "https://www.ycombinator.com/companies/superkalam"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/superkalam",
+    "websiteUrl": "https://superkalam.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9348,
+    "longitude": 77.6275,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn & Y Combinator (Koramangala 4th Block)",
+    "dataSource": [
+      {
+        "type": "ycombinator",
+        "url": "https://www.ycombinator.com/companies/superkalam"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/superkalam"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "snabbit",
+    "name": "Snabbit",
+    "sector": "Home Services / Consumer",
+    "address": "WJMC+G47 A, 6th Cross Road, 5th Block, Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "On-demand hyper-local consumer home services platform.",
+    "employees": "11–50",
+    "founders": [],
+    "foundedYear": 2024,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists the primary location as 6th Cross Road, 5th Block, Koramangala.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/justsnabbit"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/justsnabbit",
+    "websiteUrl": "https://snabbit.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9358,
+    "longitude": 77.6212,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (6th Cross Road, 5th Block, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/justsnabbit"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "pedalstart",
+    "name": "PedalStart",
+    "sector": "Startup Accelerator / Startup Platform",
+    "address": "356, 2nd Cross Road, 4th Block, Koramangala, Bengaluru, Karnataka 560034, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Founders' community and startup enablement platform helping early-stage entrepreneurs build and scale.",
+    "employees": "11–50",
+    "founders": [
+      "Vinay Jaiswal"
+    ],
+    "foundedYear": 2021,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn explicitly lists 356, 2nd Cross Road, 4th Block, Koramangala.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/pedalstart"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/pedalstart",
+    "websiteUrl": "https://pedalstart.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9332,
+    "longitude": 77.6291,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (356, 2nd Cross Rd, 4th Block, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/pedalstart"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "lokal",
+    "name": "Lokal",
+    "sector": "Local News / Consumer Internet",
+    "address": "Opposite State Bank of India, Koramangala Industrial Layout, No. 3, 20th Main Road, 7th Block, Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Hyperlocal content and community news app for non-English speaking regional India users.",
+    "employees": "201–500",
+    "founders": [
+      "Jani Pasha",
+      "Vipul Giri"
+    ],
+    "foundedYear": 2018,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn explicitly lists the Koramangala Industrial Layout / 7th Block address.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/lokal-app",
+      "https://builtin.com/company/lokal"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/lokal-app",
+    "websiteUrl": "https://www.getlokalapp.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9381,
+    "longitude": 77.6189,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn & BuiltIn (No. 3, 20th Main Rd, 7th Block, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/lokal-app"
+      },
+      {
+        "type": "builtin",
+        "url": "https://builtin.com/company/lokal"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "anthriq",
+    "name": "Anthriq",
+    "sector": "Technology / AI",
+    "address": "4th Floor, 19, KHB Colony, Koramangala 8th Block, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "AI-driven technology and software engineering solutions operating from Koramangala 8th Block.",
+    "employees": "1–10",
+    "founders": [],
+    "foundedYear": 2020,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists the primary location as 4th Floor, 19, KHB Colony, Koramangala 8th Block.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/anthriq"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/anthriq",
+    "websiteUrl": "https://anthriq.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9405,
+    "longitude": 77.6162,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (4th Floor, 19, KHB Colony, Koramangala 8th Block)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/anthriq"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "laneway",
+    "name": "Laneway",
+    "sector": "Technology / Startup",
+    "address": "Koramangala, Bengaluru, Karnataka 560095, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Early-stage tech startup headquartered in Koramangala pin code 560095.",
+    "employees": "1–10",
+    "founders": [],
+    "foundedYear": 2025,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn lists headquarters as Koramangala, Bengaluru 560095.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/laneway-india"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/laneway-india",
+    "websiteUrl": "",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9362,
+    "longitude": 77.6235,
+    "locationPrecision": "approximate",
+    "locationSource": "LinkedIn (Koramangala 560095)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/laneway-india"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "werize",
+    "name": "WeRize",
+    "sector": "FinTech",
+    "address": "Koramangala, Bengaluru, Karnataka 560095, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Full-stack financial services platform offering personalized credit, insurance, and investment products to small-town India.",
+    "employees": "201–500",
+    "founders": [
+      "Vishal Chopra",
+      "Himanshu Sarda"
+    ],
+    "foundedYear": 2019,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists the primary location as Koramangala, Bengaluru 560095.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/werize"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/werize",
+    "websiteUrl": "https://www.werize.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9378,
+    "longitude": 77.6251,
+    "locationPrecision": "approximate",
+    "locationSource": "LinkedIn (Koramangala 560095)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/werize"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "vingo",
+    "name": "Vingo",
+    "sector": "Technology / AI",
+    "address": "Nukleus, 3rd Floor, Tower 3, Prestige Blue Chip, Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "AI technology company operating from Prestige Blue Chip tech park in Koramangala.",
+    "employees": "1–10",
+    "founders": [],
+    "foundedYear": 2026,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists the primary location as Koramangala and gives the Nukleus / Prestige Blue Chip office.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/justvingo"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/justvingo",
+    "websiteUrl": "",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9318,
+    "longitude": 77.6168,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (Prestige Blue Chip, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/justvingo"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "thoughtclan-technologies",
+    "name": "ThoughtClan Technologies",
+    "sector": "Technology",
+    "address": "First Floor, N A Chambers 1, #3J, 3rd Block, 3rd Cross, 7th C Main Road, Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Product engineering, enterprise IT transformation, and custom software development agency.",
+    "employees": "51–200",
+    "founders": [],
+    "foundedYear": 2016,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn identifies the company as founded in 2016 and gives a specific 3rd Block Koramangala address.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/thoughtclan"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/thoughtclan",
+    "websiteUrl": "https://thoughtclan.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9298,
+    "longitude": 77.6255,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (N A Chambers 1, 3rd Block, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/thoughtclan"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "topgrep-tech",
+    "name": "TopGrep Tech",
+    "sector": "Technology",
+    "address": "Koramangala, Bengaluru, Karnataka 560034, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Software engineering and tech development firm based in Koramangala (560034).",
+    "employees": "1–10",
+    "founders": [],
+    "foundedYear": 2022,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn lists the company location as Koramangala, Bengaluru 560034.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/topgreptech"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/topgreptech",
+    "websiteUrl": "",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9341,
+    "longitude": 77.6268,
+    "locationPrecision": "approximate",
+    "locationSource": "LinkedIn (Koramangala 560034)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/topgreptech"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "revspot",
+    "name": "Revspot",
+    "sector": "Technology / SaaS",
+    "address": "Koramangala Main Road, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "AI-driven revenue optimization and SaaS intelligence platform.",
+    "employees": "1–10",
+    "founders": [],
+    "foundedYear": 2024,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn lists the primary location as Koramangala Main Road.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/revspot-ai"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/revspot-ai",
+    "websiteUrl": "",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.936,
+    "longitude": 77.6225,
+    "locationPrecision": "approximate",
+    "locationSource": "LinkedIn (Koramangala Main Road)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/revspot-ai"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "gloify",
+    "name": "Gloify",
+    "sector": "Technology / Software",
+    "address": "Koramangala Road, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Digital product development, UI/UX design, and cloud software engineering solutions provider.",
+    "employees": "11–50",
+    "founders": [],
+    "foundedYear": 2017,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn lists a Koramangala Road Bengaluru location.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/gloify"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/gloify",
+    "websiteUrl": "https://gloify.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9369,
+    "longitude": 77.6218,
+    "locationPrecision": "approximate",
+    "locationSource": "LinkedIn (Koramangala Road)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/gloify"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tonbo-imaging",
+    "name": "Tonbo Imaging",
+    "sector": "Defence Technology / Computer Vision",
+    "address": "Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Advanced electro-optics, micro-optics, and computer vision systems for defense and aerospace applications.",
+    "employees": "51–200",
+    "founders": [
+      "Arnab Mitra"
+    ],
+    "foundedYear": 2012,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn identifies Tonbo Imaging as founded in 2012 and operating from Bengaluru.",
+    "verificationSources": [
+      "https://www.linkedin.com/company/tonbo-imaging"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/tonbo-imaging",
+    "websiteUrl": "https://tonboimaging.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9355,
+    "longitude": 77.6248,
+    "locationPrecision": "approximate",
+    "locationSource": "LinkedIn (Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/tonbo-imaging"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "zethic-technologies",
+    "name": "Zethic Technologies",
+    "sector": "Blockchain / Software",
+    "address": "7, Koramangala 80 Feet Road, 7th Block, Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Web3, Blockchain architecture, and custom decentralized application development company.",
+    "employees": "11–50",
+    "founders": [],
+    "foundedYear": 2019,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists 80 Feet Road, 7th Block, Koramangala as the primary location.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/zethic-tech"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/zethic-tech",
+    "websiteUrl": "https://zethic.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9371,
+    "longitude": 77.6195,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (80 Feet Rd, 7th Block, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/zethic-tech"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "wakefit",
+    "name": "Wakefit",
+    "sector": "D2C / Furniture / Consumer",
+    "address": "#94, 4th B Cross Road, Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Direct-to-consumer sleep and home solutions brand manufacturing mattresses, ergonomics, and furniture.",
+    "employees": "1001–5000",
+    "founders": [
+      "Ankit Garg",
+      "Chaitanya Ramalingegowda"
+    ],
+    "foundedYear": 2014,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists #94, 4th B Cross Road, Koramangala.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/wakefitco"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/wakefitco",
+    "websiteUrl": "https://www.wakefit.co/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9339,
+    "longitude": 77.625,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (#94, 4th B Cross Rd, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/wakefitco"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "avanti",
+    "name": "Avanti",
+    "sector": "Financial Inclusion / FinTech",
+    "address": "456, 8th Main Road, 4th Block, Koramangala Extension, Bengaluru, Karnataka 560034, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Technology-led financial inclusion platform delivering affordable credit to low-income households.",
+    "employees": "51–200",
+    "founders": [],
+    "foundedYear": 2017,
+    "confidence": "high",
+    "evidenceNotes": "LinkedIn lists 456, 8th Main Road, 4th Block, Koramangala Extension.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/avanti-financial-inclusion-for-100-million-households"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/avanti-financial-inclusion-for-100-million-households",
+    "websiteUrl": "https://www.avanti.org.in/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9329,
+    "longitude": 77.628,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (456, 8th Main Rd, 4th Block, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/avanti-financial-inclusion-for-100-million-households"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "whitespaces-ai",
+    "name": "Whitespaces.ai",
+    "sector": "AI / Software",
+    "address": "WeWork, Prestige Atlanta, 80 Feet Road, Koramangala 1A / 3rd Block, Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "AI software intelligence startup operating out of WeWork Prestige Atlanta on 80 Feet Road.",
+    "employees": "1–10",
+    "founders": [],
+    "foundedYear": null,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn lists a WeWork location on 80 Feet Road in Koramangala.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/whitespaces-ai"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/whitespaces-ai",
+    "websiteUrl": "https://whitespaces.ai/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9335,
+    "longitude": 77.6228,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (WeWork Prestige Atlanta, 80 Feet Rd, Koramangala)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/whitespaces-ai"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "wizcommerce",
+    "name": "WizCommerce",
+    "sector": "B2B SaaS / Commerce",
+    "address": "Attic Space - Chanakya, Koramangala 8th Block, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "B2B sales digitisation and AI commerce workflow platform for global wholesalers and exporters.",
+    "employees": "51–200",
+    "founders": [],
+    "foundedYear": 2020,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn lists Attic Space - Chanakya, Koramangala 8th Block as a location.",
+    "verificationSources": [
+      "https://www.linkedin.com/company/wizcommerce"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/wizcommerce",
+    "websiteUrl": "https://wizcommerce.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9412,
+    "longitude": 77.6175,
+    "locationPrecision": "exact",
+    "locationSource": "LinkedIn (Attic Space - Chanakya, Koramangala 8th Block)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/wizcommerce"
+      }
+    ],
+    "verified": true
+  },
+  {
+    "id": "mason",
+    "name": "Mason",
+    "sector": "AI / Commerce",
+    "address": "Bengaluru, Karnataka 560034, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "AI-powered e-commerce storefront engine and growth automation tool.",
+    "employees": "11–50",
+    "founders": [],
+    "foundedYear": 2020,
+    "confidence": "medium",
+    "evidenceNotes": "LinkedIn identifies Mason as founded in 2020 and gives a Bengaluru 560034 location.",
+    "verificationSources": [
+      "https://www.linkedin.com/company/get-mason"
+    ],
+    "linkedinUrl": "https://www.linkedin.com/company/get-mason",
+    "websiteUrl": "https://www.getmason.io/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.935,
+    "longitude": 77.625,
+    "locationPrecision": "approximate",
+    "locationSource": "LinkedIn (Bengaluru 560034)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/company/get-mason"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "theranautilus",
+    "name": "Theranautilus",
+    "sector": "DeepTech / Nanotechnology / Healthcare",
+    "address": "Koramangala area (Exact street address unconfirmed), Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Nanotechnology and nanorobotics dental nanomedicine biotech startup originating from IISc Bengaluru.",
+    "employees": "1–10",
+    "founders": [
+      "Ambarish Ghosh",
+      "Peddi Shanmukh Srinivas",
+      "Debayan Dasgupta"
+    ],
+    "foundedYear": 2020,
+    "confidence": "medium",
+    "evidenceNotes": "The company is a Bengaluru-founded startup and LinkedIn provides founder information.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/theranautilus"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/theranautilus",
+    "websiteUrl": "https://theranautilus.com/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": null,
+    "longitude": null,
+    "locationPrecision": "unavailable",
+    "locationSource": "LinkedIn (Location pending street-level verification)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/theranautilus"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "settl",
+    "name": "Settl.",
+    "sector": "Co-living / Hospitality",
+    "address": "Koramangala area (Exact office unconfirmed), Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Tech-enabled co-living and urban rental housing network operating across Koramangala.",
+    "employees": "51–200",
+    "founders": [],
+    "foundedYear": null,
+    "confidence": "medium",
+    "evidenceNotes": "Settl appears in Koramangala-related searches.",
+    "verificationSources": [
+      "https://in.linkedin.com/company/thesettl"
+    ],
+    "linkedinUrl": "https://in.linkedin.com/company/thesettl",
+    "websiteUrl": "https://settl.in/",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": null,
+    "longitude": null,
+    "locationPrecision": "unavailable",
+    "locationSource": "LinkedIn (Location pending street-level verification)",
+    "dataSource": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/company/thesettl"
+      }
+    ],
+    "verified": false
+  },
+  {
+    "id": "tribe",
+    "name": "Tribe",
+    "sector": "Technology",
+    "address": "1st Floor, SPD Plaza, 52, Jyoti Niwas College Road, Koramangala, Bengaluru, Karnataka, India",
+    "city": "Bengaluru",
+    "area": "Koramangala",
+    "description": "Tech platform and community ecosystem startup located on Jyoti Niwas College Road.",
+    "employees": "1–10",
+    "founders": [],
+    "foundedYear": null,
+    "confidence": "high",
+    "evidenceNotes": "Tracxn identifies Tribe's registered/headquarters address on Jyoti Niwas College Road, Koramangala.",
+    "verificationSources": [
+      "https://tracxn.com/d/companies/tribe/___XNLI8qarq05_EnnsUVBMMi0AyR8Nj_QA7kZwHijzz4"
+    ],
+    "linkedinUrl": "",
+    "websiteUrl": "",
+    "careersUrl": "",
+    "applyUrl": "",
+    "latitude": 12.9325,
+    "longitude": 77.6205,
+    "locationPrecision": "exact",
+    "locationSource": "Tracxn (1st Floor, SPD Plaza, Jyoti Niwas College Rd, Koramangala)",
+    "dataSource": [
+      {
+        "type": "tracxn",
+        "url": "https://tracxn.com"
+      }
+    ],
+    "verified": true
+  }
+]
