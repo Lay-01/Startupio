@@ -16,10 +16,10 @@ export default function StartupCard({
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`group p-3 rounded-xl border transition-all cursor-pointer select-none ${
+      className={`group p-3 rounded-2xl border transition-all duration-200 cursor-pointer select-none ${
         isSelected
-          ? 'bg-slate-900 border-slate-900 text-white shadow-md'
-          : 'bg-white border-slate-200/80 hover:border-slate-300 hover:bg-slate-50/80'
+          ? 'bg-slate-900 border-slate-900 text-white shadow-[0_12px_22px_rgba(15,23,42,0.12)]'
+          : 'bg-white border-slate-200/80 hover:border-slate-300 hover:bg-slate-50/80 shadow-[0_4px_12px_rgba(15,23,42,0.02)]'
       }`}
     >
       <div className="flex items-center justify-between gap-2.5">

@@ -11,12 +11,12 @@ export default function StartupList({
   onExportPDF
 }) {
   return (
-    <div className="h-full flex flex-col bg-white border-r border-slate-200/90 shadow-sm overflow-hidden">
+    <div className="h-full flex flex-col bg-white border-r border-slate-200/90 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] overflow-hidden">
       
       {/* Directory Header */}
-      <div className="p-3.5 border-b border-slate-100 flex items-center justify-between shrink-0 bg-slate-50/60">
+      <div className="p-3.5 border-b border-slate-200/80 flex items-center justify-between shrink-0 bg-white/90 backdrop-blur-sm">
         <div>
-          <h2 className="font-extrabold text-slate-900 text-xs tracking-tight uppercase">Startups Directory</h2>
+          <h2 className="font-extrabold text-slate-900 text-[11px] tracking-[0.18em] uppercase">Startups Directory</h2>
           <p className="text-[11px] font-semibold text-slate-500 mt-0.5">
             {startups.length} matching company{startups.length === 1 ? '' : 'ies'}
           </p>
@@ -25,7 +25,7 @@ export default function StartupList({
         {onExportPDF && (
           <button
             onClick={onExportPDF}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-sky-50 hover:bg-sky-100 border border-sky-200 text-sky-700 text-xs font-bold transition"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold transition shadow-[0_8px_16px_rgba(14,165,233,0.08)]"
             title="Export directory list as PDF"
           >
             <Download className="w-3.5 h-3.5" />
@@ -35,7 +35,7 @@ export default function StartupList({
       </div>
 
       {/* Rows Container */}
-      <div className="flex-1 overflow-y-auto p-2.5 space-y-1.5">
+      <div className="flex-1 overflow-y-auto p-2.5 space-y-2">
         {startups.length > 0 ? (
           startups.map(startup => (
             <StartupCard

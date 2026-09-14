@@ -19,17 +19,17 @@ const CATEGORIES = [
 
 export default function SectorPills({ selectedSector, onSelectSector }) {
   return (
-    <div className="max-w-[1600px] mx-auto flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+    <div className="max-w-[1600px] mx-auto flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
       {CATEGORIES.map((cat) => {
         const isActive = selectedSector === cat.sectorId || (cat.sectorId === 'all' && selectedSector === 'all');
         return (
           <button
             key={cat.name}
             onClick={() => onSelectSector(cat.sectorId)}
-            className={`flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold shrink-0 transition-all cursor-pointer ${
+            className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[11px] font-bold shrink-0 transition-all cursor-pointer ${
               isActive
-                ? 'bg-slate-900 text-white shadow-2xs'
-                : 'bg-white text-slate-600 border border-slate-200/90 hover:text-slate-900 hover:border-slate-300'
+                ? 'bg-slate-900 text-white shadow-[0_6px_12px_rgba(15,23,42,0.12)]'
+                : 'bg-white text-slate-600 border border-slate-200 hover:text-slate-900 hover:border-slate-300'
             }`}
           >
             <span className={`h-1.5 w-1.5 rounded-full ${isActive ? 'bg-sky-400' : cat.color}`} />

@@ -37,12 +37,12 @@ export default function StartupDetails({ startup, onClose }) {
   };
 
   return (
-    <div className="h-full flex flex-col bg-white border-l border-slate-200/90 shadow-2xl overflow-y-auto w-full md:w-96 lg:w-[400px] shrink-0 z-30 select-text animate-in slide-in-from-right duration-200">
+    <div className="h-full flex flex-col bg-white border-l border-slate-200/90 shadow-[0_18px_40px_rgba(15,23,42,0.12)] overflow-y-auto w-full md:w-96 lg:w-[400px] shrink-0 z-30 select-text animate-in slide-in-from-right duration-200">
       
       {/* Header Bar */}
-      <div className="p-5 border-b border-slate-100 bg-white/95 backdrop-blur-md sticky top-0 z-10 flex items-center justify-between">
+      <div className="p-5 border-b border-slate-200/80 bg-white/90 backdrop-blur-sm sticky top-0 z-10 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-slate-900 text-white font-black text-sm flex items-center justify-center">
+          <div className="w-9 h-9 rounded-xl bg-slate-900 text-white font-black text-sm flex items-center justify-center shadow-[0_10px_18px_rgba(15,23,42,0.12)]">
             {startup.name.charAt(0).toUpperCase()}
           </div>
           <div>
@@ -94,7 +94,7 @@ export default function StartupDetails({ startup, onClose }) {
             <span>{startup.address}</span>
           </div>
 
-          <div className={`p-2.5 rounded-xl border text-[11px] font-medium leading-relaxed flex items-start gap-2 ${precisionMeta.badgeBg}`}>
+          <div className={`p-2.5 rounded-2xl border text-[11px] font-medium leading-relaxed flex items-start gap-2 shadow-sm ${precisionMeta.badgeBg}`}>
             <Info className="w-3.5 h-3.5 shrink-0 mt-0.5" />
             <div>
               <span className="font-bold block">{precisionMeta.label}</span>
@@ -201,7 +201,7 @@ export default function StartupDetails({ startup, onClose }) {
                 href={startup.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition shadow-xs"
+                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition shadow-[0_8px_18px_rgba(15,23,42,0.1)]"
               >
                 <div className="flex items-center gap-2">
                   <Globe className="w-3.5 h-3.5" />
@@ -216,7 +216,7 @@ export default function StartupDetails({ startup, onClose }) {
                 href={startup.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[#0A66C2] hover:bg-[#084e96] text-white text-xs font-bold transition shadow-xs"
+                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[#0A66C2] hover:bg-[#084e96] text-white text-xs font-bold transition shadow-[0_8px_18px_rgba(10,102,194,0.18)]"
               >
                 <div className="flex items-center gap-2">
                   <Linkedin className="w-3.5 h-3.5" />
@@ -231,7 +231,7 @@ export default function StartupDetails({ startup, onClose }) {
                 href={startup.applyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition shadow-xs"
+                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shadow-[0_8px_18px_rgba(16,185,129,0.18)]"
               >
                 <div className="flex items-center gap-2">
                   <Briefcase className="w-3.5 h-3.5" />

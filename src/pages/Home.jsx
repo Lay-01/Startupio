@@ -25,6 +25,8 @@ export default function Home() {
   
   const [selectedStartup, setSelectedStartup] = useState(null);
   const [hoveredStartup, setHoveredStartup] = useState(null);
+  const [mobileView, setMobileView] = useState('map');
+  const [mobileListOpen, setMobileListOpen] = useState(false);
 
   const allSectors = useMemo(() => getUniqueSectors(rawStartups), []);
   const allAreas = useMemo(() => getUniqueAreas(rawStartups), []);
@@ -73,7 +75,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col overflow-hidden bg-slate-900 select-none font-sans">
+    <div className="h-screen w-full flex flex-col overflow-hidden bg-slate-900 select-none font-sans">
       
       {/* Top Header Nav containing Search & Category Pills */}
       <Header
@@ -87,6 +89,13 @@ export default function Home() {
         selectedArea={selectedArea}
         onSelectArea={(area) => setSelectedArea(area)}
         onExportPDF={handleExportPDF}
+        mobileView={mobileView}
+        onToggleMobileView={() => {
+          const next = mobileView === 'map' ? 'list' : 'map';
+          setMobileView(next);
+          setMobileListOpen(false);
+        }}
+        onOpenMobileList={() => setMobileListOpen(prev => !prev)}
       />
 
       {/* Extended Filters Drawer */}
@@ -116,10 +125,10 @@ export default function Home() {
       )}
 
       {/* Main Viewport Content Area */}
-      <main className="flex-1 flex overflow-hidden relative">
+      <main className="flex-1 flex flex-col min-h-0 overflow-hidden relative md:flex-row">
         
         {/* Left Directory Panel */}
-        <div className="hidden sm:block w-80 md:w-96 shrink-0 h-full overflow-hidden z-10">
+        <div className={`${mobileView === 'list' ? 'block' : 'hidden'} w-full h-[32vh] min-h-[220px] overflow-hidden z-10 md:block md:w-80 md:min-w-[20rem] md:h-full md:max-w-[25rem]`}>
           <StartupList
             startups={filteredStartups}
             selectedStartup={selectedStartup}
@@ -131,7 +140,7 @@ export default function Home() {
         </div>
 
         {/* Spatial Map */}
-        <div className="flex-1 h-full relative">
+        <div className={`${mobileView === 'map' ? 'block' : 'hidden'} flex-1 h-[48vh] min-h-[300px] relative md:block md:h-full`}>
           <StartupMap
             startups={filteredStartups}
             selectedStartup={selectedStartup}
@@ -140,6 +149,26 @@ export default function Home() {
             onResetView={() => setSelectedStartup(null)}
           />
         </div>
+
+        {/* Mobile list overlay */}
+        {mobileListOpen && (
+          <div className="fixed inset-x-0 bottom-0 z-40 bg-white rounded-t-[28px] border-t border-slate-200 shadow-[0_-18px_40px_rgba(15,23,42,0.18)] md:hidden">
+            <div className="w-12 h-1.5 bg-slate-300 rounded-full mx-auto mt-3" />
+            <div className="max-h-[52vh] overflow-hidden">
+              <StartupList
+                startups={filteredStartups}
+                selectedStartup={selectedStartup}
+                onSelectStartup={(startup) => {
+                  setSelectedStartup(startup);
+                  setMobileListOpen(false);
+                }}
+                onHoverStartup={(startup) => setHoveredStartup(startup)}
+                onResetFilters={handleResetFilters}
+                onExportPDF={handleExportPDF}
+              />
+            </div>
+          </div>
+        )}
 
         {/* Right Details Drawer */}
         {selectedStartup && (

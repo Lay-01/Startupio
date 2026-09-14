@@ -13,28 +13,31 @@ export default function Header({
   areas = [],
   selectedArea = 'all',
   onSelectArea,
-  onExportPDF
+  onExportPDF,
+  mobileView,
+  onToggleMobileView,
+  onOpenMobileList
 }) {
   const [isLocationOpen, setIsLocationOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-slate-200/90 sticky top-0 z-30 shadow-xs select-none">
+    <header className="bg-white/85 backdrop-blur-xl border-b border-slate-200/80 sticky top-0 z-30 shadow-[0_8px_18px_rgba(15,23,42,0.04)] select-none">
       
       {/* Top Bar Row */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 py-2.5">
-        <div className="flex items-center justify-between gap-3 sm:gap-4">
+      <div className="max-w-[1600px] mx-auto px-3 sm:px-6 py-2.5">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           
           {/* Logo & Location Badge */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center justify-between gap-3 shrink-0">
             <Link to="/" className="flex items-center gap-2.5 group">
-              <div className="w-8.5 h-8.5 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-xs group-hover:bg-sky-600 transition-colors">
-                <Building2 className="w-4.5 h-4.5 text-sky-400 group-hover:text-white transition-colors" />
+              <div className="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-sm shadow-[0_8px_18px_rgba(15,23,42,0.12)] transition-all">
+                <Building2 className="w-4.5 h-4.5 text-sky-300 transition-colors" />
               </div>
               <div className="flex flex-col">
                 <span className="font-black text-base text-slate-900 tracking-tight leading-none">
                   Startup<span className="text-sky-600">.io</span>
                 </span>
-                <span className="text-[9px] font-extrabold text-slate-400 tracking-widest uppercase mt-0.5">
+                <span className="text-[9px] font-extrabold text-slate-400 tracking-[0.14em] uppercase mt-0.5">
                   Bengaluru Hubs
                 </span>
               </div>
@@ -44,9 +47,9 @@ export default function Header({
             <div className="relative">
               <button
                 onClick={() => setIsLocationOpen(!isLocationOpen)}
-                className={`flex items-center gap-1.5 px-3 py-1 rounded-full border text-xs font-bold transition-all shadow-2xs ${
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold transition-all ${
                   selectedArea !== 'all'
-                    ? 'bg-sky-50 border-sky-300 text-sky-800 hover:bg-sky-100'
+                    ? 'bg-sky-50 border-sky-200 text-sky-800 hover:bg-sky-100'
                     : 'bg-slate-100/90 border-slate-200 text-slate-700 hover:bg-slate-200/80'
                 }`}
                 title="Click to choose a specific area or hub in Bengaluru"
@@ -119,10 +122,10 @@ export default function Header({
           </div>
 
           {/* Command K Search Bar */}
-          <div className="flex-1 max-w-xl">
+          <div className="w-full max-w-xl sm:flex-1">
             <div 
               onClick={onOpenCommandSearch}
-              className="bg-slate-50 hover:bg-slate-100/80 border border-slate-200/90 hover:border-slate-300 rounded-xl px-3.5 py-1.5 cursor-pointer flex items-center justify-between gap-3 group transition-all shadow-2xs"
+              className="bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-2xl px-3.5 py-1.5 cursor-pointer flex items-center justify-between gap-3 group transition-all shadow-[0_4px_12px_rgba(15,23,42,0.02)]"
             >
               <div className="flex items-center gap-2.5 min-w-0">
                 <Search className="w-4 h-4 text-slate-400 group-hover:text-slate-700 transition-colors shrink-0" />
@@ -140,11 +143,20 @@ export default function Header({
           </div>
 
           {/* Filter Actions */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center justify-end gap-2 shrink-0">
+            {onToggleMobileView && (
+              <button
+                onClick={onOpenMobileList || onToggleMobileView}
+                className="md:hidden flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-900 text-white text-[11px] font-bold shadow-[0_10px_20px_rgba(15,23,42,0.14)]"
+              >
+                {mobileView === 'map' ? 'List' : 'Map'}
+              </button>
+            )}
+
             {onExportPDF && (
               <button
                 onClick={onExportPDF}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold transition shadow-xs"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold transition-all shadow-[0_8px_18px_rgba(14,165,233,0.18)]"
                 title="Download filtered startups as PDF report"
               >
                 <Download className="w-3.5 h-3.5" />
@@ -156,7 +168,7 @@ export default function Header({
               onClick={onToggleFilters}
               className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold border transition-all ${
                 activeFilterCount > 0 
-                  ? 'bg-slate-900 text-white border-slate-900 shadow-2xs' 
+                  ? 'bg-slate-900 text-white border-slate-900 shadow-[0_10px_20px_rgba(15,23,42,0.12)]' 
                   : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
               }`}
             >
