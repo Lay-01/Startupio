@@ -227,3 +227,60 @@ select {
   background-size: 200% 200%;
   animation: gradient-shift 8s ease infinite;
 }
+
+/* ═══════════════════════════════════════════
+   Mobile Bottom Tab Bar Safe Area
+   ═══════════════════════════════════════════ */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Floating capsule tab bar — map stays full, list overlays */
+@media (max-width: 767px) {
+  main {
+    padding-bottom: 52px !important;
+  }
+}
+
+/* Collapsible header transition */
+header {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+
+/* Premium mobile touch feedback */
+@media (hover: none) and (pointer: coarse) {
+  button:active {
+    transform: scale(0.97);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* Glass shadows */
+.shadow-glass {
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+.shadow-glass-lg {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+.shadow-glass-xl {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08), 0 20px 48px rgba(15, 23, 42, 0.06);
+}
+.shadow-card {
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+.shadow-card-hover {
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+.shadow-card-active {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1), 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

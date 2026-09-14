@@ -12,7 +12,6 @@ import {
   CheckCircle2, 
   Building2,
   Info,
-  Copy,
   Check,
   Share2,
   Calendar,

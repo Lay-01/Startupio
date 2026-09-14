@@ -8,13 +8,25 @@ export default function StartupList({
   onSelectStartup,
   onHoverStartup,
   onResetFilters,
-  onExportPDF
+  onExportPDF,
+  mobileOverlay = false
 }) {
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-white/95 to-white/90 backdrop-blur-xl border-r border-slate-200/50 overflow-hidden">
+    <div className={`h-full flex flex-col overflow-hidden ${
+      mobileOverlay
+        ? 'bg-white rounded-t-3xl shadow-[0_-8px_32px_rgba(0,0,0,0.12)] border border-b-0 border-slate-200/50'
+        : 'bg-white border-r border-slate-200/50'
+    }`}>
       
+      {/* Drag Handle — mobile overlay only */}
+      {mobileOverlay && (
+        <div className="flex justify-center pt-3 pb-2 shrink-0">
+          <div className="w-9 h-[3px] bg-slate-300 rounded-full" />
+        </div>
+      )}
+
       {/* Directory Header */}
-      <div className="p-4 border-b border-slate-100/80 flex items-center justify-between shrink-0 bg-white/60 backdrop-blur-sm">
+      <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between shrink-0">
         <div>
           <div className="flex items-center gap-2">
             <h2 className="font-extrabold text-slate-900 text-[11px] tracking-[0.2em] uppercase">Directory</h2>

@@ -11,7 +11,7 @@ export default function StartupBottomSheet({ startup, onClose }) {
       <div className="flex-1 w-full" onClick={onClose} />
 
       {/* Bottom Sheet Drawer Content */}
-      <div className="bg-white/95 backdrop-blur-2xl max-h-[85vh] overflow-y-auto shadow-glass-xl flex flex-col border-t border-slate-200/40 rounded-t-3xl">
+      <div className="bg-white/95 backdrop-blur-2xl max-h-[85vh] pb-16 overflow-y-auto shadow-glass-xl flex flex-col border-t border-slate-200/40 rounded-t-3xl">
         
         {/* Handle Bar */}
         <div className="flex justify-center pt-3 pb-1 shrink-0" onClick={onClose}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { getLocationPrecisionMeta } from '../utils/location';
-import { CheckCircle2, MapPin, ArrowUpRight } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function StartupCard({ 
   startup, 
@@ -17,16 +17,13 @@ export default function StartupCard({
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`group relative p-3.5 rounded-2xl border transition-all duration-300 cursor-pointer select-none ${
+      className={`group relative p-3 rounded-xl border transition-all duration-200 cursor-pointer select-none ${
         isSelected
-          ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-slate-700/50 text-white shadow-card-active ring-1 ring-sky-500/20'
-          : 'bg-white/70 border-slate-200/50 hover:border-slate-300/80 hover:bg-white hover:shadow-card-hover hover:-translate-y-0.5'
+          ? 'bg-slate-900 border-slate-700 text-white shadow-lg ring-1 ring-sky-500/20'
+          : 'bg-white border-slate-200/60 hover:border-slate-300 hover:shadow-md'
       }`}
     >
-      {/* Subtle gradient overlay on selected */}
-      {isSelected && (
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/10 via-transparent to-indigo-500/10 pointer-events-none" />
-      )}
+
 
       <div className="relative flex items-center justify-between gap-3">
         
@@ -106,12 +103,7 @@ export default function StartupCard({
 
       </div>
 
-      {/* Hover reveal arrow */}
-      <div className={`absolute right-3 top-1/2 -translate-y-1/2 transition-all duration-200 ${
-        isSelected ? 'opacity-0' : 'opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5'
-      }`}>
-        <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
-      </div>
+
     </div>
   );
 }
