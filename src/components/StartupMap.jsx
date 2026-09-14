@@ -7,7 +7,7 @@ import { RotateCcw, Maximize2, Plus, Minus, Building2, Layers } from 'lucide-rea
 
 const MAP_PROVIDERS = {
   osm: {
-    name: 'OpenStreetMap (Standard)',
+    name: 'OpenStreetMap',
     url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     maxZoom: 19,
     attribution: '© OpenStreetMap contributors'
@@ -19,13 +19,13 @@ const MAP_PROVIDERS = {
     attribution: 'Tiles © Esri'
   },
   cartoLight: {
-    name: 'CartoDB Positron (Light)',
+    name: 'CartoDB Light',
     url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
     maxZoom: 19,
     attribution: '© CARTO'
   },
   cartoDark: {
-    name: 'CartoDB Dark Matter',
+    name: 'CartoDB Dark',
     url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
     maxZoom: 19,
     attribution: '© CARTO'
@@ -48,7 +48,7 @@ export default function StartupMap({
   const [activeProviderKey, setActiveProviderKey] = useState('osm');
   const [showStyleMenu, setShowStyleMenu] = useState(false);
 
-  // Initialize Leaflet Map with OpenStreetMap Standard
+  // Initialize Leaflet Map
   useEffect(() => {
     if (!mapContainerRef.current || mapInstanceRef.current) return;
 
@@ -66,7 +66,6 @@ export default function StartupMap({
 
     tileLayerRef.current = tileLayer;
 
-    // Cluster Group
     const clusterGroup = L.markerClusterGroup({
       chunkedLoading: true,
       spiderfyOnMaxZoom: true,
@@ -76,9 +75,9 @@ export default function StartupMap({
       iconCreateFunction: (cluster) => {
         const count = cluster.getChildCount();
         return L.divIcon({
-          html: `<div class="marker-cluster-custom"><span>◉ ${count}</span></div>`,
+          html: `<div class="marker-cluster-custom"><span>${count}</span></div>`,
           className: '',
-          iconSize: L.point(36, 36)
+          iconSize: L.point(38, 38)
         });
       }
     });
@@ -96,7 +95,7 @@ export default function StartupMap({
     };
   }, []);
 
-  // Switch Tile Provider without API Key
+  // Switch Tile Provider
   const handleSelectProvider = (key) => {
     setActiveProviderKey(key);
     setShowStyleMenu(false);
@@ -129,24 +128,25 @@ export default function StartupMap({
         const meta = getLocationPrecisionMeta(startup.locationPrecision);
 
         const isActivePin = isSelected || isHovered;
-        const pinSize = isSelected ? 24 : isHovered ? 20 : 14;
+        const pinSize = isSelected ? 26 : isHovered ? 22 : 14;
 
-        // Custom Pin HTML
         const markerHtml = `
           <div class="custom-pin-marker ${isSelected ? 'pin-selected' : ''}" style="cursor: pointer;">
             <div style="
               width: ${pinSize}px;
               height: ${pinSize}px;
-              background-color: ${isActivePin ? '#0f172a' : meta.markerBg};
-              border: 2px solid ${isActivePin ? '#38bdf8' : '#ffffff'};
+              background: ${isActivePin ? 'linear-gradient(135deg, #0f172a, #1e293b)' : meta.markerBg};
+              border: 2.5px solid ${isActivePin ? '#38bdf8' : '#ffffff'};
               border-radius: 50%;
-              box-shadow: ${isActivePin ? '0 0 0 4px rgba(56, 189, 248, 0.35), 0 4px 12px rgba(0,0,0,0.3)' : '0 2px 6px rgba(0,0,0,0.2)'};
+              box-shadow: ${isActivePin 
+                ? '0 0 0 4px rgba(56, 189, 248, 0.3), 0 4px 16px rgba(0,0,0,0.3)' 
+                : '0 2px 8px rgba(0,0,0,0.18)'};
               display: flex;
               align-items: center;
               justify-content: center;
-              transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+              transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             ">
-              ${isActivePin ? `<div style="width: 6px; height: 6px; background-color: white; border-radius: 50%;"></div>` : ''}
+              ${isActivePin ? `<div style="width: 6px; height: 6px; background: white; border-radius: 50%;"></div>` : ''}
             </div>
           </div>
         `;
@@ -161,11 +161,11 @@ export default function StartupMap({
         const marker = L.marker([startup.latitude, startup.longitude], { icon });
 
         marker.bindTooltip(`
-          <div style="font-family: inherit; font-size: 11px;">
-            <div style="font-weight: 700; color: #0f172a;">${startup.name}</div>
-            <div style="color: #64748b; font-weight: 600;">${startup.sector}</div>
+          <div style="font-family: Inter, sans-serif; font-size: 11px;">
+            <div style="font-weight: 800; color: #0f172a;">${startup.name}</div>
+            <div style="color: #64748b; font-weight: 600; margin-top: 1px;">${startup.sector}</div>
           </div>
-        `, { direction: 'top', offset: [0, -10] });
+        `, { direction: 'top', offset: [0, -12], className: '' });
 
         marker.on('click', () => {
           onSelectStartup(startup);
@@ -219,36 +219,40 @@ export default function StartupMap({
       {/* Map DOM Canvas */}
       <div ref={mapContainerRef} className="w-full h-full z-10" />
 
-      {/* Floating Unobtrusive Stats Overlay Pill (Bottom Left) */}
-      <div className="absolute bottom-4 left-4 z-[400] bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl px-3.5 py-2 shadow-md flex items-center gap-3 text-xs font-bold text-slate-800 pointer-events-auto">
+      {/* Floating Stats Overlay Pill (Bottom Left) */}
+      <div className="absolute bottom-4 left-4 z-[400] glass-card rounded-2xl px-4 py-2.5 flex items-center gap-3 text-xs font-bold text-slate-800 pointer-events-auto">
         <div className="flex items-center gap-1.5">
-          <Building2 className="w-3.5 h-3.5 text-sky-600" />
-          <span>{startups.length} Startups</span>
+          <Building2 className="w-3.5 h-3.5 text-sky-500" />
+          <span className="text-slate-900">{startups.length}</span>
+          <span className="text-slate-500 font-medium">Startups</span>
         </div>
-        <span className="text-slate-300">•</span>
-        <div className="flex items-center gap-1 text-slate-600">
-          <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span>OpenStreetMap Tile Engine</span>
+        <div className="w-px h-3.5 bg-slate-200" />
+        <div className="flex items-center gap-1.5 text-slate-500">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span className="font-medium">Live</span>
         </div>
       </div>
 
-      {/* Floating Overlay Controls & Style Switcher (Bottom Right) */}
+      {/* Floating Controls & Style Switcher (Bottom Right) */}
       <div className="absolute bottom-4 right-4 z-[400] flex flex-col gap-2 pointer-events-auto items-end">
         
         {/* Style Selector Popup Menu */}
         {showStyleMenu && (
-          <div className="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-2 shadow-xl mb-1 w-52 text-xs space-y-1 animate-in zoom-in-95 duration-150">
-            <div className="text-[10px] font-black uppercase text-slate-400 px-2 py-1 tracking-wider">
-              Free Map Providers (No API Key)
+          <div className="glass-card rounded-2xl p-2 shadow-glass-lg mb-1 w-52 text-xs space-y-1">
+            <div className="text-[9px] font-black uppercase text-slate-400 px-2.5 py-1 tracking-[0.18em]">
+              Map Style
             </div>
             {Object.entries(MAP_PROVIDERS).map(([key, provider]) => (
               <button
                 key={key}
                 onClick={() => handleSelectProvider(key)}
-                className={`w-full text-left px-2.5 py-1.5 rounded-xl font-bold transition flex items-center justify-between ${
+                className={`w-full text-left px-2.5 py-2 rounded-xl font-bold transition-all duration-200 flex items-center justify-between ${
                   activeProviderKey === key 
-                    ? 'bg-slate-900 text-white' 
-                    : 'text-slate-700 hover:bg-slate-100'
+                    ? 'bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-md' 
+                    : 'text-slate-700 hover:bg-slate-50'
                 }`}
               >
                 <span>{provider.name}</span>
@@ -261,47 +265,50 @@ export default function StartupMap({
         {/* Tile Provider Layer Button */}
         <button
           onClick={() => setShowStyleMenu(prev => !prev)}
-          className={`p-2.5 rounded-2xl shadow-md border transition flex items-center justify-center ${
+          className={`p-2.5 rounded-2xl shadow-md border transition-all duration-200 flex items-center justify-center ${
             showStyleMenu 
-              ? 'bg-slate-900 text-white border-slate-900' 
-              : 'bg-white/95 backdrop-blur-md border-slate-200/90 text-slate-700 hover:bg-slate-50'
+              ? 'bg-slate-900 text-white border-slate-900 shadow-lg' 
+              : 'glass-card text-slate-700 hover:text-slate-900'
           }`}
-          title="Switch Map Tile Provider (No API key required)"
+          title="Switch Map Tile Provider"
         >
-          <Layers className="w-4 h-4 text-sky-600" />
+          <Layers className="w-4 h-4 text-sky-500" />
         </button>
 
-        <div className="bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl shadow-md flex flex-col overflow-hidden">
+        {/* Zoom Controls */}
+        <div className="glass-card rounded-2xl shadow-md flex flex-col overflow-hidden">
           <button
             onClick={handleZoomIn}
-            className="p-2.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition border-b border-slate-100"
+            className="p-2.5 text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors border-b border-slate-100/80"
             title="Zoom In"
           >
             <Plus className="w-4 h-4" />
           </button>
           <button
             onClick={handleZoomOut}
-            className="p-2.5 text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition"
+            className="p-2.5 text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors"
             title="Zoom Out"
           >
             <Minus className="w-4 h-4" />
           </button>
         </div>
 
+        {/* Reset View */}
         <button
           onClick={handleResetMap}
-          className="bg-white/95 backdrop-blur-md border border-slate-200/90 text-slate-700 hover:text-slate-900 p-2.5 rounded-2xl shadow-md hover:bg-slate-50 transition flex items-center justify-center"
-          title="Reset View to Koramangala"
+          className="glass-card p-2.5 rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-200 flex items-center justify-center group"
+          title="Reset View"
         >
-          <RotateCcw className="w-4 h-4 text-sky-600" />
+          <RotateCcw className="w-4 h-4 text-sky-500 group-hover:rotate-[-30deg] transition-transform duration-300" />
         </button>
 
+        {/* Fit Bounds */}
         <button
           onClick={handleFitBounds}
-          className="bg-white/95 backdrop-blur-md border border-slate-200/90 text-slate-700 hover:text-slate-900 p-2.5 rounded-2xl shadow-md hover:bg-slate-50 transition flex items-center justify-center"
+          className="glass-card p-2.5 rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-200 flex items-center justify-center group"
           title="Fit bounds to current results"
         >
-          <Maximize2 className="w-4 h-4 text-emerald-600" />
+          <Maximize2 className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition-transform duration-200" />
         </button>
 
       </div>

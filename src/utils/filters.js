@@ -48,7 +48,6 @@ export function getUniqueSectors(startups) {
   const sectorsSet = new Set();
   startups.forEach(s => {
     if (!s.sector) return;
-    // Extract primary sector tag before slash if any, or normalize
     const parts = s.sector.split('/').map(p => p.trim());
     parts.forEach(part => sectorsSet.add(part));
   });
@@ -65,14 +64,21 @@ export function getUniqueAreas(startups) {
 }
 
 export function getUniqueEmployeeSizes(startups) {
-  const sizes = [
-    '1–10',
-    '11–50',
-    '51–200',
-    '201–500',
-    '501–1000',
-    '1001–5000',
-    '5000+'
-  ];
-  return sizes;
+  const sizesSet = new Set();
+  startups.forEach(s => {
+    if (s.employees) sizesSet.add(s.employees);
+  });
+  return Array.from(sizesSet).sort((a, b) => {
+    const numA = parseInt(a.replace(/[^0-9]/g, '')) || 0;
+    const numB = parseInt(b.replace(/[^0-9]/g, '')) || 0;
+    return numA - numB;
+  });
+}
+
+export function getUniquePrecisions(startups) {
+  const precisionsSet = new Set();
+  startups.forEach(s => {
+    if (s.locationPrecision) precisionsSet.add(s.locationPrecision);
+  });
+  return Array.from(precisionsSet).sort();
 }

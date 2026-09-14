@@ -1,9 +1,10 @@
 import React from 'react';
 import { getLocationPrecisionMeta } from '../utils/location';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, MapPin, ArrowUpRight } from 'lucide-react';
 
 export default function StartupCard({ 
   startup, 
+  index,
   isSelected, 
   onClick, 
   onMouseEnter, 
@@ -16,59 +17,100 @@ export default function StartupCard({
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`group p-3 rounded-2xl border transition-all duration-200 cursor-pointer select-none ${
+      className={`group relative p-3.5 rounded-2xl border transition-all duration-300 cursor-pointer select-none ${
         isSelected
-          ? 'bg-slate-900 border-slate-900 text-white shadow-[0_12px_22px_rgba(15,23,42,0.12)]'
-          : 'bg-white border-slate-200/80 hover:border-slate-300 hover:bg-slate-50/80 shadow-[0_4px_12px_rgba(15,23,42,0.02)]'
+          ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-slate-700/50 text-white shadow-card-active ring-1 ring-sky-500/20'
+          : 'bg-white/70 border-slate-200/50 hover:border-slate-300/80 hover:bg-white hover:shadow-card-hover hover:-translate-y-0.5'
       }`}
     >
-      <div className="flex items-center justify-between gap-2.5">
+      {/* Subtle gradient overlay on selected */}
+      {isSelected && (
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-sky-500/10 via-transparent to-indigo-500/10 pointer-events-none" />
+      )}
+
+      <div className="relative flex items-center justify-between gap-3">
         
         {/* Startup Initial Avatar + Name + Sector */}
-        <div className="flex items-center gap-2.5 min-w-0">
-          <div className={`w-8 h-8 rounded-lg font-bold text-xs flex items-center justify-center shrink-0 border ${
-            isSelected
-              ? 'bg-sky-500 border-sky-400 text-white'
-              : 'bg-slate-100 border-slate-200 text-slate-800 group-hover:bg-slate-900 group-hover:border-slate-900 group-hover:text-white transition-colors'
-          }`}>
-            {startup.name.charAt(0).toUpperCase()}
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="relative">
+            <div className={`relative w-10 h-10 rounded-xl font-bold text-sm flex items-center justify-center shrink-0 transition-all duration-300 ${
+              isSelected
+                ? 'bg-gradient-to-br from-sky-400 to-sky-500 text-white shadow-lg shadow-sky-500/30'
+                : 'bg-gradient-to-br from-slate-100 to-slate-50 border border-slate-200/60 text-slate-700 group-hover:from-slate-900 group-hover:to-slate-800 group-hover:border-slate-900 group-hover:text-white group-hover:shadow-lg'
+            }`}>
+              {startup.name.charAt(0).toUpperCase()}
+            </div>
+            {index && (
+              <span className={`absolute -top-1.5 -left-1.5 min-w-[18px] h-[18px] flex items-center justify-center rounded-full text-[9px] font-black border-2 border-white ${
+                isSelected
+                  ? 'bg-sky-500 text-white'
+                  : 'bg-slate-900 text-white'
+              }`}>
+                {index}
+              </span>
+            )}
           </div>
 
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 truncate">
-              <h3 className={`font-bold text-xs truncate ${isSelected ? 'text-white' : 'text-slate-900 group-hover:text-slate-900'}`}>
+              <h3 className={`font-bold text-[13px] truncate transition-colors duration-200 ${
+                isSelected ? 'text-white' : 'text-slate-900 group-hover:text-slate-900'
+              }`}>
                 {startup.name}
               </h3>
               {startup.verified && (
-                <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 ${isSelected ? 'text-sky-400' : 'text-emerald-600'}`} />
+                <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 ${
+                  isSelected ? 'text-sky-400' : 'text-emerald-500'
+                }`} />
               )}
             </div>
 
-            <p className={`text-[11px] font-semibold truncate ${isSelected ? 'text-slate-300' : 'text-slate-500'}`}>
-              {startup.sector}
-            </p>
+            <div className="flex items-center gap-2 mt-0.5">
+              <span className={`text-[11px] font-semibold truncate ${
+                isSelected ? 'text-slate-300' : 'text-slate-500'
+              }`}>
+                {startup.sector}
+              </span>
+              <span className={`text-[9px] ${
+                isSelected ? 'text-slate-500' : 'text-slate-400'
+              }`}>·</span>
+              <span className={`text-[11px] font-medium truncate ${
+                isSelected ? 'text-slate-400' : 'text-slate-400'
+              }`}>
+                {startup.area}
+              </span>
+            </div>
           </div>
         </div>
 
         {/* Employee Count Pill & Location Indicator */}
-        <div className="flex items-center gap-1.5 shrink-0">
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${
+        <div className="flex items-center gap-2 shrink-0">
+          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-lg transition-all duration-200 ${
             isSelected 
-              ? 'bg-slate-800 border-slate-700 text-slate-200' 
-              : 'bg-slate-100 border-slate-200 text-slate-600'
+              ? 'bg-white/10 border border-white/10 text-slate-200' 
+              : 'bg-slate-100/80 border border-slate-200/50 text-slate-500 group-hover:bg-slate-200/60'
           }`}>
             {startup.employees}
           </span>
 
           <span 
-            className={`w-2 h-2 rounded-full shrink-0 ${
-              startup.locationPrecision === 'exact' ? 'bg-emerald-500' :
-              startup.locationPrecision === 'approximate' ? 'bg-amber-500' : 'bg-slate-400'
+            className={`w-2 h-2 rounded-full shrink-0 transition-all duration-200 ${
+              startup.locationPrecision === 'exact' 
+                ? 'bg-emerald-500 shadow-sm shadow-emerald-500/30' :
+              startup.locationPrecision === 'approximate' 
+                ? 'bg-amber-500 shadow-sm shadow-amber-500/30' : 'bg-slate-400'
             }`}
             title={precisionMeta.label}
           />
         </div>
 
+      </div>
+
+      {/* Hover reveal arrow */}
+      <div className={`absolute right-3 top-1/2 -translate-y-1/2 transition-all duration-200 ${
+        isSelected ? 'opacity-0' : 'opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5'
+      }`}>
+        <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
       </div>
     </div>
   );

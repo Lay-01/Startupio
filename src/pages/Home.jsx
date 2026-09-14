@@ -9,7 +9,7 @@ import CommandSearchModal from '../components/CommandSearchModal';
 
 import rawStartups from '../data/startups.json';
 import { searchStartups } from '../utils/search';
-import { filterStartups, getUniqueSectors, getUniqueAreas, getUniqueEmployeeSizes } from '../utils/filters';
+import { filterStartups, getUniqueSectors, getUniqueAreas, getUniqueEmployeeSizes, getUniquePrecisions } from '../utils/filters';
 import { exportStartupsToPDF } from '../utils/pdfExport';
 
 export default function Home() {
@@ -31,6 +31,7 @@ export default function Home() {
   const allSectors = useMemo(() => getUniqueSectors(rawStartups), []);
   const allAreas = useMemo(() => getUniqueAreas(rawStartups), []);
   const allEmployeeSizes = useMemo(() => getUniqueEmployeeSizes(rawStartups), []);
+  const allPrecisions = useMemo(() => getUniquePrecisions(rawStartups), []);
 
   const filteredStartups = useMemo(() => {
     let result = searchStartups(rawStartups, searchQuery);
@@ -75,7 +76,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen w-full flex flex-col overflow-hidden bg-slate-900 select-none font-sans">
+    <div className="h-screen w-full flex flex-col overflow-hidden bg-slate-50 select-none font-sans">
       
       {/* Top Header Nav containing Search & Category Pills */}
       <Header
@@ -100,12 +101,13 @@ export default function Home() {
 
       {/* Extended Filters Drawer */}
       {showFilterBar && (
-        <div className="bg-white border-b border-slate-200 p-2 z-20 shadow-md">
+        <div className="bg-white/90 backdrop-blur-xl border-b border-slate-200/50 p-2 z-20 shadow-glass">
           <div className="max-w-7xl mx-auto">
             <FilterBar
               sectors={allSectors}
               areas={allAreas}
               employeeSizes={allEmployeeSizes}
+              precisions={allPrecisions}
               selectedSector={selectedSector}
               setSelectedSector={setSelectedSector}
               selectedArea={selectedArea}
@@ -152,8 +154,10 @@ export default function Home() {
 
         {/* Mobile list overlay */}
         {mobileListOpen && (
-          <div className="fixed inset-x-0 bottom-0 z-40 bg-white rounded-t-[28px] border-t border-slate-200 shadow-[0_-18px_40px_rgba(15,23,42,0.18)] md:hidden">
-            <div className="w-12 h-1.5 bg-slate-300 rounded-full mx-auto mt-3" />
+          <div className="fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur-2xl rounded-t-3xl border-t border-slate-200/40 shadow-glass-xl md:hidden">
+            <div className="flex justify-center pt-3 pb-1">
+              <div className="w-10 h-1 bg-slate-300 rounded-full" />
+            </div>
             <div className="max-h-[52vh] overflow-hidden">
               <StartupList
                 startups={filteredStartups}

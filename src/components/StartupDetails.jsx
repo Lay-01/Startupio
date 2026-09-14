@@ -14,7 +14,11 @@ import {
   Info,
   Copy,
   Check,
-  Share2
+  Share2,
+  Calendar,
+  Shield,
+  Sparkles,
+  ArrowUpRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -37,36 +41,37 @@ export default function StartupDetails({ startup, onClose }) {
   };
 
   return (
-    <div className="h-full flex flex-col bg-white border-l border-slate-200/90 shadow-[0_18px_40px_rgba(15,23,42,0.12)] overflow-y-auto w-full md:w-96 lg:w-[400px] shrink-0 z-30 select-text animate-in slide-in-from-right duration-200">
+    <div className="h-full flex flex-col bg-gradient-to-b from-white/98 to-white/95 backdrop-blur-2xl border-l border-slate-200/40 shadow-glass-xl overflow-y-auto w-full md:w-96 lg:w-[420px] shrink-0 z-30 select-text">
       
       {/* Header Bar */}
-      <div className="p-5 border-b border-slate-200/80 bg-white/90 backdrop-blur-sm sticky top-0 z-10 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-xl bg-slate-900 text-white font-black text-sm flex items-center justify-center shadow-[0_10px_18px_rgba(15,23,42,0.12)]">
+      <div className="p-5 border-b border-slate-100/80 bg-white/50 backdrop-blur-xl sticky top-0 z-10 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white font-black text-sm flex items-center justify-center shadow-lg">
             {startup.name.charAt(0).toUpperCase()}
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-sky-400/10 to-transparent" />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
               <h2 className="font-extrabold text-slate-900 text-base leading-tight tracking-tight">{startup.name}</h2>
               {startup.verified && (
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" title="Verified Data" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" title="Verified Data" />
               )}
             </div>
-            <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">{startup.sector}</p>
+            <p className="text-[11px] font-bold text-sky-600 uppercase tracking-wider mt-0.5">{startup.sector}</p>
           </div>
         </div>
 
         <div className="flex items-center gap-1">
           <button
             onClick={handleCopyLink}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition"
+            className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-all duration-200"
             title="Copy share link"
           >
-            {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Share2 className="w-4 h-4" />}
+            {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Share2 className="w-4 h-4" />}
           </button>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition"
+            className="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-all duration-200"
             title="Close panel"
           >
             <X className="w-5 h-5" />
@@ -75,98 +80,113 @@ export default function StartupDetails({ startup, onClose }) {
       </div>
 
       {/* Main Details Body */}
-      <div className="p-5 space-y-6 flex-1 text-slate-900">
+      <div className="p-5 space-y-5 flex-1 text-slate-900">
         
         {/* Description */}
         <div>
-          <p className="text-xs text-slate-700 leading-relaxed font-medium">
+          <p className="text-[13px] text-slate-600 leading-relaxed font-medium">
             {startup.description || 'No description available for this startup.'}
           </p>
         </div>
 
-        <div className="h-px bg-slate-100" />
+        <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
         {/* Location Block */}
         <div>
-          <h3 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Location</h3>
-          <div className="flex items-start gap-2.5 text-xs font-semibold text-slate-800 leading-relaxed mb-3">
-            <MapPin className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+          <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2.5 flex items-center gap-1.5">
+            <MapPin className="w-3 h-3" />
+            Location
+          </h3>
+          <div className="flex items-start gap-2.5 text-[13px] font-semibold text-slate-800 leading-relaxed mb-3">
+            <span className="text-sky-500 mt-0.5">📍</span>
             <span>{startup.address}</span>
           </div>
 
-          <div className={`p-2.5 rounded-2xl border text-[11px] font-medium leading-relaxed flex items-start gap-2 shadow-sm ${precisionMeta.badgeBg}`}>
+          <div className={`p-3 rounded-xl border text-[11px] font-medium leading-relaxed flex items-start gap-2.5 ${precisionMeta.badgeBg}`}>
             <Info className="w-3.5 h-3.5 shrink-0 mt-0.5" />
             <div>
               <span className="font-bold block">{precisionMeta.label}</span>
-              <span>{precisionMeta.description}</span>
+              <span className="opacity-80">{precisionMeta.description}</span>
             </div>
           </div>
         </div>
 
-        <div className="h-px bg-slate-100" />
+        <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
         {/* Company Block */}
         <div>
-          <h3 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Company Details</h3>
+          <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3 flex items-center gap-1.5">
+            <Building2 className="w-3 h-3" />
+            Company Details
+          </h3>
           
-          <div className="space-y-3 text-xs">
+          <div className="grid grid-cols-2 gap-3 text-xs">
             {startup.foundedYear && (
-              <div>
-                <span className="text-slate-400 font-semibold block text-[11px]">Founded Year</span>
-                <span className="font-bold text-slate-900 text-xs mt-0.5 block">{startup.foundedYear}</span>
+              <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-100">
+                <span className="text-slate-400 font-semibold block text-[10px] uppercase tracking-wider mb-1">Founded</span>
+                <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-sky-500" />
+                  {startup.foundedYear}
+                </span>
               </div>
             )}
 
-            <div>
-              <span className="text-slate-400 font-semibold block text-[11px]">Team Size</span>
-              <span className="font-bold text-slate-900 text-xs mt-0.5 block">{startup.employees || 'Not disclosed'} employees</span>
+            <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-100">
+              <span className="text-slate-400 font-semibold block text-[10px] uppercase tracking-wider mb-1">Team Size</span>
+              <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                <Users className="w-3.5 h-3.5 text-sky-500" />
+                {startup.employees || 'N/A'}
+              </span>
             </div>
+          </div>
 
-            <div>
-              <span className="text-slate-400 font-semibold block text-[11px]">Founders</span>
-              {Array.isArray(startup.founders) && startup.founders.length > 0 ? (
-                <div className="flex flex-wrap gap-1.5 mt-1">
-                  {startup.founders.map((founder, i) => (
-                    <span key={i} className="inline-flex items-center gap-1 bg-slate-100 border border-slate-200/80 px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-800">
-                      <UserCheck className="w-3 h-3 text-sky-600" />
-                      {founder}
-                    </span>
-                  ))}
-                </div>
-              ) : (
-                <span className="text-slate-400 italic text-[11px] mt-0.5 block">Founder information not publicly disclosed.</span>
-              )}
-            </div>
+          <div className="mt-3">
+            <span className="text-slate-400 font-semibold block text-[10px] uppercase tracking-wider mb-2">Founders</span>
+            {Array.isArray(startup.founders) && startup.founders.length > 0 ? (
+              <div className="flex flex-wrap gap-1.5">
+                {startup.founders.map((founder, i) => (
+                  <span key={i} className="inline-flex items-center gap-1.5 bg-white border border-slate-200/60 px-3 py-1.5 rounded-lg text-[11px] font-bold text-slate-700 shadow-card">
+                    <UserCheck className="w-3 h-3 text-sky-500" />
+                    {founder}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <span className="text-slate-400 italic text-[11px]">Founder information not publicly disclosed.</span>
+            )}
           </div>
         </div>
 
-        {/* Verification & Evidence Notes Block */}
+        {/* Verification & Evidence */}
         {(startup.confidence || startup.evidenceNotes || (Array.isArray(startup.verificationSources) && startup.verificationSources.length > 0)) && (
           <>
-            <div className="h-px bg-slate-100" />
+            <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
             <div>
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-[10px] font-black uppercase tracking-widest text-slate-400">Data Verification & Evidence</h3>
+              <div className="flex items-center justify-between mb-2.5">
+                <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-1.5">
+                  <Shield className="w-3 h-3" />
+                  Data Verification
+                </h3>
                 {startup.confidence && (
-                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
+                  <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full border ${
                     startup.confidence.toLowerCase() === 'high' 
-                      ? 'bg-emerald-50 border-emerald-200 text-emerald-700' 
-                      : 'bg-amber-50 border-amber-200 text-amber-700'
+                      ? 'bg-emerald-50 border-emerald-200/60 text-emerald-700' 
+                      : 'bg-amber-50 border-amber-200/60 text-amber-700'
                   }`}>
-                    {startup.confidence.toUpperCase()} CONFIDENCE
+                    {startup.confidence.toUpperCase()}
                   </span>
                 )}
               </div>
 
               {startup.evidenceNotes && (
-                <p className="text-[11px] text-slate-600 bg-slate-50 border border-slate-200/80 p-2.5 rounded-xl leading-relaxed mb-3 font-medium">
+                <p className="text-[11px] text-slate-600 bg-slate-50/80 border border-slate-100 p-3 rounded-xl leading-relaxed mb-3 font-medium">
                   {startup.evidenceNotes}
                 </p>
               )}
 
               {Array.isArray(startup.verificationSources) && startup.verificationSources.length > 0 && (
-                <div className="space-y-1">
-                  <span className="text-slate-400 font-semibold block text-[10px] uppercase tracking-wider">Verification Sources</span>
+                <div className="space-y-1.5">
+                  <span className="text-slate-400 font-semibold block text-[10px] uppercase tracking-wider">Sources</span>
                   <div className="flex flex-wrap gap-1.5">
                     {startup.verificationSources.map((srcUrl, idx) => (
                       <a
@@ -174,10 +194,10 @@ export default function StartupDetails({ startup, onClose }) {
                         href={srcUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-sky-600 hover:text-sky-800 bg-sky-50 border border-sky-100 px-2 py-0.5 rounded-md hover:underline truncate max-w-[320px]"
+                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-sky-600 hover:text-sky-800 bg-sky-50/80 border border-sky-100/60 px-2.5 py-1 rounded-lg hover:underline truncate max-w-[320px] transition-colors"
                       >
                         <Globe className="w-3 h-3 shrink-0" />
-                        <span className="truncate">{srcUrl.replace(/^https?:\/\/(www\.)?/, '')}</span>
+                        <span className="truncate">{srcUrl.replace(/^https?:\/\/(www\.)?/, '').substring(0, 40)}</span>
                         <ExternalLink className="w-2.5 h-2.5 shrink-0 opacity-70" />
                       </a>
                     ))}
@@ -188,11 +208,14 @@ export default function StartupDetails({ startup, onClose }) {
           </>
         )}
 
-        <div className="h-px bg-slate-100" />
+        <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
         {/* Links Block */}
         <div>
-          <h3 className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-3">Links & Action Links</h3>
+          <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-3 flex items-center gap-1.5">
+            <ExternalLink className="w-3 h-3" />
+            Links & Actions
+          </h3>
 
           <div className="space-y-2">
             
@@ -201,13 +224,13 @@ export default function StartupDetails({ startup, onClose }) {
                 href={startup.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition shadow-[0_8px_18px_rgba(15,23,42,0.1)]"
+                className="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white text-xs font-bold transition-all duration-200 shadow-lg hover:shadow-xl group"
               >
-                <div className="flex items-center gap-2">
-                  <Globe className="w-3.5 h-3.5" />
+                <div className="flex items-center gap-2.5">
+                  <Globe className="w-4 h-4" />
                   <span>Company Website</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
               </a>
             )}
 
@@ -216,13 +239,13 @@ export default function StartupDetails({ startup, onClose }) {
                 href={startup.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[#0A66C2] hover:bg-[#084e96] text-white text-xs font-bold transition shadow-[0_8px_18px_rgba(10,102,194,0.18)]"
+                className="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-gradient-to-r from-[#0A66C2] to-[#084e96] hover:from-[#084e96] hover:to-[#073d78] text-white text-xs font-bold transition-all duration-200 shadow-lg shadow-[#0A66C2]/20 hover:shadow-[#0A66C2]/30 group"
               >
-                <div className="flex items-center gap-2">
-                  <Linkedin className="w-3.5 h-3.5" />
+                <div className="flex items-center gap-2.5">
+                  <Linkedin className="w-4 h-4" />
                   <span>LinkedIn Profile</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
               </a>
             )}
 
@@ -231,29 +254,29 @@ export default function StartupDetails({ startup, onClose }) {
                 href={startup.applyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition shadow-[0_8px_18px_rgba(16,185,129,0.18)]"
+                className="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white text-xs font-bold transition-all duration-200 shadow-lg shadow-emerald-500/20 group"
               >
-                <div className="flex items-center gap-2">
-                  <Briefcase className="w-3.5 h-3.5" />
+                <div className="flex items-center gap-2.5">
+                  <Briefcase className="w-4 h-4" />
                   <span>Apply Now</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
               </a>
             ) : hasCareers ? (
               <a
                 href={startup.careersUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold transition shadow-xs"
+                className="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-gradient-to-r from-sky-600 to-sky-500 hover:from-sky-500 hover:to-sky-400 text-white text-xs font-bold transition-all duration-200 shadow-lg shadow-sky-500/20 group"
               >
-                <div className="flex items-center gap-2">
-                  <Briefcase className="w-3.5 h-3.5" />
+                <div className="flex items-center gap-2.5">
+                  <Briefcase className="w-4 h-4" />
                   <span>Careers Page</span>
                 </div>
-                <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
               </a>
             ) : (
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-500 font-medium text-center italic">
+              <div className="p-3 rounded-xl bg-slate-50/80 border border-slate-100 text-[11px] text-slate-500 font-medium text-center italic">
                 Career information not publicly available
               </div>
             )}
@@ -264,10 +287,10 @@ export default function StartupDetails({ startup, onClose }) {
           <div className="pt-3">
             <Link
               to={`/startup/${startup.id}`}
-              className="w-full flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-800 text-xs font-bold transition"
+              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200/60 hover:bg-slate-50 hover:border-slate-300 text-slate-700 text-xs font-bold transition-all duration-200 hover:shadow-card"
             >
-              <Building2 className="w-3.5 h-3.5 text-slate-500" />
-              <span>Open Dedicated Profile Page</span>
+              <Sparkles className="w-3.5 h-3.5 text-sky-500" />
+              <span>Open Full Profile</span>
             </Link>
           </div>
 
