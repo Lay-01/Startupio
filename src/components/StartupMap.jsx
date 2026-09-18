@@ -3,7 +3,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster';
 import { getLocationPrecisionMeta, BENGALURU_CENTER, DEFAULT_ZOOM } from '../utils/location';
-import { RotateCcw, Maximize2, Plus, Minus, Building2, Layers } from 'lucide-react';
+import { RotateCcw, Maximize2, Plus, Minus, Layers } from 'lucide-react';
 
 const MAP_PROVIDERS = {
   osm: {
@@ -219,22 +219,7 @@ export default function StartupMap({
       {/* Map DOM Canvas */}
       <div ref={mapContainerRef} className="w-full h-full z-10" />
 
-      {/* Floating Stats Overlay Pill (Bottom Left) */}
-      <div className="absolute bottom-4 left-4 z-[400] glass-card rounded-2xl px-4 py-2.5 flex items-center gap-3 text-xs font-bold text-slate-800 pointer-events-auto">
-        <div className="flex items-center gap-1.5">
-          <Building2 className="w-3.5 h-3.5 text-sky-500" />
-          <span className="text-slate-900">{startups.length}</span>
-          <span className="text-slate-500 font-medium">Startups</span>
-        </div>
-        <div className="w-px h-3.5 bg-slate-200" />
-        <div className="flex items-center gap-1.5 text-slate-500">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          <span className="font-medium">Live</span>
-        </div>
-      </div>
+
 
       {/* Floating Controls & Style Switcher (Bottom Right) */}
       <div className="absolute bottom-4 right-4 z-[400] flex flex-col gap-2 pointer-events-auto items-end">
