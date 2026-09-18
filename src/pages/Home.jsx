@@ -182,11 +182,15 @@ export default function Home() {
             <StartupList
               startups={filteredStartups}
               selectedStartup={selectedStartup}
-              onSelectStartup={(startup) => setSelectedStartup(startup)}
+              onSelectStartup={(startup) => {
+                setSelectedStartup(startup);
+                setMobileView('map');
+              }}
               onHoverStartup={(startup) => setHoveredStartup(startup)}
               onResetFilters={handleResetFilters}
               onExportPDF={handleExportPDF}
               mobileOverlay
+              onClose={() => setMobileView('map')}
             />
           </div>
         </div>
@@ -225,7 +229,7 @@ export default function Home() {
 
           {/* List Button */}
           <button
-            onClick={() => setMobileView('list')}
+            onClick={() => setMobileView(prev => prev === 'list' ? 'map' : 'list')}
             className={`flex items-center gap-1.5 pl-5 pr-4 py-2.5 rounded-full transition-all duration-200 ${
               mobileView === 'list'
                 ? 'bg-slate-900 text-white shadow-lg'

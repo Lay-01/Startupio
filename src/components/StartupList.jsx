@@ -1,6 +1,6 @@
 import React from 'react';
 import StartupCard from './StartupCard';
-import { SearchX, SlidersHorizontal, Download } from 'lucide-react';
+import { SearchX, SlidersHorizontal, Download, X } from 'lucide-react';
 
 export default function StartupList({ 
   startups, 
@@ -9,7 +9,8 @@ export default function StartupList({
   onHoverStartup,
   onResetFilters,
   onExportPDF,
-  mobileOverlay = false
+  mobileOverlay = false,
+  onClose
 }) {
   return (
     <div className={`h-full flex flex-col overflow-hidden ${
@@ -20,9 +21,13 @@ export default function StartupList({
       
       {/* Drag Handle — mobile overlay only */}
       {mobileOverlay && (
-        <div className="flex justify-center pt-3 pb-2 shrink-0">
-          <div className="w-9 h-[3px] bg-slate-300 rounded-full" />
-        </div>
+        <button 
+          onClick={onClose}
+          className="flex justify-center pt-3 pb-2 shrink-0 group cursor-pointer w-full focus:outline-none"
+          title="Close list"
+        >
+          <div className="w-10 h-1 bg-slate-300 group-hover:bg-slate-400 rounded-full transition-colors" />
+        </button>
       )}
 
       {/* Directory Header */}
@@ -39,16 +44,28 @@ export default function StartupList({
           </p>
         </div>
 
-        {onExportPDF && (
-          <button
-            onClick={onExportPDF}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-sky-50 to-sky-100/80 border border-sky-200/60 text-sky-700 text-xs font-bold transition-all duration-200 hover:from-sky-100 hover:to-sky-200/60 hover:shadow-card active:scale-95"
-            title="Export directory list as PDF"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span>PDF</span>
-          </button>
-        )}
+        <div className="flex items-center gap-2">
+          {onExportPDF && (
+            <button
+              onClick={onExportPDF}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-sky-50 to-sky-100/80 border border-sky-200/60 text-sky-700 text-xs font-bold transition-all duration-200 hover:from-sky-100 hover:to-sky-200/60 hover:shadow-card active:scale-95"
+              title="Export directory list as PDF"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>PDF</span>
+            </button>
+          )}
+
+          {mobileOverlay && onClose && (
+            <button
+              onClick={onClose}
+              className="p-1.5 rounded-xl bg-slate-100 text-slate-500 hover:text-slate-800 hover:bg-slate-200 transition-colors"
+              title="Close list view"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Rows Container */}
