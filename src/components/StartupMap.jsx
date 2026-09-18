@@ -226,7 +226,7 @@ export default function StartupMap({
         
         {/* Style Selector Popup Menu */}
         {showStyleMenu && (
-          <div className="glass-card rounded-2xl p-2 shadow-glass-lg mb-1 w-52 text-xs space-y-1">
+          <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-2 shadow-xl border border-slate-200/80 mb-1 w-52 text-xs space-y-1">
             <div className="text-[9px] font-black uppercase text-slate-400 px-2.5 py-1 tracking-[0.18em]">
               Map Style
             </div>
@@ -236,8 +236,8 @@ export default function StartupMap({
                 onClick={() => handleSelectProvider(key)}
                 className={`w-full text-left px-2.5 py-2 rounded-xl font-bold transition-all duration-200 flex items-center justify-between ${
                   activeProviderKey === key 
-                    ? 'bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-md' 
-                    : 'text-slate-700 hover:bg-slate-50'
+                    ? 'bg-slate-900 text-white shadow-md' 
+                    : 'text-slate-700 hover:bg-slate-100'
                 }`}
               >
                 <span>{provider.name}</span>
@@ -247,54 +247,50 @@ export default function StartupMap({
           </div>
         )}
 
-        {/* Tile Provider Layer Button */}
-        <button
-          onClick={() => setShowStyleMenu(prev => !prev)}
-          className={`p-2.5 rounded-2xl shadow-md border transition-all duration-200 flex items-center justify-center ${
-            showStyleMenu 
-              ? 'bg-slate-900 text-white border-slate-900 shadow-lg' 
-              : 'glass-card text-slate-700 hover:text-slate-900'
-          }`}
-          title="Switch Map Tile Provider"
-        >
-          <Layers className="w-4 h-4 text-sky-500" />
-        </button>
+        {/* Unified Map Controls Toolbar */}
+        <div className="bg-white/90 backdrop-blur-xl border border-slate-200/80 rounded-2xl shadow-lg flex flex-col divide-y divide-slate-100 overflow-hidden">
+          <button
+            onClick={() => setShowStyleMenu(prev => !prev)}
+            className={`p-2.5 transition-colors flex items-center justify-center ${
+              showStyleMenu ? 'bg-slate-900 text-white' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+            }`}
+            title="Map Styles"
+          >
+            <Layers className="w-4 h-4 text-sky-500" />
+          </button>
 
-        {/* Zoom Controls */}
-        <div className="glass-card rounded-2xl shadow-md flex flex-col overflow-hidden">
           <button
             onClick={handleZoomIn}
-            className="p-2.5 text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors border-b border-slate-100/80"
+            className="p-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors flex items-center justify-center"
             title="Zoom In"
           >
             <Plus className="w-4 h-4" />
           </button>
+
           <button
             onClick={handleZoomOut}
-            className="p-2.5 text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+            className="p-2.5 text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors flex items-center justify-center"
             title="Zoom Out"
           >
             <Minus className="w-4 h-4" />
           </button>
+
+          <button
+            onClick={handleFitBounds}
+            className="p-2.5 text-slate-600 hover:text-emerald-600 hover:bg-slate-50 transition-colors flex items-center justify-center"
+            title="Fit bounds to results"
+          >
+            <Maximize2 className="w-4 h-4" />
+          </button>
+
+          <button
+            onClick={handleResetMap}
+            className="p-2.5 text-slate-600 hover:text-sky-600 hover:bg-slate-50 transition-colors flex items-center justify-center group"
+            title="Reset View"
+          >
+            <RotateCcw className="w-4 h-4 group-hover:rotate-[-30deg] transition-transform duration-300" />
+          </button>
         </div>
-
-        {/* Reset View */}
-        <button
-          onClick={handleResetMap}
-          className="glass-card p-2.5 rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-200 flex items-center justify-center group"
-          title="Reset View"
-        >
-          <RotateCcw className="w-4 h-4 text-sky-500 group-hover:rotate-[-30deg] transition-transform duration-300" />
-        </button>
-
-        {/* Fit Bounds */}
-        <button
-          onClick={handleFitBounds}
-          className="glass-card p-2.5 rounded-2xl shadow-md hover:shadow-card-hover transition-all duration-200 flex items-center justify-center group"
-          title="Fit bounds to current results"
-        >
-          <Maximize2 className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition-transform duration-200" />
-        </button>
 
       </div>
 
