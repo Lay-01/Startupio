@@ -1,75 +1,108 @@
 import React from 'react';
 import StartupCard from './StartupCard';
-import { SearchX, SlidersHorizontal, Download, X } from 'lucide-react';
+import SectorPills from './SectorPills';
+import { Search, SlidersHorizontal, Download, X, SearchX } from 'lucide-react';
 
 export default function StartupList({ 
   startups, 
   selectedStartup, 
   onSelectStartup,
   onHoverStartup,
+  selectedSector,
+  onSelectSector,
+  searchQuery,
+  onSearchChange,
+  onToggleFilters,
   onResetFilters,
   onExportPDF,
   mobileOverlay = false,
   onClose
 }) {
   return (
-    <div className={`h-full flex flex-col overflow-hidden ${
+    <div className={`h-full flex flex-col overflow-hidden bg-slate-50/50 ${
       mobileOverlay
-        ? 'bg-white rounded-t-3xl shadow-[0_-8px_32px_rgba(0,0,0,0.12)] border border-b-0 border-slate-200/50'
-        : 'bg-white border-r border-slate-200/50'
+        ? 'bg-white rounded-t-3xl shadow-2xl border-t border-slate-200/80'
+        : 'border-r border-slate-200/80'
     }`}>
       
-      {/* Drag Handle — mobile overlay only */}
+      {/* Mobile Drag Handle */}
       {mobileOverlay && (
-        <button 
-          onClick={onClose}
-          className="flex justify-center pt-3 pb-2 shrink-0 group cursor-pointer w-full focus:outline-none"
-          title="Close list"
-        >
-          <div className="w-10 h-1 bg-slate-300 group-hover:bg-slate-400 rounded-full transition-colors" />
-        </button>
+        <div className="flex justify-center pt-3 pb-1 shrink-0">
+          <div className="w-10 h-1 bg-slate-300 rounded-full" />
+        </div>
       )}
 
       {/* Directory Header */}
-      <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between shrink-0">
-        <div>
-          <div className="flex items-center gap-2">
-            <h2 className="font-extrabold text-slate-900 text-[11px] tracking-[0.2em] uppercase">Directory</h2>
-            <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-sky-50 border border-sky-200/60 text-sky-700 text-[10px] font-black">
-              {startups.length}
-            </span>
+      <div className="p-4 border-b border-slate-200/80 bg-white/80 backdrop-blur-sm shrink-0">
+        <div className="flex items-center justify-between gap-2 mb-3">
+          <div>
+            <h2 className="font-extrabold text-xl text-slate-900 tracking-tight">Startups</h2>
+            <p className="text-xs font-medium text-slate-500 mt-0.5">
+              {startups.length.toLocaleString()} companies found
+            </p>
           </div>
-          <p className="text-[11px] font-medium text-slate-400 mt-0.5">
-            {startups.length === 1 ? '1 matching company' : `${startups.length} matching companies`}
-          </p>
+
+          <div className="flex items-center gap-2">
+            {onExportPDF && (
+              <button
+                onClick={onExportPDF}
+                className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors text-xs font-bold flex items-center gap-1.5"
+                title="Export PDF"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Export</span>
+              </button>
+            )}
+
+            {onToggleFilters && (
+              <button
+                onClick={onToggleFilters}
+                className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
+                title="Filter Startups"
+              >
+                <SlidersHorizontal className="w-4 h-4" />
+              </button>
+            )}
+
+            {mobileOverlay && onClose && (
+              <button
+                onClick={onClose}
+                className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
+                title="Close List"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
         </div>
 
-        <div className="flex items-center gap-2">
-          {onExportPDF && (
-            <button
-              onClick={onExportPDF}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-sky-50 to-sky-100/80 border border-sky-200/60 text-sky-700 text-xs font-bold transition-all duration-200 hover:from-sky-100 hover:to-sky-200/60 hover:shadow-card active:scale-95"
-              title="Export directory list as PDF"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>PDF</span>
-            </button>
-          )}
+        {/* Category Pills Row */}
+        {onSelectSector && (
+          <div className="-mx-4 px-1 border-t border-b border-slate-100 bg-slate-50/40">
+            <SectorPills
+              selectedSector={selectedSector || 'all'}
+              onSelectSector={onSelectSector}
+            />
+          </div>
+        )}
 
-          {mobileOverlay && onClose && (
-            <button
-              onClick={onClose}
-              className="p-1.5 rounded-xl bg-slate-100 text-slate-500 hover:text-slate-800 hover:bg-slate-200 transition-colors"
-              title="Close list view"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          )}
-        </div>
+        {/* Inner Search Bar Input */}
+        {onSearchChange !== undefined && (
+          <div className="relative mt-3">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={searchQuery || ''}
+              onChange={(e) => onSearchChange(e.target.value)}
+              placeholder="Search startups..."
+              className="w-full bg-white border border-slate-200/90 rounded-2xl pl-10 pr-4 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900/10 shadow-sm"
+            />
+          </div>
+        )}
       </div>
 
-      {/* Rows Container */}
-      <div className="flex-1 overflow-y-auto p-3 space-y-2">
+      {/* Cards List Container */}
+      <div className="flex-1 overflow-y-auto p-4 space-y-2.5">
         {startups.length > 0 ? (
           startups.map((startup, index) => (
             <StartupCard
@@ -83,24 +116,20 @@ export default function StartupList({
             />
           ))
         ) : (
-          <div className="py-20 px-4 text-center">
-            <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center text-slate-300 mx-auto mb-4 border border-slate-200/50">
+          <div className="py-16 px-4 text-center">
+            <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slate-400 mx-auto mb-3">
               <SearchX className="w-6 h-6" />
-              <div className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-slate-900 flex items-center justify-center">
-                <span className="text-[10px] text-white">0</span>
-              </div>
             </div>
             <h3 className="font-bold text-slate-900 text-sm">No startups found</h3>
-            <p className="text-[11px] text-slate-500 mt-1.5 max-w-[240px] mx-auto leading-relaxed">
-              Try adjusting your filters or search for a different sector, name, or founder.
+            <p className="text-xs text-slate-500 mt-1 max-w-[220px] mx-auto">
+              Try adjusting your search query or category filters.
             </p>
             {onResetFilters && (
               <button
                 onClick={onResetFilters}
-                className="mt-5 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-slate-900 to-slate-800 text-white text-xs font-bold transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95"
+                className="mt-4 px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold shadow-sm hover:bg-slate-800 transition-colors"
               >
-                <SlidersHorizontal className="w-3.5 h-3.5" />
-                <span>Reset All Filters</span>
+                Reset Filters
               </button>
             )}
           </div>

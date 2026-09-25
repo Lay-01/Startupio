@@ -1,10 +1,15 @@
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import { S_PROFILE_URL } from './config';
 
 /**
  * Generates and downloads a formatted PDF report of the given filtered startups.
+ * Note: Maximum 10 records allowed for export. Redirects to social dev for more data.
  */
 export function exportStartupsToPDF(startups, filters = {}) {
+  const MAX_RECORDS = 10;
+  const limitedStartups = startups.slice(0, MAX_RECORDS);
+
   const doc = new jsPDF({
     orientation: 'landscape',
     unit: 'mm',
@@ -28,13 +33,13 @@ export function exportStartupsToPDF(startups, filters = {}) {
   doc.setTextColor(255, 255, 255);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(16);
-  doc.text('Startup.io — Bengaluru Startup Directory Report', 14, 12);
+  doc.text('startupio — Bengaluru Startup Directory Report', 14, 12);
 
   // Subtitle / Date
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(9);
   doc.setTextColor(148, 163, 184); // Slate 400
-  doc.text(`Exported on: ${dateString} | Total Records: ${startups.length}`, 14, 19);
+  doc.text(`Exported on: ${dateString} | Exported: ${limitedStartups.length} of ${startups.length} records (Limit: ${MAX_RECORDS})`, 14, 19);
 
   // Active Filters Summary Line
   const activeFilterTexts = [];
@@ -54,8 +59,8 @@ export function exportStartupsToPDF(startups, filters = {}) {
   doc.setFont('helvetica', 'bold');
   doc.text(filterSummary, 14, 32);
 
-  // Prepare table data
-  const tableData = startups.map((s, index) => {
+  // Prepare table data (limited to 10 records)
+  const tableData = limitedStartups.map((s, index) => {
     const foundersStr = Array.isArray(s.founders) && s.founders.length > 0
       ? s.founders.join(', ')
       : 'Not disclosed';
@@ -117,12 +122,29 @@ export function exportStartupsToPDF(startups, filters = {}) {
       doc.setFontSize(8);
       doc.setTextColor(148, 163, 184);
       doc.text(
-        `Page ${data.pageNumber} of ${totalPages} — Startup.io Directory Data`,
+        `Page ${data.pageNumber} of ${totalPages} — startupio Directory Data`,
         data.settings.margin.left,
         doc.internal.pageSize.height - 8
       );
     }
   });
+
+  // Render "Contact the social dev to download more data" notice inside the PDF
+  const finalY = (doc.lastAutoTable ? doc.lastAutoTable.finalY : 120) + 8;
+
+  doc.setFillColor(241, 245, 249); // Slate 100
+  doc.setDrawColor(203, 213, 225); // Slate 300
+  doc.rect(14, finalY, 269, 14, 'FD');
+
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(9.5);
+  doc.setTextColor(15, 23, 42);
+  doc.text('Contact the social dev to download more data.', 18, finalY + 6);
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(9);
+  doc.setTextColor(2, 132, 199); // Sky 600
+  doc.textWithLink(S_PROFILE_URL, 18, finalY + 11, { url: S_PROFILE_URL });
 
   // Save File
   const filenameStr = filters.area && filters.area !== 'all' 
@@ -130,4 +152,9 @@ export function exportStartupsToPDF(startups, filters = {}) {
     : `startups-report.pdf`;
 
   doc.save(filenameStr);
+
+  // If total records exceed 10, open social dev website in a new tab to contact
+  if (startups.length > 10) {
+    window.open(S_PROFILE_URL, '_blank');
+  }
 }

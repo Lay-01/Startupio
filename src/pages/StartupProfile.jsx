@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import L from 'leaflet';
 import rawStartups from '../data/startups.json';
 import { getLocationPrecisionMeta } from '../utils/location';
+import { S_PROFILE_URL } from '../utils/config';
 import { 
   ArrowLeft, 
   Building2, 
@@ -130,15 +131,13 @@ export default function StartupProfile() {
             <span>Back to Discovery</span>
           </button>
 
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="relative w-8 h-8 rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center text-white shadow-lg group-hover:shadow-glow transition-all duration-300 group-hover:scale-105">
-              <Building2 className="w-4 h-4 text-sky-300" />
-            </div>
-            <span className="font-black text-base text-slate-900 tracking-tight">
-              Startup<span className="text-gradient-brand">.io</span>
-            </span>
-          </Link>
-
+            <button
+              onClick={() => window.open(S_PROFILE_URL, "_blank")}
+              className="w-9 h-9 rounded-full bg-[#0F172A] hover:bg-slate-800 text-white font-bold text-sm flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer select-none"
+              title="User Profile (S)"
+            >
+              S
+            </button>
         </div>
       </header>
 

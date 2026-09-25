@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useMemo } from 'react';
+import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import FilterBar from '../components/FilterBar';
 import StartupMap from '../components/StartupMap';
@@ -6,11 +7,13 @@ import StartupList from '../components/StartupList';
 import StartupDetails from '../components/StartupDetails';
 import StartupBottomSheet from '../components/StartupBottomSheet';
 import CommandSearchModal from '../components/CommandSearchModal';
+import MobileNav from '../components/MobileNav';
 
 import rawStartups from '../data/startups.json';
 import { searchStartups } from '../utils/search';
 import { filterStartups, getUniqueSectors, getUniqueAreas, getUniqueEmployeeSizes, getUniquePrecisions } from '../utils/filters';
 import { exportStartupsToPDF } from '../utils/pdfExport';
+import { LayoutGrid, Settings } from 'lucide-react';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -25,10 +28,9 @@ export default function Home() {
   
   const [selectedStartup, setSelectedStartup] = useState(null);
   const [hoveredStartup, setHoveredStartup] = useState(null);
-  const [mobileView, setMobileView] = useState('map');
-  const [headerCollapsed, setHeaderCollapsed] = useState(false);
-  const lastScrollY = useRef(0);
-  const ticking = useRef(false);
+  
+  // Navigation tabs ('map', 'startups', 'categories', 'settings')
+  const [activeTab, setActiveTab] = useState('map');
 
   const allSectors = useMemo(() => getUniqueSectors(rawStartups), []);
   const allAreas = useMemo(() => getUniqueAreas(rawStartups), []);
@@ -66,28 +68,6 @@ export default function Home() {
     setVerifiedOnly(false);
   };
 
-  // Collapsible header: hide on scroll down, show on scroll up (mobile only)
-  const handleScroll = useCallback(() => {
-    if (!ticking.current) {
-      requestAnimationFrame(() => {
-        const currentY = window.scrollY || window.pageYOffset;
-        if (currentY > lastScrollY.current && currentY > 80) {
-          setHeaderCollapsed(true);
-        } else if (lastScrollY.current - currentY > 10) {
-          setHeaderCollapsed(false);
-        }
-        lastScrollY.current = currentY;
-        ticking.current = false;
-      });
-      ticking.current = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
   const handleExportPDF = () => {
     exportStartupsToPDF(filteredStartups, {
       sector: selectedSector,
@@ -100,153 +80,211 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen w-full flex flex-col overflow-hidden bg-slate-50 select-none font-sans">
+    <div className="h-screen w-full flex overflow-hidden bg-[#F8FAFC] font-sans antialiased select-none text-slate-900">
       
-      {/* Top Header Nav containing Search & Category Pills */}
-      <Header
-        onOpenCommandSearch={() => setIsCommandOpen(true)}
-        onToggleFilters={() => setShowFilterBar(prev => !prev)}
-        activeFilterCount={activeFilterCount}
-        selectedSector={selectedSector}
-        onSelectSector={(sec) => setSelectedSector(sec)}
-        areas={allAreas}
-        selectedArea={selectedArea}
-        onSelectArea={(area) => setSelectedArea(area)}
-        headerCollapsed={headerCollapsed}
+      {/* 1. Left Vertical Dark Navigation Sidebar (Desktop) */}
+      <Sidebar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
       />
 
-      {/* Extended Filters Drawer — always rendered, animated collapse */}
-      <div 
-        className="overflow-hidden transition-all duration-300 ease-out z-20"
-        style={{
-          maxHeight: showFilterBar ? '300px' : '0px',
-          opacity: showFilterBar ? 1 : 0
-        }}
-      >
-        <div className="bg-white border-b border-slate-200/50">
-          <FilterBar
-            sectors={allSectors}
-            areas={allAreas}
-            employeeSizes={allEmployeeSizes}
-            precisions={allPrecisions}
-            selectedSector={selectedSector}
-            setSelectedSector={setSelectedSector}
-            selectedArea={selectedArea}
-            setSelectedArea={setSelectedArea}
-            selectedEmployeeSize={selectedEmployeeSize}
-            setSelectedEmployeeSize={setSelectedEmployeeSize}
-            selectedPrecision={selectedPrecision}
-            setSelectedPrecision={setSelectedPrecision}
-            verifiedOnly={verifiedOnly}
-            setVerifiedOnly={setVerifiedOnly}
-            onClose={() => setShowFilterBar(false)}
-            onReset={handleResetFilters}
-            onExportPDF={handleExportPDF}
-          />
-        </div>
-      </div>
-
-      {/* Main Viewport Content Area */}
-      <main className="flex-1 flex flex-col min-h-0 overflow-hidden relative md:flex-row">
+      {/* 2. Main Layout Area */}
+      <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden relative">
         
-        {/* Left Directory Panel — desktop sidebar */}
-        <div className="hidden md:block md:w-80 md:min-w-[20rem] md:h-full md:max-w-[25rem] md:flex-none z-10">
-          <StartupList
-            startups={filteredStartups}
-            selectedStartup={selectedStartup}
-            onSelectStartup={(startup) => setSelectedStartup(startup)}
-            onHoverStartup={(startup) => setHoveredStartup(startup)}
-            onResetFilters={handleResetFilters}
-            onExportPDF={handleExportPDF}
-          />
-        </div>
+        {/* Top Header */}
+        <Header
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+          onOpenCommandSearch={() => setIsCommandOpen(true)}
+          areas={allAreas}
+          selectedArea={selectedArea}
+          onSelectArea={setSelectedArea}
+          onToggleFilters={() => setShowFilterBar(prev => !prev)}
+          activeFilterCount={activeFilterCount}
+        />
 
-        {/* Spatial Map — right side on desktop, full on mobile */}
-        <div className="flex-1 min-h-0 relative md:h-full">
-          <StartupMap
-            startups={filteredStartups}
-            selectedStartup={selectedStartup}
-            hoveredStartup={hoveredStartup}
-            onSelectStartup={(startup) => setSelectedStartup(startup)}
-            onResetView={() => setSelectedStartup(null)}
-          />
-        </div>
-
-        {/* Mobile List Overlay — slides up over the map */}
-        <div className={`absolute inset-x-0 top-0 bottom-0 z-20 md:hidden flex flex-col transition-all duration-300 ease-out ${
-          mobileView === 'list' 
-            ? 'translate-y-0 opacity-100 pointer-events-auto'
-            : 'translate-y-full opacity-0 pointer-events-none'
-        }`}>
-          <div className="flex-1 min-h-0">
-            <StartupList
-              startups={filteredStartups}
-              selectedStartup={selectedStartup}
-              onSelectStartup={(startup) => {
-                setSelectedStartup(startup);
-                setMobileView('map');
-              }}
-              onHoverStartup={(startup) => setHoveredStartup(startup)}
-              onResetFilters={handleResetFilters}
+        {/* Extended Filter Drawer */}
+        {showFilterBar && (
+          <div className="bg-white border-b border-slate-200/80 z-30 shadow-sm animate-in fade-in slide-in-from-top-2 duration-200">
+            <FilterBar
+              sectors={allSectors}
+              areas={allAreas}
+              employeeSizes={allEmployeeSizes}
+              precisions={allPrecisions}
+              selectedSector={selectedSector}
+              setSelectedSector={setSelectedSector}
+              selectedArea={selectedArea}
+              setSelectedArea={setSelectedArea}
+              selectedEmployeeSize={selectedEmployeeSize}
+              setSelectedEmployeeSize={setSelectedEmployeeSize}
+              selectedPrecision={selectedPrecision}
+              setSelectedPrecision={setSelectedPrecision}
+              verifiedOnly={verifiedOnly}
+              setVerifiedOnly={setVerifiedOnly}
+              onClose={() => setShowFilterBar(false)}
+              onReset={handleResetFilters}
               onExportPDF={handleExportPDF}
-              mobileOverlay
-              onClose={() => setMobileView('map')}
-            />
-          </div>
-        </div>
-
-        {/* Right Details Drawer */}
-        {selectedStartup && (
-          <div className="hidden lg:block h-full z-20">
-            <StartupDetails
-              startup={selectedStartup}
-              onClose={() => setSelectedStartup(null)}
             />
           </div>
         )}
 
-      </main>
+        {/* Content Views (Map / List / Categories / Settings) */}
+        <div className="flex-1 flex min-h-0 overflow-hidden relative">
+          
+          {/* Main 3-Column View (Desktop & Mobile Map View) */}
+          <main className={`flex-1 flex min-h-0 w-full h-full relative ${
+            activeTab === 'map' || activeTab === 'startups' ? 'flex' : 'hidden'
+          }`}>
+            
+            {/* Left Directory Panel (Visible on Desktop OR Mobile List Tab) */}
+            <div className={`
+              ${activeTab === 'startups' ? 'flex w-full z-20' : 'hidden md:flex md:w-[360px] lg:w-[380px] flex-none z-20'}
+              h-full min-h-0
+            `}>
+              <StartupList
+                startups={filteredStartups}
+                selectedStartup={selectedStartup}
+                onSelectStartup={(startup) => {
+                  setSelectedStartup(startup);
+                  if (window.innerWidth < 768) {
+                    setActiveTab('map');
+                  }
+                }}
+                onHoverStartup={(startup) => setHoveredStartup(startup)}
+                selectedSector={selectedSector}
+                onSelectSector={setSelectedSector}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
+                onToggleFilters={() => setShowFilterBar(prev => !prev)}
+                onResetFilters={handleResetFilters}
+                onExportPDF={handleExportPDF}
+              />
+            </div>
 
-      {/* Mobile Floating Capsule Tab Bar */}
-      <div className="md:hidden fixed bottom-4 inset-x-0 z-50 flex justify-center pointer-events-none safe-area-bottom">
-        <div className="pointer-events-auto flex items-center bg-white/80 backdrop-blur-2xl border border-slate-200/50 rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.12)] px-1 py-1">
-          {/* Map Button */}
-          <button
-            onClick={() => setMobileView('map')}
-            className={`flex items-center gap-1.5 pl-4 pr-5 py-2.5 rounded-full transition-all duration-200 ${
-              mobileView === 'map'
-                ? 'bg-slate-900 text-white shadow-lg'
-                : 'text-slate-400 active:text-slate-600'
-            }`}
-          >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3 7l6 -3l6 3l6 -3v13l-6 3l-6 -3l-6 3z" />
-              <path d="M9 4v13" />
-              <path d="M15 7v13" />
-            </svg>
-            <span className="text-[11px] font-bold">Map</span>
-          </button>
+            {/* Spatial Map Canvas */}
+            <div className={`
+              flex-1 h-full min-h-0 relative
+              ${activeTab === 'startups' ? 'hidden md:block' : 'block'}
+            `}>
+              <StartupMap
+                startups={filteredStartups}
+                selectedStartup={selectedStartup}
+                hoveredStartup={hoveredStartup}
+                onSelectStartup={(startup) => setSelectedStartup(startup)}
+                onResetView={() => setSelectedStartup(null)}
+              />
+            </div>
 
-          {/* List Button */}
-          <button
-            onClick={() => setMobileView(prev => prev === 'list' ? 'map' : 'list')}
-            className={`flex items-center gap-1.5 pl-5 pr-4 py-2.5 rounded-full transition-all duration-200 ${
-              mobileView === 'list'
-                ? 'bg-slate-900 text-white shadow-lg'
-                : 'text-slate-400 active:text-slate-600'
-            }`}
-          >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="8" y1="6" x2="21" y2="6" />
-              <line x1="8" y1="12" x2="21" y2="12" />
-              <line x1="8" y1="18" x2="21" y2="18" />
-              <line x1="3" y1="6" x2="3.01" y2="6" />
-              <line x1="3" y1="12" x2="3.01" y2="12" />
-              <line x1="3" y1="18" x2="3.01" y2="18" />
-            </svg>
-            <span className="text-[11px] font-bold">List</span>
-          </button>
+            {/* Right Startup Details Drawer (Desktop) */}
+            {selectedStartup && (
+              <div className="hidden lg:block h-full z-30">
+                <StartupDetails
+                  startup={selectedStartup}
+                  onClose={() => setSelectedStartup(null)}
+                />
+              </div>
+            )}
+
+          </main>
+
+          {/* Categories Tab View */}
+          {activeTab === 'categories' && (
+            <div className="flex-1 h-full overflow-y-auto p-6 max-w-4xl mx-auto w-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center">
+                  <LayoutGrid className="w-5 h-5 text-sky-400" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Startup Categories</h1>
+                  <p className="text-xs text-slate-500">Explore startups by industry sector</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                {allSectors.map((sector) => (
+                  <button
+                    key={sector}
+                    onClick={() => {
+                      setSelectedSector(sector);
+                      setActiveTab('map');
+                    }}
+                    className={`p-4 rounded-2xl border text-left transition-all duration-200 ${
+                      selectedSector === sector
+                        ? 'bg-slate-900 text-white border-slate-900 shadow-md'
+                        : 'bg-white border-slate-200/80 text-slate-800 hover:border-slate-300 hover:shadow-sm'
+                    }`}
+                  >
+                    <span className="font-bold text-sm block">{sector}</span>
+                    <span className="text-xs text-slate-400 font-medium mt-1 block">
+                      {rawStartups.filter(s => s.sector === sector).length} startups
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Settings Tab View */}
+          {activeTab === 'settings' && (
+            <div className="flex-1 h-full overflow-y-auto p-6 max-w-3xl mx-auto w-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center">
+                  <Settings className="w-5 h-5 text-sky-400" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Settings & Preferences</h1>
+                  <p className="text-xs text-slate-500">Startup Discovery Platform Options</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl border border-slate-200/80 p-6 space-y-6">
+                <div>
+                  <h3 className="font-bold text-sm text-slate-900 mb-1">Data Overview</h3>
+                  <p className="text-xs text-slate-500">Total active database records in Bengaluru ecosystem.</p>
+                  <div className="mt-3 grid grid-cols-3 gap-3 text-center">
+                    <div className="bg-slate-50 border border-slate-100 p-3 rounded-2xl">
+                      <span className="text-[10px] font-bold text-slate-400 uppercase block">Total Startups</span>
+                      <span className="text-base font-extrabold text-slate-900">{rawStartups.length}</span>
+                    </div>
+                    <div className="bg-slate-50 border border-slate-100 p-3 rounded-2xl">
+                      <span className="text-[10px] font-bold text-slate-400 uppercase block">Unique Sectors</span>
+                      <span className="text-base font-extrabold text-slate-900">{allSectors.length}</span>
+                    </div>
+                    <div className="bg-slate-50 border border-slate-100 p-3 rounded-2xl">
+                      <span className="text-[10px] font-bold text-slate-400 uppercase block">Unique Areas</span>
+                      <span className="text-base font-extrabold text-slate-900">{allAreas.length}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t border-slate-100 pt-5">
+                  <h3 className="font-bold text-sm text-slate-900 mb-1">Export Data</h3>
+                  <p className="text-xs text-slate-500 mb-3">Download the current filtered dataset as a PDF directory document.</p>
+                  <button
+                    onClick={handleExportPDF}
+                    className="px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition-colors shadow-sm"
+                  >
+                    Export Directory PDF
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
+
+        {/* Mobile Bottom Navigation Bar */}
+        <MobileNav
+          activeTab={activeTab === 'startups' ? 'list' : activeTab}
+          setActiveTab={(tab) => {
+            if (tab === 'list') {
+              setActiveTab('startups');
+            } else {
+              setActiveTab(tab);
+            }
+          }}
+        />
+
       </div>
 
       {/* Mobile Touch Bottom Sheet */}
@@ -262,7 +300,10 @@ export default function Home() {
         isOpen={isCommandOpen}
         onClose={() => setIsCommandOpen(false)}
         startups={rawStartups}
-        onSelectStartup={(startup) => setSelectedStartup(startup)}
+        onSelectStartup={(startup) => {
+          setSelectedStartup(startup);
+          setActiveTab('map');
+        }}
       />
 
     </div>

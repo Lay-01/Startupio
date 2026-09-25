@@ -1,0 +1,3434 @@
+[
+  {
+    "name": "Apna",
+    "category": null,
+    "website": "https://apna.co",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Ather Energy",
+    "category": null,
+    "website": "https://www.atherenergy.com",
+    "location": "IBC Internal Rd"
+  },
+  {
+    "name": "Bellatrix Aerospace",
+    "category": null,
+    "website": "https://bellatrix.aero",
+    "location": "opposite to BDA Head Office, Sankey Rd"
+  },
+  {
+    "name": "BYJU'S (Think & Learn)",
+    "category": null,
+    "website": "https://byjus.com",
+    "location": "Vijayanagar"
+  },
+  {
+    "name": "Capillary Technologies",
+    "category": null,
+    "website": "https://www.capillarytech.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Cred",
+    "category": null,
+    "website": "https://cred.club",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Darwinbox",
+    "category": null,
+    "website": "https://darwinbox.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Decentro",
+    "category": null,
+    "website": "https://decentro.tech",
+    "location": "Shri Krishna Temple Rd"
+  },
+  {
+    "name": "Digantara",
+    "category": null,
+    "website": "https://www.digantara.co.in",
+    "location": "Hebbal"
+  },
+  {
+    "name": "Fi (epiFi)",
+    "category": null,
+    "website": "https://fi.money",
+    "location": "Brookefield"
+  },
+  {
+    "name": "Euler Motors",
+    "category": null,
+    "website": "https://www.eulermotors.com/en/",
+    "location": "Rajajinagar"
+  },
+  {
+    "name": "Exotel",
+    "category": null,
+    "website": "https://exotel.com",
+    "location": "Domlur"
+  },
+  {
+    "name": "Flipkart",
+    "category": null,
+    "website": "https://www.flipkart.com",
+    "location": "Outer Ring Road"
+  },
+  {
+    "name": "Great Learning",
+    "category": null,
+    "website": "https://www.mygreatlearning.com",
+    "location": "Somasundarapalya Main Rd"
+  },
+  {
+    "name": "Groww",
+    "category": null,
+    "website": "https://groww.in",
+    "location": "Sarjapur - Marathahalli Rd"
+  },
+  {
+    "name": "HackerEarth",
+    "category": null,
+    "website": "https://www.hackerearth.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Hasura",
+    "category": null,
+    "website": "https://hasura.io",
+    "location": "Koramangala"
+  },
+  {
+    "name": "InnAccel Technologies",
+    "category": null,
+    "website": "https://innaccel.com/",
+    "location": "Raja Ram Mohan Roy Rd"
+  },
+  {
+    "name": "Juspay",
+    "category": null,
+    "website": "https://juspay.io",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Khatabook",
+    "category": null,
+    "website": "https://khatabook.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Krutrim (Krutrim SI Designs)",
+    "category": null,
+    "website": "https://www.olakrutrim.com/",
+    "location": "Vidyaranyapura"
+  },
+  {
+    "name": "LeadSquared",
+    "category": null,
+    "website": "https://www.leadsquared.com",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Leap Scholar",
+    "category": null,
+    "website": "http://ls.leapscholar.com/gmb",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "M2P Fintech",
+    "category": null,
+    "website": "https://m2pfintech.com/",
+    "location": "near CMR University"
+  },
+  {
+    "name": "MFine",
+    "category": null,
+    "website": "https://www.mfine.co/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Myntra",
+    "category": null,
+    "website": "https://www.myntra.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Niramai Health Analytix",
+    "category": null,
+    "website": "https://www.niramai.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Niyo",
+    "category": null,
+    "website": "https://www.goniyo.com",
+    "location": "Dickenson Rd"
+  },
+  {
+    "name": "NoBroker",
+    "category": null,
+    "website": "https://www.nobroker.in/",
+    "location": "Sarjapur Main Rd"
+  },
+  {
+    "name": "Observe.AI",
+    "category": null,
+    "website": "https://www.observe.ai/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "OkCredit",
+    "category": null,
+    "website": "https://okcredit.in",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Ola (ANI Technologies)",
+    "category": null,
+    "website": "https://www.olacabs.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Pixxel",
+    "category": null,
+    "website": "https://www.pixxel.space",
+    "location": "Chinmaya Mission Hospital Rd"
+  },
+  {
+    "name": "PlaySimple Games",
+    "category": null,
+    "website": "https://playsimple.in/",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Porter",
+    "category": null,
+    "website": "https://porter.in",
+    "location": "opp. Vijaya bank"
+  },
+  {
+    "name": "Postman",
+    "category": null,
+    "website": "https://www.postman.com",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Practo",
+    "category": null,
+    "website": "https://www.practo.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Rapido",
+    "category": null,
+    "website": "https://rapido.bike",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Razorpay",
+    "category": null,
+    "website": "https://razorpay.com",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Sarvam AI",
+    "category": null,
+    "website": "https://www.sarvam.ai",
+    "location": "Chinmaya Mission Hospital Rd"
+  },
+  {
+    "name": "Setu",
+    "category": null,
+    "website": "https://setu.co",
+    "location": "Vasanth Nagar"
+  },
+  {
+    "name": "Signzy",
+    "category": null,
+    "website": "https://www.signzy.com",
+    "location": "BTM Layout"
+  },
+  {
+    "name": "SigTuple",
+    "category": null,
+    "website": "https://www.sigtuple.com/",
+    "location": "near Sai Baba Temple, Hosur Rd"
+  },
+  {
+    "name": "Simple Energy",
+    "category": null,
+    "website": "https://www.simpleenergy.in/",
+    "location": "Yelahanka"
+  },
+  {
+    "name": "Simplilearn",
+    "category": null,
+    "website": "https://www.simplilearn.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "String Bio",
+    "category": null,
+    "website": "https://www.stringbio.com/",
+    "location": "Tumkur Rd"
+  },
+  {
+    "name": "Swiggy",
+    "category": null,
+    "website": "https://www.swiggy.com",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Udaan",
+    "category": null,
+    "website": "https://udaan.com",
+    "location": "Bellandur"
+  },
+  {
+    "name": "Ultraviolette Automotive",
+    "category": null,
+    "website": "https://www.ultraviolette.com",
+    "location": "Jigani"
+  },
+  {
+    "name": "Unacademy",
+    "category": null,
+    "website": "https://unacademy.com",
+    "location": "Lane Road"
+  },
+  {
+    "name": "Vedantu",
+    "category": null,
+    "website": "https://www.vedantu.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Wakefit",
+    "category": null,
+    "website": "https://www.wakefit.co",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Whatfix",
+    "category": null,
+    "website": "https://whatfix.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Yellow.ai",
+    "category": null,
+    "website": "https://yellow.ai",
+    "location": "ITPL Main Rd"
+  },
+  {
+    "name": "Yulu",
+    "category": null,
+    "website": "https://www.yulu.bike",
+    "location": "Bellandur"
+  },
+  {
+    "name": "Zerodha",
+    "category": null,
+    "website": "https://zerodha.com",
+    "location": "opp. Clarence Public School"
+  },
+  {
+    "name": "ZETWERK",
+    "category": null,
+    "website": "https://www.zetwerk.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Zolve",
+    "category": null,
+    "website": "https://www.zolve.com/",
+    "location": "RMZ Ecoworld Rd"
+  },
+  {
+    "name": "3D Printing Innovation Lab",
+    "category": null,
+    "website": "https://3d-printing-innovation.grexa.site/",
+    "location": null
+  },
+  {
+    "name": "5C Network",
+    "category": null,
+    "website": "https://www.5cnetwork.com/#/home",
+    "location": "BTM Layout"
+  },
+  {
+    "name": "9Pic AI",
+    "category": null,
+    "website": "https://9pic.ai",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Aadyah Aerospace",
+    "category": null,
+    "website": "http://www.aadyah.com/",
+    "location": "Old Madras Rd"
+  },
+  {
+    "name": "Aays",
+    "category": null,
+    "website": "https://www.aaysanalytics.com/",
+    "location": "next to Chaayos"
+  },
+  {
+    "name": "Accio Robotics",
+    "category": null,
+    "website": "http://acciorobotics.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Acharya Food Products",
+    "category": null,
+    "website": "https://www.acharyafoodproducts.com/",
+    "location": "Rajajinagar"
+  },
+  {
+    "name": "AchieversIT",
+    "category": null,
+    "website": "https://achieversit.com",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "AchyutDigital",
+    "category": null,
+    "website": "https://www.achyutdigital.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Acko",
+    "category": null,
+    "website": "https://www.acko.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Aditya birla capital",
+    "category": null,
+    "website": "https://branches.adityabirlacapital.com/aditya-birla-finance-ltd-victoria-layout-loan-agency-victoria-layout-bengaluru-100492/Home",
+    "location": "near Bank Of Baroda, Victoria Rd"
+  },
+  {
+    "name": "Advisou",
+    "category": null,
+    "website": "https://advisou.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Agilitas",
+    "category": null,
+    "website": "http://agilitas.in/",
+    "location": "Marathahalli Main Rd"
+  },
+  {
+    "name": "AgriHawk Technologies",
+    "category": null,
+    "website": "http://www.fyllo.in/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "AI Company India",
+    "category": null,
+    "website": "https://aicompanyindia.com/",
+    "location": "Brookefield"
+  },
+  {
+    "name": "Aiepoch Technologies",
+    "category": null,
+    "website": "https://www.aiepoch.ai/",
+    "location": null
+  },
+  {
+    "name": "AIX Connect",
+    "category": null,
+    "website": "http://www.airasia.com/in/en/home.page",
+    "location": "opposite Niligiris, Brigade Rd"
+  },
+  {
+    "name": "Air Pegasus",
+    "category": null,
+    "website": "http://www.airpegasus.in/",
+    "location": "Mahatma Gandhi Rd"
+  },
+  {
+    "name": "Akoi Marketing HUB",
+    "category": null,
+    "website": "https://www.akoi.in/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Akshayakalpa Organic",
+    "category": null,
+    "website": "https://akshayakalpa.org/",
+    "location": "near Esteem Enclave, Arekere Main Rd"
+  },
+  {
+    "name": "Algorithmic Biologics",
+    "category": null,
+    "website": "https://algorithmicbiologics.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Allengers Medical Systems",
+    "category": null,
+    "website": "https://www.allengers.com/",
+    "location": "Rajajinagar"
+  },
+  {
+    "name": "AllGoVision",
+    "category": null,
+    "website": "http://www.allgovision.com/",
+    "location": "Paramahansa Yogananda Rd"
+  },
+  {
+    "name": "Alt Carbon",
+    "category": null,
+    "website": "https://altcarbon.com/",
+    "location": "Malleshwaram"
+  },
+  {
+    "name": "Altigreen Propulsion Labs",
+    "category": null,
+    "website": "https://altigreen.com/",
+    "location": "Euro School Rd"
+  },
+  {
+    "name": "AMCI Edtech",
+    "category": null,
+    "website": "https://www.amciedtech.com/",
+    "location": null
+  },
+  {
+    "name": "Amoris",
+    "category": null,
+    "website": "https://amoris.ueniweb.com/?utm_campaign=gmb",
+    "location": null
+  },
+  {
+    "name": "ANSCER ROBOTICS",
+    "category": null,
+    "website": "https://anscer.com/",
+    "location": "Tavarekere Main Rd"
+  },
+  {
+    "name": "AppsForBharat",
+    "category": null,
+    "website": "https://appsforbharat.com/",
+    "location": "opposite VELS Global School"
+  },
+  {
+    "name": "Appstix Technologies",
+    "category": null,
+    "website": "https://appsele.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Artha Group",
+    "category": null,
+    "website": "http://www.arthaproperty.com/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Articulus Surgical",
+    "category": null,
+    "website": "https://www.articulussurgical.com/",
+    "location": "Service Rd"
+  },
+  {
+    "name": "Aryaka",
+    "category": null,
+    "website": "https://www.aryaka.com/",
+    "location": "Sarjapur - Marathahalli Rd"
+  },
+  {
+    "name": "Asper AI",
+    "category": null,
+    "website": "https://asper.ai/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Aspire Proptech",
+    "category": null,
+    "website": "http://www.aspireprop.com/",
+    "location": "N Park Rd"
+  },
+  {
+    "name": "Asteria Aerospace",
+    "category": null,
+    "website": "https://asteria.co.in",
+    "location": "Yelahanka"
+  },
+  {
+    "name": "Astrome Technologies",
+    "category": null,
+    "website": "https://astrome.co",
+    "location": "Tumkur Rd"
+  },
+  {
+    "name": "Atla HRT",
+    "category": null,
+    "website": "https://atlashrt.in/",
+    "location": "Benson A Cross Rd"
+  },
+  {
+    "name": "ATOM8 Robotic Labs",
+    "category": null,
+    "website": "https://www.atom8.ai/",
+    "location": "Subbarama Chetty Road"
+  },
+  {
+    "name": "Atomicwork",
+    "category": null,
+    "website": "https://www.atomicwork.com/",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Aujas Networks",
+    "category": null,
+    "website": "http://www.aujas.com",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "AutoGrid",
+    "category": null,
+    "website": "http://www.auto-grid.com/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Aten Porus Lifesciences",
+    "category": null,
+    "website": "https://www.atenporus.com/",
+    "location": "Devarachikkanahalli Main Rd"
+  },
+  {
+    "name": "Avataar.AI",
+    "category": null,
+    "website": "https://avataar.ai/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Axesmap Drone Surveys",
+    "category": null,
+    "website": "https://axesmap.com/",
+    "location": "opp. Sri Chaithanya PU College, Ullal Main Rd"
+  },
+  {
+    "name": "Ayana Renewable Power",
+    "category": null,
+    "website": "https://ayanapower.com/",
+    "location": "Dr Rajkumar Rd"
+  },
+  {
+    "name": "Ayu Health",
+    "category": null,
+    "website": "https://ayu.health/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Azira",
+    "category": null,
+    "website": "http://azira.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Azooka Labs",
+    "category": null,
+    "website": "https://azooka.life/",
+    "location": "Peenya"
+  },
+  {
+    "name": "Azurite Edutech",
+    "category": null,
+    "website": "https://azurite.world/",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "B2B SALES ARROW",
+    "category": null,
+    "website": "http://b2bsalesarrow.com/",
+    "location": "Neeladri Rd"
+  },
+  {
+    "name": "Baaz",
+    "category": null,
+    "website": "https://baaz.pro",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Benaka Gold Company",
+    "category": null,
+    "website": "https://www.benakagoldcompany.com",
+    "location": "opp. Netkalappa Circle, Subbarama Chetty Rd"
+  },
+  {
+    "name": "Berht Robotics",
+    "category": null,
+    "website": "http://www.berhtrobotics.com/",
+    "location": "next to Sri Sathya Sai Group of institutions, Kachohalli Main Rd"
+  },
+  {
+    "name": "BetterPlace",
+    "category": null,
+    "website": "https://www.betterplace.co.in/",
+    "location": "Mahatma Gandhi Rd"
+  },
+  {
+    "name": "BigHaat",
+    "category": null,
+    "website": "https://www.bighaat.com/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "BimaKavach",
+    "category": null,
+    "website": "https://www.bimakavach.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Binbag",
+    "category": null,
+    "website": "http://www.binbag.in/",
+    "location": "near Viva Toyota, Mysore Rd"
+  },
+  {
+    "name": "Biokart Genomics Lab",
+    "category": null,
+    "website": "http://www.biokart.com/",
+    "location": "B.Channasandra Main Rd"
+  },
+  {
+    "name": "Biomoneta Research",
+    "category": null,
+    "website": "https://biomoneta.com/",
+    "location": "Railway Parallel Rd"
+  },
+  {
+    "name": "BIOPOWER",
+    "category": null,
+    "website": "http://biopower.co.in/",
+    "location": "HRBR Layout"
+  },
+  {
+    "name": "Biorad Medisys",
+    "category": null,
+    "website": "https://www.bioradmedisys.com/",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "Bizom (Mobisy Technologies)",
+    "category": null,
+    "website": "https://bizom.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "BlackBuck (Zinka Logistics)",
+    "category": null,
+    "website": "https://www.blackbuck.com/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "BLEND VIDYA ED TECH COMPANY",
+    "category": null,
+    "website": "http://www.blendvidya.in/",
+    "location": "near kalamandir"
+  },
+  {
+    "name": "BlissClub",
+    "category": null,
+    "website": "https://blissclub.com",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Bloombuz Media",
+    "category": null,
+    "website": "https://bloombuz.co/",
+    "location": "HRBR Layout"
+  },
+  {
+    "name": "Blue Yonder",
+    "category": null,
+    "website": "https://blueyonder.com/",
+    "location": "near Sakra World Hospital, Outer Ring Rd"
+  },
+  {
+    "name": "Boldfit",
+    "category": null,
+    "website": "https://boldfit.in",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "Bolna",
+    "category": null,
+    "website": "https://www.bolna.ai/",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Bolt.Earth (formerly RevOS)",
+    "category": null,
+    "website": "https://bolt.earth/",
+    "location": "opposite Kalyan Jewellery"
+  },
+  {
+    "name": "Botaxis Robotics AND Automation",
+    "category": null,
+    "website": "http://www.botaxis.in/",
+    "location": "Nagarbhavi"
+  },
+  {
+    "name": "Brandhero Design",
+    "category": null,
+    "website": "https://www.brandhero.design",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Brand Scale Up",
+    "category": null,
+    "website": "https://www.brandscaleupinc.com/",
+    "location": "Kalyan Nagar"
+  },
+  {
+    "name": "Brands of Bharat",
+    "category": null,
+    "website": "https://www.brandsofbharat.in/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Brick&Bolt",
+    "category": null,
+    "website": "https://www.bricknbolt.com/",
+    "location": "near Dhanalakshmi Bank"
+  },
+  {
+    "name": "Silver Crafts",
+    "category": null,
+    "website": "http://brindavansilvercrafts.com/",
+    "location": "Crescent Rd"
+  },
+  {
+    "name": "Buddy Loan",
+    "category": null,
+    "website": "https://www.buddyloan.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Bugworks Research",
+    "category": null,
+    "website": "https://bugworksresearch.com/",
+    "location": "Bellary Rd"
+  },
+  {
+    "name": "California Burrito",
+    "category": null,
+    "website": "https://www.californiaburrito.in/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Cambrian Bioworks",
+    "category": null,
+    "website": "http://www.cambrianbioworks.com/",
+    "location": "Peenya"
+  },
+  {
+    "name": "Captain Fresh",
+    "category": null,
+    "website": "https://captainfresh.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Cardiotrack (Uber Diagnostics)",
+    "category": null,
+    "website": "https://www.cardiotrack.io/",
+    "location": "Nagarbhavi"
+  },
+  {
+    "name": "Cargopandalogistics",
+    "category": null,
+    "website": "https://www.cargopandalogistics.in/",
+    "location": null
+  },
+  {
+    "name": "Cashfree Payments",
+    "category": null,
+    "website": "https://www.cashfree.com",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Centricity Wealth Tech",
+    "category": null,
+    "website": "https://centricity.co.in/",
+    "location": "MG Road"
+  },
+  {
+    "name": "CFO Angle Advisory Services LLP",
+    "category": null,
+    "website": "https://cfoangle.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "CHANVI FARMS",
+    "category": null,
+    "website": "https://chanvifarms-site.onrender.com/shop",
+    "location": "Kasavanahalli"
+  },
+  {
+    "name": "Chiplogic Technologies",
+    "category": null,
+    "website": "http://www.chiplogictech.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Wingman / Clari Copilot",
+    "category": null,
+    "website": "https://www.clari.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Cloudphysician",
+    "category": null,
+    "website": "https://cloudphysician.ai",
+    "location": "Bellary Rd"
+  },
+  {
+    "name": "CloudSEK",
+    "category": null,
+    "website": "https://www.cloudsek.com",
+    "location": "Cambridge Rd"
+  },
+  {
+    "name": "Clover Ventures",
+    "category": null,
+    "website": "http://cloverventures.in/",
+    "location": "Margosa Rd"
+  },
+  {
+    "name": "Cogxar Research and Solutions",
+    "category": null,
+    "website": "http://cogxar.com/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "CoinSwitch",
+    "category": null,
+    "website": "https://coinswitch.co/",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Colive",
+    "category": null,
+    "website": "https://www.colive.com/",
+    "location": "behind RR layout"
+  },
+  {
+    "name": "Colormyles",
+    "category": null,
+    "website": "https://lifekrafts.com",
+    "location": "Basavanapura Main Rd"
+  },
+  {
+    "name": "Commonfloor.com",
+    "category": null,
+    "website": "https://www.commonfloor.com/",
+    "location": "HAL"
+  },
+  {
+    "name": "Confident Group of Companies",
+    "category": null,
+    "website": "https://www.confident-group.com/",
+    "location": "Brigade Rd"
+  },
+  {
+    "name": "CoRover.ai",
+    "category": null,
+    "website": "https://corover.ai/",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Crea Network",
+    "category": null,
+    "website": "https://creanetwork.in/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Create and Commerce",
+    "category": null,
+    "website": "https://createandcommerce.com/",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Cropin",
+    "category": null,
+    "website": "https://www.cropin.com/",
+    "location": "BTM Layout"
+  },
+  {
+    "name": "Cuemath",
+    "category": null,
+    "website": "https://www.cuemath.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Curefoods",
+    "category": null,
+    "website": "https://www.curefoods.in",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Cyberei Technologies",
+    "category": null,
+    "website": "https://www.cyberei.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Cyberpwn Technologies",
+    "category": null,
+    "website": "http://cyberpwn.com/",
+    "location": "next to HSR Fly Over"
+  },
+  {
+    "name": "Cyber Security Hive",
+    "category": null,
+    "website": "https://www.cybersecurityhive.com/",
+    "location": "Adugodi"
+  },
+  {
+    "name": "iTuring.ai",
+    "category": null,
+    "website": "https://ituring.ai/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Cybrilla",
+    "category": null,
+    "website": "https://cybrilla.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "CynLr (Cybernetics Laboratory)",
+    "category": null,
+    "website": "https://www.cynlr.com",
+    "location": "opp. Sathya Sai Baba hospital"
+  },
+  {
+    "name": "DaMENSCH",
+    "category": null,
+    "website": "https://damensch.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "DarkRelay Security Labs",
+    "category": null,
+    "website": "https://www.darkrelay.com/",
+    "location": "Domlur"
+  },
+  {
+    "name": "Dashverse (Dashtoon)",
+    "category": null,
+    "website": "https://dashverse.ai/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "DaveAI",
+    "category": null,
+    "website": "https://www.iamdave.ai/",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "Day One Technologies",
+    "category": null,
+    "website": "https://www.day1tech.com/",
+    "location": "BTM Layout"
+  },
+  {
+    "name": "Dealshare",
+    "category": null,
+    "website": "https://dealshare.in",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "DermisLove Cosmetics",
+    "category": null,
+    "website": "https://dermislove.com/",
+    "location": null
+  },
+  {
+    "name": "DesignCafe",
+    "category": null,
+    "website": "https://www.designcafe.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Dexler Energy",
+    "category": null,
+    "website": "http://www.dexlerenergy.com/",
+    "location": "Tavarekere Main Rd"
+  },
+  {
+    "name": "Dexterity Edtech",
+    "category": null,
+    "website": "http://dexterityglobal.in/",
+    "location": "Global Village Rd"
+  },
+  {
+    "name": "Dhoond",
+    "category": null,
+    "website": "https://dhoond.co",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Diabetacare",
+    "category": null,
+    "website": "http://diabetacare.com/",
+    "location": "Inner Road"
+  },
+  {
+    "name": "Digital Craft",
+    "category": null,
+    "website": "https://www.giftsco.in",
+    "location": "near SJR Eastwood, Haralur Main Rd"
+  },
+  {
+    "name": "Digitap.ai",
+    "category": null,
+    "website": "https://www.digitap.ai/",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Doppelio Technologies",
+    "category": null,
+    "website": "https://doppelio.com/",
+    "location": "Rajarajeshwari Nagar"
+  },
+  {
+    "name": "Doqfy —",
+    "category": null,
+    "website": "https://doqfy.in",
+    "location": "Basavanagar Main Rd"
+  },
+  {
+    "name": "Draconic",
+    "category": null,
+    "website": "https://draconic.ai",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Droneer",
+    "category": null,
+    "website": "http://droneer.co/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "Drone Part Store",
+    "category": null,
+    "website": "http://www.dronepartstore.com/",
+    "location": "Rajajinagar"
+  },
+  {
+    "name": "Drones Applied",
+    "category": null,
+    "website": "http://www.dronesapplied.com/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Drools",
+    "category": null,
+    "website": "https://www.drools.in",
+    "location": "near Transworld"
+  },
+  {
+    "name": "Ducom Aerospace",
+    "category": null,
+    "website": "http://www.ducom-aerospace.com/",
+    "location": "Peenya"
+  },
+  {
+    "name": "EDALL SYSTEMS",
+    "category": null,
+    "website": "https://www.edallsystems.com/",
+    "location": "HAL"
+  },
+  {
+    "name": "EdgeVerve Systems",
+    "category": null,
+    "website": "https://www.edgeverve.com/",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Edify Club",
+    "category": null,
+    "website": "https://edify.club",
+    "location": "Hosa Rd"
+  },
+  {
+    "name": "Eka Care",
+    "category": null,
+    "website": "https://www.eka.care",
+    "location": "Mahadevapura"
+  },
+  {
+    "name": "Ekfrazo Technologies",
+    "category": null,
+    "website": "https://ekfrazo.com",
+    "location": "Railway Parallel Rd"
+  },
+  {
+    "name": "ElectricPe Corporate Office",
+    "category": null,
+    "website": "https://electricpe.com",
+    "location": "opp. Max"
+  },
+  {
+    "name": "Eli Lilly",
+    "category": null,
+    "website": "http://www.lilly.com/",
+    "location": "Embassy Tech Village Rd"
+  },
+  {
+    "name": "eLitmus",
+    "category": null,
+    "website": "https://www.elitmus.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Eloelo",
+    "category": null,
+    "website": "https://eloelo.in/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Elxion E-waste Recycling",
+    "category": null,
+    "website": "http://www.elxion.in/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "Embibe",
+    "category": null,
+    "website": "https://www.embibe.com",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Embrace Innovations",
+    "category": null,
+    "website": "http://embraceglobal.org/",
+    "location": "Richmond Town"
+  },
+  {
+    "name": "Emmvee",
+    "category": null,
+    "website": "https://emmvee.com/",
+    "location": "International Airport Road"
+  },
+  {
+    "name": "EMO.energy",
+    "category": null,
+    "website": "https://www.emoenergy.in/",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "Enerzolve Smart Technologies",
+    "category": null,
+    "website": "https://enerzolve.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Enterpret",
+    "category": null,
+    "website": "http://www.enterpret.com/",
+    "location": "Mahadevapura"
+  },
+  {
+    "name": "Entropik",
+    "category": null,
+    "website": "https://www.entropik.io",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Epicure Robotics",
+    "category": null,
+    "website": "http://epicurerobotics.com/",
+    "location": "Doddanagamangala Rd"
+  },
+  {
+    "name": "eShipz",
+    "category": null,
+    "website": "https://eshipz.com/",
+    "location": "Hebbal"
+  },
+  {
+    "name": "Ethereal Machines",
+    "category": null,
+    "website": "https://etherealmachines.com",
+    "location": "Tumkur Rd"
+  },
+  {
+    "name": "e-TRNL Energy",
+    "category": null,
+    "website": "https://www.e-trnl.energy",
+    "location": "Mahadevapura"
+  },
+  {
+    "name": "Evenflow Brands",
+    "category": null,
+    "website": "https://evenflowbrands.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Even Healthcare",
+    "category": null,
+    "website": "https://www.even.in/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Evoride Motors",
+    "category": null,
+    "website": "http://www.evoride.in/",
+    "location": "near Sumanahalli Flyover"
+  },
+  {
+    "name": "Excellential Consulting Services",
+    "category": null,
+    "website": "https://www.excellential.com",
+    "location": "Brookefield"
+  },
+  {
+    "name": "Exponent Energy",
+    "category": null,
+    "website": "https://www.exponent.energy/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "FamPay (FamApp)",
+    "category": null,
+    "website": "https://famapp.in",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Farmitopia",
+    "category": null,
+    "website": "http://www.farmitopia.com/",
+    "location": "Dr.Vishnuvardhan Rd"
+  },
+  {
+    "name": "Fasal (Wolkus Technology Solutions)",
+    "category": null,
+    "website": "https://fasal.co/",
+    "location": "Main Road"
+  },
+  {
+    "name": "Fat Rabbit Productions",
+    "category": null,
+    "website": "https://www.fatrabbitproductions.com/",
+    "location": "Sahakar Nagar"
+  },
+  {
+    "name": "Felis Creations",
+    "category": null,
+    "website": "http://felis.in",
+    "location": "Ground Floor 14th Cross Road"
+  },
+  {
+    "name": "Fibr AI (SeamlessAI Softtech",
+    "category": null,
+    "website": "https://fibr.ai/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "FinBox",
+    "category": null,
+    "website": "https://finbox.in",
+    "location": "Bellandur"
+  },
+  {
+    "name": "FirstClub",
+    "category": null,
+    "website": "https://www.firstclub.co.in/",
+    "location": "Sarjapur Main Rd"
+  },
+  {
+    "name": "Floworks",
+    "category": null,
+    "website": "https://floworks.ai/",
+    "location": "opposite to NIFT"
+  },
+  {
+    "name": "Foradian",
+    "category": null,
+    "website": "http://www.foradian.com/",
+    "location": "Somasundarapalya Main Rd"
+  },
+  {
+    "name": "Fortunesoft IT Innovations",
+    "category": null,
+    "website": "https://www.fortunesoftit.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Forus Health",
+    "category": null,
+    "website": "https://forushealth.com/",
+    "location": "Banashankari"
+  },
+  {
+    "name": "Fracktal Works",
+    "category": null,
+    "website": "https://fracktal.in/",
+    "location": "near Old Police Chowky, Laggere Main Rd"
+  },
+  {
+    "name": "Fractal Analytics",
+    "category": null,
+    "website": "https://fractal.ai/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "FreshMenu",
+    "category": null,
+    "website": "https://www.freshmenu.com/",
+    "location": "Shri Krishna Temple Rd"
+  },
+  {
+    "name": "FreshToHome",
+    "category": null,
+    "website": "https://www.freshtohome.com",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "FTD Automation",
+    "category": null,
+    "website": "http://www.ftdautomation.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Furlenco",
+    "category": null,
+    "website": "https://www.furlenco.com/",
+    "location": "near Silk Board Junction"
+  },
+  {
+    "name": "Fymble",
+    "category": null,
+    "website": "https://fymble.app/",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "GalaxEye Space",
+    "category": null,
+    "website": "https://galaxeye.space",
+    "location": "Devanahalli"
+  },
+  {
+    "name": "Gameberry Labs",
+    "category": null,
+    "website": "https://gameberrylabs.com/",
+    "location": "Bellandur"
+  },
+  {
+    "name": "Gameskraft",
+    "category": null,
+    "website": "https://gameskraft.com/",
+    "location": "Prestige Tech Park Rd"
+  },
+  {
+    "name": "Game Theory —",
+    "category": null,
+    "website": "https://gametheory.in",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Geektrust",
+    "category": null,
+    "website": "https://www.geektrust.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Genei Laboratories",
+    "category": null,
+    "website": "http://www.geneilabs.com/",
+    "location": "near SRS Road, College Road"
+  },
+  {
+    "name": "General Aeronautics",
+    "category": null,
+    "website": "https://www.generalaeronautics.com",
+    "location": null
+  },
+  {
+    "name": "Genex Space",
+    "category": null,
+    "website": "http://genex.space/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Genser Aerospace & IT",
+    "category": null,
+    "website": "http://www.genser.com/",
+    "location": "Palace Rd"
+  },
+  {
+    "name": "Geo Seasonal Exports",
+    "category": null,
+    "website": "https://www.geoseasonalexports.com/",
+    "location": "Sahakar Nagar"
+  },
+  {
+    "name": "Giva",
+    "category": null,
+    "website": "https://www.giva.co",
+    "location": "Church Street"
+  },
+  {
+    "name": "Glance (InMobi)",
+    "category": null,
+    "website": "https://glance.com",
+    "location": "Kadubeesanahalli"
+  },
+  {
+    "name": "Global Bioscience Solutions",
+    "category": null,
+    "website": "https://globalbiosciencesolution.com",
+    "location": "Rajajinagar"
+  },
+  {
+    "name": "Globaldata plc",
+    "category": null,
+    "website": "https://www.aipalette.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Gnani.ai",
+    "category": null,
+    "website": "https://www.gnani.ai/",
+    "location": "Rashtriya Vidyalaya Rd"
+  },
+  {
+    "name": "Go Digit General Insurance",
+    "category": null,
+    "website": "https://www.godigit.com",
+    "location": "Andrahalli Main Rd"
+  },
+  {
+    "name": "Gopalan Aerospace India",
+    "category": null,
+    "website": "http://www.gopalanaerospace.com/",
+    "location": "Hoskote"
+  },
+  {
+    "name": "GOSUPER EDTECH",
+    "category": null,
+    "website": "http://gosuperedtech.com/",
+    "location": "Electronic City"
+  },
+  {
+    "name": "GoWhey",
+    "category": null,
+    "website": "https://gowhey.in/",
+    "location": "Basavanagudi"
+  },
+  {
+    "name": "GROx Technologies",
+    "category": null,
+    "website": "https://www.groxmoney.com/",
+    "location": "Thimmaiah Rd"
+  },
+  {
+    "name": "HackerRank",
+    "category": null,
+    "website": "https://www.hackerrank.com/",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Happiest Minds Technologies",
+    "category": null,
+    "website": "https://www.happiestminds.com/",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Hasiru Dala Innovations",
+    "category": null,
+    "website": "https://hasirudalainnovations.com/",
+    "location": "next to McDonalds drive thru, Kasturba Rd"
+  },
+  {
+    "name": "Headrun",
+    "category": null,
+    "website": "http://www.headrun.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "HealthAsyst",
+    "category": null,
+    "website": "https://www.healthasyst.com/",
+    "location": "Palace Rd"
+  },
+  {
+    "name": "HealthifyMe",
+    "category": null,
+    "website": "https://www.healthifyme.com/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Hombale Films",
+    "category": null,
+    "website": "https://hombalefilms.com/",
+    "location": "opposite to Orion Mall"
+  },
+  {
+    "name": "HomeLane",
+    "category": null,
+    "website": "https://www.homelane.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Home Medix [india] Private",
+    "category": null,
+    "website": "http://www.homemedix.in/",
+    "location": "Industrial Town Rd"
+  },
+  {
+    "name": "Honebi commerce",
+    "category": null,
+    "website": "http://honebi.com/",
+    "location": "Paramahansa Yogananda Rd"
+  },
+  {
+    "name": "Housejoy",
+    "category": null,
+    "website": "https://www.housejoy.in/",
+    "location": "near Barbeque Nation"
+  },
+  {
+    "name": "HungerBox",
+    "category": null,
+    "website": "https://hungerbox.com",
+    "location": "near 17th Cross Road"
+  },
+  {
+    "name": "SkyServe",
+    "category": null,
+    "website": "https://www.skyserve.ai",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "IamHere Software Labs",
+    "category": null,
+    "website": "https://about.iamhere.app/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "iBridge360 Edtech",
+    "category": null,
+    "website": "https://www.ibridge360.com/",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "Icount Consultancy",
+    "category": null,
+    "website": "https://icountfinancials.com/",
+    "location": "behind Mahalakshmi Layout"
+  },
+  {
+    "name": "iD Fresh Food",
+    "category": null,
+    "website": "https://www.idfreshfood.com/",
+    "location": "ITPL Main Rd"
+  },
+  {
+    "name": "iEnergytree",
+    "category": null,
+    "website": "http://www.ienergytree.com/",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "Ignomagine",
+    "category": null,
+    "website": "http://www.ignomagine.com/",
+    "location": "Banashankari"
+  },
+  {
+    "name": "Increff",
+    "category": null,
+    "website": "https://www.increff.com/",
+    "location": "Sarjapur - Marathahalli Rd"
+  },
+  {
+    "name": "Indofast Energy",
+    "category": null,
+    "website": "https://www.indofastenergy.com/",
+    "location": "Khane Rd"
+  },
+  {
+    "name": "inGO_Electric",
+    "category": null,
+    "website": "http://ingoelectric.com/",
+    "location": "Richmond Town"
+  },
+  {
+    "name": "InMobi",
+    "category": null,
+    "website": "https://www.inmobi.com",
+    "location": "Embassy Tech Square Main Rd"
+  },
+  {
+    "name": "INNOFLEXION",
+    "category": null,
+    "website": "http://www.innoflexion.com/",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "Innoviti",
+    "category": null,
+    "website": "https://innoviti.com/",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "InstaSafe",
+    "category": null,
+    "website": "https://www.instasafe.com",
+    "location": "Paramahansa Yogananda Rd"
+  },
+  {
+    "name": "Internastra Edtech",
+    "category": null,
+    "website": "https://www.internastra.com/",
+    "location": "Jyoti Nivas College Rd"
+  },
+  {
+    "name": "International Aerospace Manufacturing",
+    "category": null,
+    "website": "http://www.iampl.co.in/",
+    "location": "Bellandur"
+  },
+  {
+    "name": "Invento Robotics",
+    "category": null,
+    "website": "http://www.mitrarobot.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Iterator",
+    "category": null,
+    "website": "https://iterator.in/",
+    "location": "Ulsoor"
+  },
+  {
+    "name": "Janaadhar Constructions",
+    "category": null,
+    "website": "http://www.janaadhar.com",
+    "location": "Kensington Rd"
+  },
+  {
+    "name": "Juego Studios",
+    "category": null,
+    "website": "https://www.juegostudio.com/",
+    "location": "Kanakapura Main Rd"
+  },
+  {
+    "name": "Jumbotail",
+    "category": null,
+    "website": "https://jumbotail.com",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Kalvium",
+    "category": null,
+    "website": "https://kalvium.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Kanaka Management Services",
+    "category": null,
+    "website": "https://kms-group.com",
+    "location": "Yelahanka"
+  },
+  {
+    "name": "Kapiva",
+    "category": null,
+    "website": "https://kapiva.in/",
+    "location": "Bellandur"
+  },
+  {
+    "name": "Karnataka Renewable Energy Development",
+    "category": null,
+    "website": "https://kredl.karnataka.gov.in/english",
+    "location": "Nagarbhavi"
+  },
+  {
+    "name": "Kazam",
+    "category": null,
+    "website": "https://kazam.energy/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Keespark",
+    "category": null,
+    "website": "https://keespark.com",
+    "location": "Chandapura- Anekal Rd"
+  },
+  {
+    "name": "Kenstone Capital",
+    "category": null,
+    "website": "https://kenstonecredit.com/credit-repair-bengaluru?utm_source=gbp&utm_campaign=bengaluru",
+    "location": "Field Marshal Cariappa Rd"
+  },
+  {
+    "name": "Kiwi",
+    "category": null,
+    "website": "https://kiwi.money",
+    "location": "next to SAPNA BOOK HOUSE"
+  },
+  {
+    "name": "Krafton India",
+    "category": null,
+    "website": "https://krafton.in/",
+    "location": "Lavelle Road"
+  },
+  {
+    "name": "KreditBee",
+    "category": null,
+    "website": "https://www.kreditbee.in",
+    "location": "HAL"
+  },
+  {
+    "name": "Kreedo (Kreedo Early Childhood Solutions)",
+    "category": null,
+    "website": "https://kreedology.com",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "Krishnamurthy EdTech",
+    "category": null,
+    "website": "https://krishnamurthyedtech.com/",
+    "location": "near Gangotri Circle, Maruthi Nagar Main Rd"
+  },
+  {
+    "name": "Kritter Software Technology",
+    "category": null,
+    "website": "http://www.kritter.in/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Kryil Infotech",
+    "category": null,
+    "website": "https://www.kryil.com",
+    "location": null
+  },
+  {
+    "name": "ksham",
+    "category": null,
+    "website": "https://ksham.in",
+    "location": "Jakkur"
+  },
+  {
+    "name": "Kuvera",
+    "category": null,
+    "website": "https://kuvera.in",
+    "location": "Somasundarapalya Main Rd"
+  },
+  {
+    "name": "Kynetiq Labs",
+    "category": null,
+    "website": "https://kynetiqlabs.com",
+    "location": "near Shell Petrol Pump, Nallurhalli Main Road"
+  },
+  {
+    "name": "Lamhenow",
+    "category": null,
+    "website": "https://lamhenow.com/",
+    "location": null
+  },
+  {
+    "name": "Learnyst Insight",
+    "category": null,
+    "website": "https://bit.ly/3zx0w0V",
+    "location": "Rajarajeshwari Nagar"
+  },
+  {
+    "name": "LeRemitt",
+    "category": null,
+    "website": "https://www.leremitt.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "LetsTransport",
+    "category": null,
+    "website": "https://letstransport.in",
+    "location": "near Indian Oil Petrol Pump, Seetharampalya - Hoodi Rd"
+  },
+  {
+    "name": "Leucine",
+    "category": null,
+    "website": "https://www.leucine.io/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "LiftOff Software India",
+    "category": null,
+    "website": "http://www.liftoffllc.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "LILA Games",
+    "category": null,
+    "website": "https://www.lilagames.com/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Listable Labs",
+    "category": null,
+    "website": "https://www.listableLabs.com",
+    "location": "opp. MNK Rao Road, Dewan Madhava Rao Rd"
+  },
+  {
+    "name": "Livaah Innovations",
+    "category": null,
+    "website": "https://www.livaah.com/",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Livspace",
+    "category": null,
+    "website": "https://www.livspace.com/in/",
+    "location": "near Federal Bank"
+  },
+  {
+    "name": "Lobb",
+    "category": null,
+    "website": "https://www.lobb.in/",
+    "location": "Infantry Rd"
+  },
+  {
+    "name": "Locus",
+    "category": null,
+    "website": "https://locus.sh/",
+    "location": "Sarjapur - Marathahalli Rd"
+  },
+  {
+    "name": "Logistimo (India)",
+    "category": null,
+    "website": "http://www.logistimo.com/",
+    "location": "Residency Rd"
+  },
+  {
+    "name": "Loop Health",
+    "category": null,
+    "website": "https://www.loophealth.com/",
+    "location": "near Dhanalakshmi Bank"
+  },
+  {
+    "name": "Loopworm",
+    "category": null,
+    "website": "https://loopworm.in/",
+    "location": "Bellary Rd"
+  },
+  {
+    "name": "Lumor Technologies",
+    "category": null,
+    "website": "https://www.lumor.tech",
+    "location": "Ejipura"
+  },
+  {
+    "name": "mach33 aero",
+    "category": null,
+    "website": "http://mach33.aero/",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Magellan Aerospace India",
+    "category": null,
+    "website": "https://magellan.aero/location/magellan-aerospace-pvt-ltd/",
+    "location": "Devanahalli"
+  },
+  {
+    "name": "Mars Data Solutions",
+    "category": null,
+    "website": "http://marsdata.in/%20%20/%20When%20we%20search%20in%20Google%20as%20%22Mars%20Data%20Insights%22,%20it%20appears%20all%20headers%20the%20below%20line%20as%20%22we%20mars%20data%20have%20more%20than%208%20years%20experience%22,%20instead%20this%20words/line%20in%20the%20search%20page%20appearing,%20we%20need%20as%20it%20is%20on%20the%20website%20as%20like%20titles%20and%20the%20contents,%20please%20do%20the%20needful.%20thank%20you%20for%20your%20support.%20it%20awesome.",
+    "location": "Electronic City"
+  },
+  {
+    "name": "Masai School",
+    "category": null,
+    "website": "https://www.masaischool.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Maximl",
+    "category": null,
+    "website": "https://maximl.com/",
+    "location": "Shri Krishna Temple Rd"
+  },
+  {
+    "name": "Mayhem Studios",
+    "category": null,
+    "website": "https://mayhem-studios.com/",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Mecwin Technologies India",
+    "category": null,
+    "website": "http://www.mecwinindia.com/",
+    "location": "KG Lakkenahally Road"
+  },
+  {
+    "name": "MEDFIN Corporate Office",
+    "category": null,
+    "website": "https://www.medfin.in/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "MedGenome",
+    "category": null,
+    "website": "https://www.medgenome.com/",
+    "location": "Electronic City"
+  },
+  {
+    "name": "MediBuddy",
+    "category": null,
+    "website": "https://www.medibuddy.in/",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "Medreich r&d",
+    "category": null,
+    "website": "http://www.medreich.com/",
+    "location": "Huskur Rd"
+  },
+  {
+    "name": "Mela Ventures",
+    "category": null,
+    "website": "https://melaventures.in/",
+    "location": "Residency Rd"
+  },
+  {
+    "name": "Melorra",
+    "category": null,
+    "website": "https://www.melorra.com",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "Mensa Brands",
+    "category": null,
+    "website": "https://www.mensabrands.com",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Metastable Materials",
+    "category": null,
+    "website": "https://www.metastable.in/",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "Millory",
+    "category": null,
+    "website": "https://millory.in/",
+    "location": "Sarjapur Main Rd"
+  },
+  {
+    "name": "modulus seventeen",
+    "category": null,
+    "website": "https://modulusseventeen.com/",
+    "location": "Tavarekere Rd"
+  },
+  {
+    "name": "MoEngage",
+    "category": null,
+    "website": "https://www.moengage.com",
+    "location": "Hosur Road"
+  },
+  {
+    "name": "Mokobara",
+    "category": null,
+    "website": "https://www.mokobara.com",
+    "location": "Brigade Rd"
+  },
+  {
+    "name": "moneyHOP",
+    "category": null,
+    "website": "https://www.moneyhop.co/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Moneyview",
+    "category": null,
+    "website": "https://moneyview.in",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Moonfrog Labs",
+    "category": null,
+    "website": "https://moonfroglabs.com/",
+    "location": "Old Madras Rd"
+  },
+  {
+    "name": "Morphing Machines",
+    "category": null,
+    "website": "https://www.morphing.in",
+    "location": "Infantry Rd"
+  },
+  {
+    "name": "MosChip® Technologies",
+    "category": null,
+    "website": "https://www.moschip.com/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "MoveInSync",
+    "category": null,
+    "website": "https://moveinsync.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Mowito Automation Development Center",
+    "category": null,
+    "website": "http://mowito.in/",
+    "location": "Vijayanagar"
+  },
+  {
+    "name": "Mrkhan",
+    "category": null,
+    "website": "https://mrkhan.digital/ai-automation-agency-in-bangalore-india/",
+    "location": "near Masjid E Sultan"
+  },
+  {
+    "name": "Mudrex",
+    "category": null,
+    "website": "https://mudrex.com/",
+    "location": "Bommanahalli"
+  },
+  {
+    "name": "Mukunda Foods",
+    "category": null,
+    "website": "https://mukundafoods.com/",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Multibhashi",
+    "category": null,
+    "website": "https://multibhashi.com",
+    "location": "Sarjapur - Marathahalli Rd"
+  },
+  {
+    "name": "Mu Sigma",
+    "category": null,
+    "website": "https://mu-sigma.com",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Muthoot FinCorp ONE",
+    "category": null,
+    "website": "https://www.muthootfincorpone.com/",
+    "location": "Marigowda Rd"
+  },
+  {
+    "name": "Nano Kernel",
+    "category": null,
+    "website": "https://kernel.ltd/",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "Navi",
+    "category": null,
+    "website": "https://navi.com",
+    "location": "Bellandur"
+  },
+  {
+    "name": "NeoWinn Biotech",
+    "category": null,
+    "website": "http://www.neowinnbiotech.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "New Eras Enercon Technologies",
+    "category": null,
+    "website": "https://nerastech.com/",
+    "location": "BTM Layout"
+  },
+  {
+    "name": "NestAway",
+    "category": null,
+    "website": "https://www.nestaway.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Netcore Unbxd",
+    "category": null,
+    "website": "http://www.netcoreunbxd.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Netradyne",
+    "category": null,
+    "website": "https://netradyne.com",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Neuron7.ai",
+    "category": null,
+    "website": "https://www.neuron7.ai/",
+    "location": "near New Horizon College Road, Outer Ring Rd"
+  },
+  {
+    "name": "Newme",
+    "category": null,
+    "website": "https://www.newme.asia",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Newron AI",
+    "category": null,
+    "website": "https://newron.ai/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Newtech Aerospace",
+    "category": null,
+    "website": "http://www.newtechaerospace.com/",
+    "location": "Devanahalli"
+  },
+  {
+    "name": "Newton School",
+    "category": null,
+    "website": "https://www.newtonschool.co",
+    "location": "Hosur Main Road"
+  },
+  {
+    "name": "Newtrace",
+    "category": null,
+    "website": "https://newtrace.io/",
+    "location": "Mahadevapura"
+  },
+  {
+    "name": "NEXGEN ENGINEERING",
+    "category": null,
+    "website": "http://nextorq.com/",
+    "location": "Attibele"
+  },
+  {
+    "name": "Nextbrain Bangalore",
+    "category": null,
+    "website": "https://www.nextbraintech.com/",
+    "location": "Whitefield"
+  },
+  {
+    "name": "NextFirst Engineering Technologies",
+    "category": null,
+    "website": "http://www.nextfirst.com/",
+    "location": "Wilson Garden"
+  },
+  {
+    "name": "Ninjacart",
+    "category": null,
+    "website": "https://www.ninjacart.com",
+    "location": "Kadubeesanahalli"
+  },
+  {
+    "name": "Niqo Robotics",
+    "category": null,
+    "website": "http://niqorobotics.com/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "NoKasa",
+    "category": null,
+    "website": "https://nokasa.co/",
+    "location": "Sarjapur Main Rd"
+  },
+  {
+    "name": "Nosh Robotics",
+    "category": null,
+    "website": "https://www.letsnosh.io/",
+    "location": "BEML Layout Main Rd"
+  },
+  {
+    "name": "Nova Benefits",
+    "category": null,
+    "website": "https://novabenefits.com/",
+    "location": "near Sony world Signal"
+  },
+  {
+    "name": "Numen health",
+    "category": null,
+    "website": "https://numenhealth.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Numocity",
+    "category": null,
+    "website": "https://www.numocity.com/",
+    "location": "Infantry Rd"
+  },
+  {
+    "name": "Nunam",
+    "category": null,
+    "website": "https://nunam.com/",
+    "location": "Electronic City"
+  },
+  {
+    "name": "Nurix AI",
+    "category": null,
+    "website": "https://www.nurix.ai/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "NuSummit Cybersecurity",
+    "category": null,
+    "website": "https://cybersecurity.nusummit.com/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "Nuvyera",
+    "category": null,
+    "website": "https://nuvyera.com/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "NxtSft Proptech Innovations",
+    "category": null,
+    "website": "http://www.nxtsft.com/",
+    "location": "Hebbal"
+  },
+  {
+    "name": "Nyvo",
+    "category": null,
+    "website": "https://nyvo.in",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "O2 Animation Studios",
+    "category": null,
+    "website": "https://o2animation.studio",
+    "location": "HRBR Layout"
+  },
+  {
+    "name": "Okulo Aerospace",
+    "category": null,
+    "website": "http://www.okuloaerospace.com/",
+    "location": "Jai Bhuvaneshwari Layout Rd"
+  },
+  {
+    "name": "Olympus Medical Systems India Pvt. Ltd.",
+    "category": null,
+    "website": "http://www.olympusmedical.co.in/",
+    "location": "Meanee Ave Rd"
+  },
+  {
+    "name": "ONO ARK India",
+    "category": null,
+    "website": "https://ono.ag/",
+    "location": "near Kudlu Gate"
+  },
+  {
+    "name": "Onsurity",
+    "category": null,
+    "website": "https://www.onsurity.com",
+    "location": "Sarjapur Main Rd"
+  },
+  {
+    "name": "oorja.energy",
+    "category": null,
+    "website": "https://oorja.energy/",
+    "location": "Sir M Visvesvaraya Inst Rd"
+  },
+  {
+    "name": "Open",
+    "category": null,
+    "website": "https://www.open.money",
+    "location": "Sarjapur Main Rd"
+  },
+  {
+    "name": "Operon Biotech & Healthcare",
+    "category": null,
+    "website": "https://www.operonbiotech.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "OrbitAID Aerospace",
+    "category": null,
+    "website": "http://orbitaid.com/",
+    "location": "Yeshwanthpur"
+  },
+  {
+    "name": "Origenix Digital Solutions",
+    "category": null,
+    "website": "https://www.origenixdigitalsolution.com",
+    "location": "Bellandur"
+  },
+  {
+    "name": "ORO PROPTECH",
+    "category": null,
+    "website": "https://www.oroproptech.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Ossus Biorenewables",
+    "category": null,
+    "website": "https://www.ossusbio.com/",
+    "location": "Hosur Main Road"
+  },
+  {
+    "name": "Pandorum Technologies",
+    "category": null,
+    "website": "https://pandorum.com/",
+    "location": "Bellary Road"
+  },
+  {
+    "name": "Peoplebox",
+    "category": null,
+    "website": "https://www.peoplebox.ai",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Perfios",
+    "category": null,
+    "website": "https://www.perfios.com",
+    "location": "Hosur Rd"
+  },
+  {
+    "name": "Petoo",
+    "category": null,
+    "website": "https://www.petoo.in/",
+    "location": "Hennur"
+  },
+  {
+    "name": "Pixis",
+    "category": null,
+    "website": "https://pixis.ai/",
+    "location": "Service Rd"
+  },
+  {
+    "name": "Planet Aerospace",
+    "category": null,
+    "website": "http://planetaerospace.in/",
+    "location": null
+  },
+  {
+    "name": "PlayShifu",
+    "category": null,
+    "website": "https://www.playshifu.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Plum",
+    "category": null,
+    "website": "https://www.plumhq.com",
+    "location": "Main Rd"
+  },
+  {
+    "name": "Pocket FM",
+    "category": null,
+    "website": "https://pocketfm.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Portea Medical",
+    "category": null,
+    "website": "https://www.portea.com/",
+    "location": "Domlur"
+  },
+  {
+    "name": "Portkey",
+    "category": null,
+    "website": "https://portkey.ai/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Power Planet",
+    "category": null,
+    "website": "https://powerplanetindia.com/",
+    "location": "Nagarabhavi Main Rd"
+  },
+  {
+    "name": "Powerplay",
+    "category": null,
+    "website": "https://www.getpowerplay.in/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Prakruthi Recycling",
+    "category": null,
+    "website": "https://prakruthirecycling.com/",
+    "location": "Nagarbhavi"
+  },
+  {
+    "name": "Pranavam aerospace",
+    "category": null,
+    "website": "http://www.pranavam-aerospace.co.in/",
+    "location": "Devanahalli"
+  },
+  {
+    "name": "Pratima AI",
+    "category": null,
+    "website": "https://www.pratimaai.com/",
+    "location": "opposite to Village Hyper Bazaar, Canara Bank Colony Rd"
+  },
+  {
+    "name": "Printeasy",
+    "category": null,
+    "website": "http://printeasy.co.in/",
+    "location": "Vijayanagar"
+  },
+  {
+    "name": "Prognosys Medical Systems",
+    "category": null,
+    "website": "http://www.prognosysmedical.com/",
+    "location": "next to Vani Vidyalaya"
+  },
+  {
+    "name": "Prolance",
+    "category": null,
+    "website": "https://www.prolance.co.in/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Propsoch",
+    "category": null,
+    "website": "https://www.propsoch.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Prosperr.io",
+    "category": null,
+    "website": "https://www.prosperr.io/",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Protein Design",
+    "category": null,
+    "website": "http://www.proteindesign.co.in/",
+    "location": "Mathikere"
+  },
+  {
+    "name": "QpiAI",
+    "category": null,
+    "website": "https://www.qpiai.tech/",
+    "location": "Outer Ring Road"
+  },
+  {
+    "name": "Quadrasystems",
+    "category": null,
+    "website": "https://www.quadrasystems.net/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Quikjet Airlines",
+    "category": null,
+    "website": "https://quikjet.co.in",
+    "location": "Residency Rd"
+  },
+  {
+    "name": "Quikr",
+    "category": null,
+    "website": "http://www.quikr.com/",
+    "location": "Rachenahalli Main Rd"
+  },
+  {
+    "name": "Rapture Biotech, Bengaluru (Bangalore)",
+    "category": null,
+    "website": "https://www.rapturebio.com/",
+    "location": "Anekal"
+  },
+  {
+    "name": "Rapyder Cloud Solutions",
+    "category": null,
+    "website": "https://www.rapyder.com/?utm_source=google_cta&utm_medium=google&utm_campaign=website&utm_id=30000022&utm_term=google_cta&utm_content=25_google_organic_website",
+    "location": "Mahatma Gandhi Rd"
+  },
+  {
+    "name": "ReadyForRole",
+    "category": null,
+    "website": "https://readyforrole.com/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "Reddonatura India",
+    "category": null,
+    "website": "https://www.reddonatura.com/",
+    "location": null
+  },
+  {
+    "name": "Redwing Labs",
+    "category": null,
+    "website": "https://redwinglabs.in",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Refyne",
+    "category": null,
+    "website": "https://refyne.co.in/",
+    "location": "Sarjapur - Marathahalli Rd"
+  },
+  {
+    "name": "RegisterKaro",
+    "category": null,
+    "website": "https://www.registerkaro.in",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Remidio Innovative Solutions",
+    "category": null,
+    "website": "https://www.remidio.com/",
+    "location": "Peenya"
+  },
+  {
+    "name": "RenewSys (India)",
+    "category": null,
+    "website": "http://www.renewsysworld.com/",
+    "location": "Bommasandra Jigani Link Rd"
+  },
+  {
+    "name": "RentoMojo",
+    "category": null,
+    "website": "https://www.rentomojo.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Reveal HealthTech",
+    "category": null,
+    "website": "https://revealhealthtech.com/",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Richpanel",
+    "category": null,
+    "website": "https://richpanel.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "River",
+    "category": null,
+    "website": "https://rideriver.com/",
+    "location": "Seetharampalya - Hoodi Rd"
+  },
+  {
+    "name": "Rizzle Technology",
+    "category": null,
+    "website": "https://www.cleanerp.com",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Roars Technologies",
+    "category": null,
+    "website": "http://www.roarsinc.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Rocketium",
+    "category": null,
+    "website": "https://rocketium.ai",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Rockstar India",
+    "category": null,
+    "website": "http://rockstargames.com/",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Royalacquisition",
+    "category": null,
+    "website": "https://royalacquisition.com/",
+    "location": "Adugodi"
+  },
+  {
+    "name": "Rupeek",
+    "category": null,
+    "website": "https://rupeek.com/",
+    "location": "Ground Floor 1st A Main Road"
+  },
+  {
+    "name": "Rupifi",
+    "category": null,
+    "website": "https://rupifi.com",
+    "location": "near Wipro Signal"
+  },
+  {
+    "name": "Saahas Zero Waste",
+    "category": null,
+    "website": "https://saahaszerowaste.com/",
+    "location": "BTM Layout"
+  },
+  {
+    "name": "Saankhya Labs",
+    "category": null,
+    "website": "https://www.saankhyalabs.com",
+    "location": "Mahadevapura"
+  },
+  {
+    "name": "Safran HAL Aircraft Engines",
+    "category": null,
+    "website": "https://www.safran-aircraft-engines.com/company/safran-aircraft-engines-hal-aerospace-pvt-ltd",
+    "location": "KIADB Aerospace SEZ Rd"
+  },
+  {
+    "name": "Samosa Singh",
+    "category": null,
+    "website": "https://samosasingh.com",
+    "location": "Bellary Rd"
+  },
+  {
+    "name": "Sangene Biotech (ISO 9001 Certified Lab)",
+    "category": null,
+    "website": "https://sangenebiotech.com/",
+    "location": "near Honda Service"
+  },
+  {
+    "name": "Sanlayan Technologies",
+    "category": null,
+    "website": "https://www.sanlayan.com",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "SatSure",
+    "category": null,
+    "website": "https://www.satsure.co",
+    "location": "Brunton Rd"
+  },
+  {
+    "name": "Satyukt Analytics",
+    "category": null,
+    "website": "https://satyukt.com/",
+    "location": "Sanjay Nagar Main Rd"
+  },
+  {
+    "name": "Scapia",
+    "category": null,
+    "website": "https://scapia.cards",
+    "location": "Bellandur"
+  },
+  {
+    "name": "Scripbox",
+    "category": null,
+    "website": "http://scripbox.com/",
+    "location": "Mahadevapura"
+  },
+  {
+    "name": "Sea6 Energy",
+    "category": null,
+    "website": "https://www.sea6energy.com/",
+    "location": "Bellary Road"
+  },
+  {
+    "name": "SecPod",
+    "category": null,
+    "website": "https://www.secpod.com/",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "SecurTime",
+    "category": null,
+    "website": "https://www.securtime.com/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "Seezo",
+    "category": null,
+    "website": "https://seezo.io",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "SELCO India",
+    "category": null,
+    "website": "https://selco-india.com/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "SenseHawk",
+    "category": null,
+    "website": "http://sensehawk.com/",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "Shadowfax",
+    "category": null,
+    "website": "https://shadowfax.in",
+    "location": "opposite Sakra World Hospital, Devarabisanahalli Rd"
+  },
+  {
+    "name": "Sharanya arcade apartment",
+    "category": null,
+    "website": "https://emitrr.com/",
+    "location": "Kasavanahalli"
+  },
+  {
+    "name": "Shilpa loans",
+    "category": null,
+    "website": "https://shilpaloans.com/",
+    "location": "near ganesha temple"
+  },
+  {
+    "name": "Simplesurface AI",
+    "category": null,
+    "website": "https://www.simplesurface.ai",
+    "location": "Church Street"
+  },
+  {
+    "name": "SimpliContract Technologies",
+    "category": null,
+    "website": "https://simplicontract.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Simplismart",
+    "category": null,
+    "website": "https://simplismart.ai/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "SkilloVilla",
+    "category": null,
+    "website": "https://www.skillovilla.com/",
+    "location": "near Royloak, Bannerghatta Rd"
+  },
+  {
+    "name": "SkillVertex",
+    "category": null,
+    "website": "http://www.skillvertex.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Skilwi",
+    "category": null,
+    "website": "https://skilwi.ai",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Skit.ai",
+    "category": null,
+    "website": "https://skit.ai/",
+    "location": "Old Madras Rd"
+  },
+  {
+    "name": "Skylark Drones",
+    "category": null,
+    "website": "https://skylarkdrones.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "smallcase",
+    "category": null,
+    "website": "https://www.smallcase.com",
+    "location": "Richmond Rd"
+  },
+  {
+    "name": "Smallest AI",
+    "category": null,
+    "website": "https://smallest.ai/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "SmartQ (Bottle Lab Technologies)",
+    "category": null,
+    "website": "https://www.thesmartq.com/",
+    "location": "Sankey Rd"
+  },
+  {
+    "name": "Snaptrude",
+    "category": null,
+    "website": "https://www.snaptrude.com/",
+    "location": "Koramangala Club Road"
+  },
+  {
+    "name": "Snitch",
+    "category": null,
+    "website": "https://snitch.com",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Social Saga",
+    "category": null,
+    "website": "https://www.socialsaga.in/",
+    "location": "NR Complex"
+  },
+  {
+    "name": "Sodio Technologies",
+    "category": null,
+    "website": "https://sodio.tech/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Soket AI Labs",
+    "category": null,
+    "website": "https://soket.ai/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "sole proprietorship",
+    "category": null,
+    "website": "https://www.registration-s.com/",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "SpaceFields",
+    "category": null,
+    "website": "https://www.spacefields.in",
+    "location": "Chord Rd"
+  },
+  {
+    "name": "Spectrum Build Tech Company",
+    "category": null,
+    "website": "http://spectrumbuildtech.com/",
+    "location": "behind MES college"
+  },
+  {
+    "name": "Sportomic.com",
+    "category": null,
+    "website": "https://sportomic.com",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "SpotDraft",
+    "category": null,
+    "website": "https://www.spotdraft.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Sprinto",
+    "category": null,
+    "website": "https://sprinto.com",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "Stable Money",
+    "category": null,
+    "website": "https://stablemoney.in/",
+    "location": "Kudlu"
+  },
+  {
+    "name": "Stellapps",
+    "category": null,
+    "website": "https://www.stellapps.com/",
+    "location": "Kudlu"
+  },
+  {
+    "name": "Stellixir Biotech",
+    "category": null,
+    "website": "http://www.stellixir.com/",
+    "location": "Peenya"
+  },
+  {
+    "name": "StockOne",
+    "category": null,
+    "website": "https://www.stockone.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Strand Life Sciences",
+    "category": null,
+    "website": "https://www.strandls.com/",
+    "location": "Dr Puneeth Rajkumar Road"
+  },
+  {
+    "name": "Stridefuture Technologies",
+    "category": null,
+    "website": "https://www.stridefuture.com/",
+    "location": "opp. lawrence school"
+  },
+  {
+    "name": "sugar.fit",
+    "category": null,
+    "website": "https://www.sugarfit.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "SUNEASE SOLAR",
+    "category": null,
+    "website": "https://www.suneasesolar.com/",
+    "location": "Residency Rd"
+  },
+  {
+    "name": "SunTrop Solar",
+    "category": null,
+    "website": "http://www.suntropsolar.com/",
+    "location": "Vijayanagar"
+  },
+  {
+    "name": "SuperKalam",
+    "category": null,
+    "website": "https://www.superkalam.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "super.money",
+    "category": null,
+    "website": "https://super.money/",
+    "location": "Bellandur"
+  },
+  {
+    "name": "Supertails",
+    "category": null,
+    "website": "https://supertails.com",
+    "location": "Shri Krishna Temple Rd"
+  },
+  {
+    "name": "SuperU",
+    "category": null,
+    "website": "https://www.superu.ai/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Suryanirbhar Agritech",
+    "category": null,
+    "website": "https://www.suryanirbhar.co.in/",
+    "location": null
+  },
+  {
+    "name": "SwitchKart Technologies",
+    "category": null,
+    "website": "https://switchkart.com/",
+    "location": "Kalyan Nagar"
+  },
+  {
+    "name": "SwitchOn",
+    "category": null,
+    "website": "https://switchon.io/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "SyncUp",
+    "category": null,
+    "website": "https://www.syncup.in",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Systemantics India",
+    "category": null,
+    "website": "http://www.systemantics.com/",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "TASA Foods",
+    "category": null,
+    "website": "http://www.tasafoods.com/",
+    "location": "Brigade Rd"
+  },
+  {
+    "name": "Tavant",
+    "category": null,
+    "website": "https://www.tavant.com/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Tayyib",
+    "category": null,
+    "website": "https://tayyibco.com",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Teachmint",
+    "category": null,
+    "website": "https://www.teachmint.com",
+    "location": "Sarjapur Main Rd"
+  },
+  {
+    "name": "Tech4Biz Solutions",
+    "category": null,
+    "website": "https://tech4bizsolutions.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Techasoft",
+    "category": null,
+    "website": "https://www.techasoft.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "TechCreare Software",
+    "category": null,
+    "website": "https://techcreare.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Tejvon Technologies",
+    "category": null,
+    "website": "https://tejvon.com/",
+    "location": "Whitefield"
+  },
+  {
+    "name": "TELISTAT SOFTWARE",
+    "category": null,
+    "website": "https://telistatsoftware.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Tentackles",
+    "category": null,
+    "website": "https://tentackles.com",
+    "location": "Marathahalli"
+  },
+  {
+    "name": "Terraeagle Technologies",
+    "category": null,
+    "website": "https://terraeagle.com/",
+    "location": "opposite Wilson Garden"
+  },
+  {
+    "name": "Thales India",
+    "category": null,
+    "website": "https://www.thalesgroup.com/en",
+    "location": "Richmond Rd"
+  },
+  {
+    "name": "Real estate",
+    "category": null,
+    "website": "http://www.blrrealestate.com/",
+    "location": "Bowring Hospital Rd"
+  },
+  {
+    "name": "The Click Oven",
+    "category": null,
+    "website": "http://theclickoven.com/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "Theranautilus",
+    "category": null,
+    "website": "http://www.theranautilus.com/",
+    "location": "Malleshwaram"
+  },
+  {
+    "name": "Think41",
+    "category": null,
+    "website": "https://think41.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Tonbo Imaging",
+    "category": null,
+    "website": "https://tonboimaging.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "ToneTag",
+    "category": null,
+    "website": "http://www.tonetag.com/",
+    "location": "Whitefield Main Road"
+  },
+  {
+    "name": "Town Contacts Technologies",
+    "category": null,
+    "website": "https://automatically.live/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Tricog Health India",
+    "category": null,
+    "website": "https://www.tricog.com/",
+    "location": "Malleshwaram"
+  },
+  {
+    "name": "Truworth wellness",
+    "category": null,
+    "website": "http://www.truworthwellness.com/",
+    "location": "Mahatma Gandhi Rd"
+  },
+  {
+    "name": "Truww",
+    "category": null,
+    "website": "https://truww.com/",
+    "location": "Opp Silver Pearl Apartment, Choodasandra Central Jail Road"
+  },
+  {
+    "name": "Twixor",
+    "category": null,
+    "website": "https://twixor.ai/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Ubanthu Robotics",
+    "category": null,
+    "website": "http://www.ubanthu.com/",
+    "location": "JP Nagar"
+  },
+  {
+    "name": "Ujjivan Small Finance Bank",
+    "category": null,
+    "website": "https://www.ujjivansfb.bank.in/",
+    "location": "Sampige Rd"
+  },
+  {
+    "name": "Ultrahuman",
+    "category": null,
+    "website": "https://www.ultrahuman.com/",
+    "location": "Domlur"
+  },
+  {
+    "name": "Unocoin",
+    "category": null,
+    "website": "https://www.unocoin.com/",
+    "location": "Dr Rajkumar Rd"
+  },
+  {
+    "name": "Unscript.AI",
+    "category": null,
+    "website": "https://unscript.ai/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "UpCykal",
+    "category": null,
+    "website": "https://www.upcykal.in",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "UpTaught Edtech",
+    "category": null,
+    "website": "https://uptaught.com/",
+    "location": "near BDA Complex"
+  },
+  {
+    "name": "Uravu Labs",
+    "category": null,
+    "website": "https://www.uravulabs.com/",
+    "location": null
+  },
+  {
+    "name": "Urban Ladder",
+    "category": null,
+    "website": "http://www.urbanladder.com/",
+    "location": "next to Paramount Hotel"
+  },
+  {
+    "name": "UrbanPiper",
+    "category": null,
+    "website": "https://www.urbanpiper.com/",
+    "location": "Whitefield"
+  },
+  {
+    "name": "Vama Gears",
+    "category": null,
+    "website": "http://www.vamagears.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Varaha",
+    "category": null,
+    "website": "https://varaha.earth",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "Vault Proptech",
+    "category": null,
+    "website": "https://www.vaultproptech.com/?utm_source=GBM&utm_medium=GBM&utm_campaign=Google+Business+Account",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Vayana Network",
+    "category": null,
+    "website": "https://vayana.com",
+    "location": "Residency Rd"
+  },
+  {
+    "name": "Verloop.io",
+    "category": null,
+    "website": "https://www.verloop.io",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Vimaan",
+    "category": null,
+    "website": "https://vimaan.ai",
+    "location": "Koramangala"
+  },
+  {
+    "name": "VIRGIO",
+    "category": null,
+    "website": "https://www.virgio.com",
+    "location": "Electronic City"
+  },
+  {
+    "name": "MyGate",
+    "category": null,
+    "website": "https://mygate.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Vobiz.ai",
+    "category": null,
+    "website": "https://vobiz.ai/",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Vowels Lifesciences",
+    "category": null,
+    "website": "http://www.vowelslifesciences.com/",
+    "location": "Jayanagar"
+  },
+  {
+    "name": "Vxceed",
+    "category": null,
+    "website": "https://vxceed.com",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Vyapar App",
+    "category": null,
+    "website": "https://vyaparapp.in/",
+    "location": "Sarjapur Main Rd"
+  },
+  {
+    "name": "Vymo",
+    "category": null,
+    "website": "https://vymo.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Way2Agribusiness India",
+    "category": null,
+    "website": "https://www.way2agribusiness.com/",
+    "location": "Yeshwanthpur"
+  },
+  {
+    "name": "We Create Problems",
+    "category": null,
+    "website": "http://wecreateproblems.com",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Panigrahana Weddings",
+    "category": null,
+    "website": "https://panigrahana.com",
+    "location": "Mathikere"
+  },
+  {
+    "name": "WeMech Automation",
+    "category": null,
+    "website": "http://wemechautomation.com/",
+    "location": null
+  },
+  {
+    "name": "Kratos Studios / KGeN (IndiGG)",
+    "category": null,
+    "website": "https://www.kgen.io/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Wint Wealth",
+    "category": null,
+    "website": "https://www.wintwealth.com/",
+    "location": "Bannerghatta Rd"
+  },
+  {
+    "name": "WizCommerce",
+    "category": null,
+    "website": "https://wizcommerce.com",
+    "location": "Koramangala"
+  },
+  {
+    "name": "Wolf Frameworks",
+    "category": null,
+    "website": "http://www.wolfframeworks.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "WoVerse",
+    "category": null,
+    "website": "https://www.thewoverse.com",
+    "location": "Haralur Main Rd"
+  },
+  {
+    "name": "Wow Labz",
+    "category": null,
+    "website": "https://wowlabz.com/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Wysa",
+    "category": null,
+    "website": "https://www.wysa.com/",
+    "location": "Indiranagar"
+  },
+  {
+    "name": "Xipid Sports",
+    "category": null,
+    "website": "https://xipidsports.com/in/",
+    "location": "Jyoti Nivas College Rd"
+  },
+  {
+    "name": "Xovian Aerospace",
+    "category": null,
+    "website": "http://xovian.co.in/",
+    "location": "Outer Ring Rd"
+  },
+  {
+    "name": "Xoxoday",
+    "category": null,
+    "website": "https://www.xoxoday.com",
+    "location": "Kudlu"
+  },
+  {
+    "name": "YourDOST",
+    "category": null,
+    "website": "https://yourdost.com/",
+    "location": "HSR Layout"
+  },
+  {
+    "name": "Yudu Robotics",
+    "category": null,
+    "website": "https://yudurobotics.com/",
+    "location": "near Shahi Exports Unit-1"
+  },
+  {
+    "name": "Zenith Sports",
+    "category": null,
+    "website": "https://zenithsports.in",
+    "location": "Mysore Rd"
+  },
+  {
+    "name": "Zeotap",
+    "category": null,
+    "website": "https://www.zeotap.com/",
+    "location": "KGA Road"
+  },
+  {
+    "name": "Zeta",
+    "category": null,
+    "website": "https://www.zeta.tech",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Zignite Labs",
+    "category": null,
+    "website": "https://www.zignite.io/",
+    "location": "Nagarbhavi"
+  },
+  {
+    "name": "Zinier",
+    "category": null,
+    "website": "https://www.zinier.com/",
+    "location": "Kadubeesanahalli"
+  },
+  {
+    "name": "Zluri",
+    "category": null,
+    "website": "https://www.zluri.com",
+    "location": "Whitefield Main Rd"
+  },
+  {
+    "name": "Zolo (ZoloStays)",
+    "category": null,
+    "website": "https://zolostays.com/",
+    "location": "near Oracle"
+  },
+  {
+    "name": "Zoomcar",
+    "category": null,
+    "website": "https://www.zoomcar.com/",
+    "location": "HAL Old Airport Rd"
+  },
+  {
+    "name": "Zumutor Biologics",
+    "category": null,
+    "website": "https://zumutor.com/",
+    "location": "Yeshwanthpur"
+  },
+  {
+    "name": "Zuru",
+    "category": null,
+    "website": "http://zuruservices.com/",
+    "location": "Hebbal"
+  }
+]

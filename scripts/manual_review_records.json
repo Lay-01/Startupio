@@ -1,0 +1,632 @@
+[
+  {
+    "imported": {
+      "name": "Euler Motors",
+      "category": null,
+      "website": "https://www.eulermotors.com/en/",
+      "location": "Rajajinagar"
+    },
+    "matched_candidate": {
+      "id": "eto-motors",
+      "name": "ETO Motors",
+      "website": "https://etomotors.com",
+      "address": "Phase 1, Yeswanthpur"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "InnAccel Technologies",
+      "category": null,
+      "website": "https://innaccel.com/",
+      "location": "Raja Ram Mohan Roy Rd"
+    },
+    "matched_candidate": {
+      "id": "innovaccer",
+      "name": "Innovaccer",
+      "website": "https://innovaccer.com",
+      "address": "Shanthala Nagar, Ashok Nagar"
+    },
+    "similarity_score": 0.778
+  },
+  {
+    "imported": {
+      "name": "Leap Scholar",
+      "category": null,
+      "website": "http://ls.leapscholar.com/gmb",
+      "location": "HSR Layout"
+    },
+    "matched_candidate": {
+      "id": "lead-school",
+      "name": "LEAD School",
+      "website": "https://leadschool.in",
+      "address": "4th Block, Koramangala"
+    },
+    "similarity_score": 0.783
+  },
+  {
+    "imported": {
+      "name": "Accio Robotics",
+      "category": null,
+      "website": "http://acciorobotics.com/",
+      "location": "HSR Layout"
+    },
+    "matched_candidate": {
+      "id": "anscer-robotics",
+      "name": "ANSCER Robotics",
+      "website": "https://www.anscer.com",
+      "address": "Indiranagar 2nd Stage"
+    },
+    "similarity_score": 0.759
+  },
+  {
+    "imported": {
+      "name": "AllGoVision",
+      "category": null,
+      "website": "http://www.allgovision.com/",
+      "location": "Paramahansa Yogananda Rd"
+    },
+    "matched_candidate": {
+      "id": "allegion-india",
+      "name": "Allegion India",
+      "website": "https://www.allegion.com",
+      "address": "IBC Knowledge Park, Bannerghatta Road"
+    },
+    "similarity_score": 0.737
+  },
+  {
+    "imported": {
+      "name": "Asper AI",
+      "category": null,
+      "website": "https://asper.ai/",
+      "location": "Outer Ring Rd"
+    },
+    "matched_candidate": {
+      "id": "aspora",
+      "name": "Aspora",
+      "website": "https://www.aspora.com",
+      "address": "WeWork Prestige Atlanta, Koramangala 1A Block"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "Asteria Aerospace",
+      "category": null,
+      "website": "https://asteria.co.in",
+      "location": "Yelahanka"
+    },
+    "matched_candidate": {
+      "id": "aadyah-aerospace",
+      "name": "Aadyah Aerospace",
+      "website": "http://www.aadyah.com/",
+      "address": "Old Madras Rd"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "Azira",
+      "category": null,
+      "website": "http://azira.com/",
+      "location": "Koramangala"
+    },
+    "matched_candidate": {
+      "id": "aindra-systems",
+      "name": "Aindra Systems",
+      "website": "https://www.aindra.in",
+      "address": "JP Nagar 5th Phase"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "BigHaat",
+      "category": null,
+      "website": "https://www.bighaat.com/",
+      "location": "JP Nagar"
+    },
+    "matched_candidate": {
+      "id": "bharatx",
+      "name": "BharatX",
+      "website": "https://bharatx.tech",
+      "address": "7th Sector, HSR Layout"
+    },
+    "similarity_score": 0.714
+  },
+  {
+    "imported": {
+      "name": "Blue Yonder",
+      "category": null,
+      "website": "https://blueyonder.com/",
+      "location": "near Sakra World Hospital, Outer Ring Rd"
+    },
+    "matched_candidate": {
+      "id": "bluestone",
+      "name": "BlueStone",
+      "website": "https://www.bluestone.com",
+      "address": "Koramangala, Bengaluru, Karnataka, India"
+    },
+    "similarity_score": 0.7
+  },
+  {
+    "imported": {
+      "name": "CloudSEK",
+      "category": null,
+      "website": "https://www.cloudsek.com",
+      "location": "Cambridge Rd"
+    },
+    "matched_candidate": {
+      "id": "cloudzen",
+      "name": "CloudZen",
+      "website": "https://www.cloudzen.in/",
+      "address": "Jayanagar, Bengaluru, Karnataka, India"
+    },
+    "similarity_score": 0.75
+  },
+  {
+    "imported": {
+      "name": "Clover Ventures",
+      "category": null,
+      "website": "http://cloverventures.in/",
+      "location": "Margosa Rd"
+    },
+    "matched_candidate": {
+      "id": "capria-ventures",
+      "name": "Capria Ventures",
+      "website": "https://capria.vc",
+      "address": "Haudin Road, Sivanchetti Gardens"
+    },
+    "similarity_score": 0.733
+  },
+  {
+    "imported": {
+      "name": "Dhoond",
+      "category": null,
+      "website": "https://dhoond.co",
+      "location": "HSR Layout"
+    },
+    "matched_candidate": {
+      "id": "dashtoon",
+      "name": "Dashtoon",
+      "website": "https://dashtoon.com",
+      "address": "Koramangala"
+    },
+    "similarity_score": 0.714
+  },
+  {
+    "imported": {
+      "name": "Embibe",
+      "category": null,
+      "website": "https://www.embibe.com",
+      "location": "HAL Old Airport Rd"
+    },
+    "matched_candidate": {
+      "id": "emobi",
+      "name": "Emobi",
+      "website": "https://emobi.in",
+      "address": "Marathahalli"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "Evoride Motors",
+      "category": null,
+      "website": "http://www.evoride.in/",
+      "location": "near Sumanahalli Flyover"
+    },
+    "matched_candidate": {
+      "id": "eto-motors",
+      "name": "ETO Motors",
+      "website": "https://etomotors.com",
+      "address": "Phase 1, Yeswanthpur"
+    },
+    "similarity_score": 0.75
+  },
+  {
+    "imported": {
+      "name": "Fymble",
+      "category": null,
+      "website": "https://fymble.app/",
+      "location": "Jayanagar"
+    },
+    "matched_candidate": {
+      "id": "fyle",
+      "name": "Fyle",
+      "website": "https://www.fylehq.com",
+      "address": "HSR Layout"
+    },
+    "similarity_score": 0.8
+  },
+  {
+    "imported": {
+      "name": "Genex Space",
+      "category": null,
+      "website": "http://genex.space/",
+      "location": "Koramangala"
+    },
+    "matched_candidate": {
+      "id": "galaxeye-space",
+      "name": "GalaxEye Space",
+      "website": "https://www.galaxeye.space",
+      "address": "Whitefield, Bengaluru, Karnataka, India"
+    },
+    "similarity_score": 0.72
+  },
+  {
+    "imported": {
+      "name": "Headrun",
+      "category": null,
+      "website": "http://www.headrun.com/",
+      "location": "Koramangala"
+    },
+    "matched_candidate": {
+      "id": "headout",
+      "name": "Headout",
+      "website": "https://www.headout.com",
+      "address": "Vaishnavi Tech Park, Bellandur"
+    },
+    "similarity_score": 0.714
+  },
+  {
+    "imported": {
+      "name": "Iterator",
+      "category": null,
+      "website": "https://iterator.in/",
+      "location": "Ulsoor"
+    },
+    "matched_candidate": {
+      "id": "interact-ai",
+      "name": "Interact AI",
+      "website": "https://interactlabs.ai",
+      "address": "HSR Layout, Bengaluru, Karnataka, India"
+    },
+    "similarity_score": 0.75
+  },
+  {
+    "imported": {
+      "name": "Kreedo (Kreedo Early Childhood Solutions)",
+      "category": null,
+      "website": "https://kreedology.com",
+      "location": "Jayanagar"
+    },
+    "matched_candidate": {
+      "id": "kredx",
+      "name": "KredX",
+      "website": "",
+      "address": "Koramangala"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "Lumor Technologies",
+      "category": null,
+      "website": "https://www.lumor.tech",
+      "location": "Ejipura"
+    },
+    "matched_candidate": {
+      "id": "lumio",
+      "name": "Lumio",
+      "website": "https://lumio.co.in",
+      "address": "HSR Sector 1"
+    },
+    "similarity_score": 0.8
+  },
+  {
+    "imported": {
+      "name": "moneyHOP",
+      "category": null,
+      "website": "https://www.moneyhop.co/",
+      "location": "HSR Layout"
+    },
+    "matched_candidate": {
+      "id": "moneytap",
+      "name": "MoneyTap",
+      "website": "https://moneytap.com",
+      "address": "Upkar Layout, Whitefield"
+    },
+    "similarity_score": 0.75
+  },
+  {
+    "imported": {
+      "name": "Newron AI",
+      "category": null,
+      "website": "https://newron.ai/",
+      "location": "HSR Layout"
+    },
+    "matched_candidate": {
+      "id": "neuron7-ai",
+      "name": "Neuron7.ai",
+      "website": "https://www.neuron7.ai/",
+      "address": "near New Horizon College Road, Outer Ring Rd"
+    },
+    "similarity_score": 0.769
+  },
+  {
+    "imported": {
+      "name": "NextFirst Engineering Technologies",
+      "category": null,
+      "website": "http://www.nextfirst.com/",
+      "location": "Wilson Garden"
+    },
+    "matched_candidate": {
+      "id": "nexgen-engineering",
+      "name": "NEXGEN ENGINEERING",
+      "website": "http://nextorq.com/",
+      "address": "Attibele"
+    },
+    "similarity_score": 0.769
+  },
+  {
+    "imported": {
+      "name": "Nosh Robotics",
+      "category": null,
+      "website": "https://www.letsnosh.io/",
+      "location": "BEML Layout Main Rd"
+    },
+    "matched_candidate": {
+      "id": "niqo-robotics",
+      "name": "Niqo Robotics",
+      "website": "https://niqorobotics.com",
+      "address": "Electronic City"
+    },
+    "similarity_score": 0.846
+  },
+  {
+    "imported": {
+      "name": "Nyvo",
+      "category": null,
+      "website": "https://nyvo.in",
+      "location": "HSR Layout"
+    },
+    "matched_candidate": {
+      "id": "niyo",
+      "name": "Niyo",
+      "website": "https://www.goniyo.com",
+      "address": "Indiranagar, Bengaluru, Karnataka, India"
+    },
+    "similarity_score": 0.75
+  },
+  {
+    "imported": {
+      "name": "Power Planet",
+      "category": null,
+      "website": "https://powerplanetindia.com/",
+      "location": "Nagarabhavi Main Rd"
+    },
+    "matched_candidate": {
+      "id": "powerplay",
+      "name": "Powerplay",
+      "website": "https://www.getpowerplay.in",
+      "address": "HSR Sector 1"
+    },
+    "similarity_score": 0.762
+  },
+  {
+    "imported": {
+      "name": "Pranavam aerospace",
+      "category": null,
+      "website": "http://www.pranavam-aerospace.co.in/",
+      "location": "Devanahalli"
+    },
+    "matched_candidate": {
+      "id": "planet-aerospace",
+      "name": "Planet Aerospace",
+      "website": "http://planetaerospace.in/",
+      "address": "Bengaluru, Karnataka, India"
+    },
+    "similarity_score": 0.765
+  },
+  {
+    "imported": {
+      "name": "RenewSys (India)",
+      "category": null,
+      "website": "http://www.renewsysworld.com/",
+      "location": "Bommasandra Jigani Link Rd"
+    },
+    "matched_candidate": {
+      "id": "renesas-india",
+      "name": "Renesas India",
+      "website": "https://renesas.com",
+      "address": "Old Baiyyappanahalli, Indiranagar"
+    },
+    "similarity_score": 0.8
+  },
+  {
+    "imported": {
+      "name": "Saankhya Labs",
+      "category": null,
+      "website": "https://www.saankhyalabs.com",
+      "location": "Mahadevapura"
+    },
+    "matched_candidate": {
+      "id": "samkhya",
+      "name": "Samkhya",
+      "website": "https://samkhya.ai",
+      "address": "CMH Road, Indiranagar"
+    },
+    "similarity_score": 0.8
+  },
+  {
+    "imported": {
+      "name": "SecurTime",
+      "category": null,
+      "website": "https://www.securtime.com/",
+      "location": "JP Nagar"
+    },
+    "matched_candidate": {
+      "id": "secureu",
+      "name": "SECUREU",
+      "website": "https://secureu.in",
+      "address": "WeWork Salarpuria Symbiosis, Bannerghatta Road"
+    },
+    "similarity_score": 0.75
+  },
+  {
+    "imported": {
+      "name": "Seezo",
+      "category": null,
+      "website": "https://seezo.io",
+      "location": "Jayanagar"
+    },
+    "matched_candidate": {
+      "id": "seekho",
+      "name": "Seekho",
+      "website": "https://seekho.in",
+      "address": "HSR Layout, Bengaluru, Karnataka, India"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "SELCO India",
+      "category": null,
+      "website": "https://selco-india.com/",
+      "location": "JP Nagar"
+    },
+    "matched_candidate": {
+      "id": "secpod",
+      "name": "SecPod",
+      "website": "https://www.secpod.com/",
+      "address": "Bannerghatta Rd"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "Smallest AI",
+      "category": null,
+      "website": "https://smallest.ai/",
+      "location": "Indiranagar"
+    },
+    "matched_candidate": {
+      "id": "smallcase",
+      "name": "smallcase",
+      "website": "https://www.smallcase.com",
+      "address": "Le Parc Richmonde, Richmond Road"
+    },
+    "similarity_score": 0.706
+  },
+  {
+    "imported": {
+      "name": "Stridefuture Technologies",
+      "category": null,
+      "website": "https://www.stridefuture.com/",
+      "location": "opp. lawrence school"
+    },
+    "matched_candidate": {
+      "id": "stride-ventures",
+      "name": "Stride Ventures",
+      "website": "https://strideventures.global",
+      "address": "Koramangala 3rd Block"
+    },
+    "similarity_score": 0.741
+  },
+  {
+    "imported": {
+      "name": "SuperKalam",
+      "category": null,
+      "website": "https://www.superkalam.com",
+      "location": "HSR Layout"
+    },
+    "matched_candidate": {
+      "id": "supertails",
+      "name": "Supertails",
+      "website": "https://supertails.com",
+      "address": "Binnamangala 1st Stage, Indiranagar"
+    },
+    "similarity_score": 0.7
+  },
+  {
+    "imported": {
+      "name": "super.money",
+      "category": null,
+      "website": "https://super.money/",
+      "location": "Bellandur"
+    },
+    "matched_candidate": {
+      "id": "superfone",
+      "name": "Superfone",
+      "website": "https://www.superfone.in",
+      "address": "HSR Sector 3"
+    },
+    "similarity_score": 0.8
+  },
+  {
+    "imported": {
+      "name": "SuperU",
+      "category": null,
+      "website": "https://www.superu.ai/",
+      "location": "HSR Layout"
+    },
+    "matched_candidate": {
+      "id": "superops",
+      "name": "SuperOps",
+      "website": "https://superops.com",
+      "address": "HSR Layout"
+    },
+    "similarity_score": 0.714
+  },
+  {
+    "imported": {
+      "name": "Ubanthu Robotics",
+      "category": null,
+      "website": "http://www.ubanthu.com/",
+      "location": "JP Nagar"
+    },
+    "matched_candidate": {
+      "id": "unbox-robotics",
+      "name": "Unbox Robotics",
+      "website": "https://unboxrobotics.com",
+      "address": "Koramangala 2nd Block, Koramangala"
+    },
+    "similarity_score": 0.733
+  },
+  {
+    "imported": {
+      "name": "Varaha",
+      "category": null,
+      "website": "https://varaha.earth",
+      "location": "Bannerghatta Rd"
+    },
+    "matched_candidate": {
+      "id": "vahak",
+      "name": "Vahak",
+      "website": "https://vahak.in",
+      "address": "Koramangala"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "Vimaan",
+      "category": null,
+      "website": "https://vimaan.ai",
+      "location": "Koramangala"
+    },
+    "matched_candidate": {
+      "id": "vahan",
+      "name": "Vahan",
+      "website": "https://vahan.ai",
+      "address": "HSR Sector 6"
+    },
+    "similarity_score": 0.727
+  },
+  {
+    "imported": {
+      "name": "Zignite Labs",
+      "category": null,
+      "website": "https://www.zignite.io/",
+      "location": "Nagarbhavi"
+    },
+    "matched_candidate": {
+      "id": "zinier",
+      "name": "Zinier",
+      "website": "https://zinier.com",
+      "address": "Bellandur"
+    },
+    "similarity_score": 0.769
+  }
+]
