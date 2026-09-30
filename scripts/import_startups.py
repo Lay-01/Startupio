@@ -6,9 +6,9 @@ from urllib.parse import urlparse
 from difflib import SequenceMatcher
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
-EXISTING_FILE = ROOT_DIR / 'src' / 'data' / 'startups.json'
-ECHAI_FILE = ROOT_DIR / 'echai-bengaluru-startups.json'
-REVIEW_FILE = ROOT_DIR / 'scripts' / 'manual_review_records.json'
+EXISTING_FILE = ROOT_DIR / 'server' / 'data' / 'startups.json'
+ECHAI_FILE = ROOT_DIR / 'server' / 'data' / 'echai-bengaluru-startups.json'
+REVIEW_FILE = ROOT_DIR / 'server' / 'data' / 'manual_review_records.json'
 
 def normalize_domain(url):
     if not url or not isinstance(url, str):

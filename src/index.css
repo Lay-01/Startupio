@@ -19,6 +19,11 @@
       linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
   }
 
+  .app-shell {
+    height: 100vh;
+    height: 100dvh;
+  }
+
   @media (max-width: 640px) {
     body {
       overflow: auto;

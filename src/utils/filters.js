@@ -5,18 +5,19 @@ export function filterStartups(startups, { sector = 'all', area = 'all', employe
   return startups.filter(startup => {
     // Sector filter
     if (sector !== 'all') {
-      const s = startup.sector?.toLowerCase() || '';
-      const filterSector = sector.toLowerCase();
-      if (!s.includes(filterSector)) {
+      const filterSector = sector.trim().toLocaleLowerCase();
+      const startupSectors = (startup.sector || '').split('/').map(value => value.trim().toLocaleLowerCase());
+      if (!startupSectors.includes(filterSector)) {
         return false;
       }
     }
 
     // Area filter
     if (area !== 'all') {
-      const a = startup.area?.toLowerCase() || '';
-      const filterArea = area.toLowerCase();
-      if (!a.includes(filterArea) && !filterArea.includes(a)) {
+      const normalizeArea = value => String(value ?? '').trim().toLocaleLowerCase();
+      const startupArea = normalizeArea(startup.area);
+      const filterArea = normalizeArea(area);
+      if (!startupArea || startupArea !== filterArea) {
         return false;
       }
     }
@@ -45,13 +46,16 @@ export function filterStartups(startups, { sector = 'all', area = 'all', employe
 }
 
 export function getUniqueSectors(startups) {
-  const sectorsSet = new Set();
+  const sectorsByKey = new Map();
   startups.forEach(s => {
     if (!s.sector) return;
-    const parts = s.sector.split('/').map(p => p.trim());
-    parts.forEach(part => sectorsSet.add(part));
+    const parts = s.sector.split('/').map(part => part.trim()).filter(Boolean);
+    parts.forEach(part => {
+      const key = part.toLocaleLowerCase();
+      if (!sectorsByKey.has(key)) sectorsByKey.set(key, part);
+    });
   });
-  return Array.from(sectorsSet).sort();
+  return Array.from(sectorsByKey.values()).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 }
 
 export function getUniqueAreas(startups) {

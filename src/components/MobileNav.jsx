@@ -1,10 +1,11 @@
 import React from 'react';
-import { Map, List, Bookmark, Settings } from 'lucide-react';
+import { Map, List, LayoutGrid, Settings } from 'lucide-react';
 
 export default function MobileNav({ activeTab = 'map', setActiveTab }) {
   const tabs = [
     { id: 'map', label: 'Map', icon: Map },
     { id: 'list', label: 'List', icon: List },
+    { id: 'categories', label: 'Categories', icon: LayoutGrid },
     { id: 'settings', label: 'Settings', icon: Settings },
   ];
 

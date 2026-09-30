@@ -1,27 +1,11 @@
 import React from 'react';
 
-const CATEGORIES = [
-  { name: "All", sectorId: "all" },
-  { name: "FinTech", sectorId: "FinTech" },
-  { name: "SaaS", sectorId: "SaaS" },
-  { name: "AI & DeepTech", sectorId: "AI" },
-  { name: "HealthTech", sectorId: "HealthTech" },
-  { name: "D2C", sectorId: "D2C" },
-  { name: "EdTech", sectorId: "EdTech" },
-  { name: "Consumer", sectorId: "Consumer" },
-  { name: "Logistics", sectorId: "Logistics" },
-  { name: "Mobility", sectorId: "Mobility" },
-  { name: "AgriTech", sectorId: "AgriTech" },
-  { name: "CleanTech", sectorId: "CleanTech" },
-  { name: "Web3", sectorId: "Web3" }
-];
-
-export default function SectorPills({ selectedSector, onSelectSector }) {
+export default function SectorPills({ sectors = [], selectedSector, onSelectSector }) {
   return (
     <div className="w-full overflow-x-auto no-scrollbar py-2.5 px-3">
       <div className="flex items-center gap-2 shrink-0">
-        {CATEGORIES.map((cat) => {
-          const isActive = selectedSector === cat.sectorId || (cat.sectorId === 'all' && selectedSector === 'all');
+        {[{ name: 'All', sectorId: 'all' }, ...sectors.map(sector => ({ name: sector, sectorId: sector }))].map((cat) => {
+          const isActive = selectedSector === cat.sectorId;
           return (
             <button
               key={cat.name}

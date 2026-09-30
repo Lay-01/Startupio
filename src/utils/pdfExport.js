@@ -155,6 +155,6 @@ export function exportStartupsToPDF(startups, filters = {}) {
 
   // If total records exceed 10, open social dev website in a new tab to contact
   if (startups.length > 10) {
-    window.open(S_PROFILE_URL, '_blank');
+    window.open(S_PROFILE_URL, '_blank', 'noopener,noreferrer');
   }
 }

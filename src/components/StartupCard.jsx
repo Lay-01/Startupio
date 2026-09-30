@@ -17,7 +17,7 @@ export default function StartupCard({
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`group relative p-3.5 rounded-2xl border transition-all duration-200 cursor-pointer select-none ${
+      className={`group relative h-full p-3 rounded-xl border transition-all duration-200 cursor-pointer select-none ${
         isSelected
           ? 'bg-slate-50/80 border-slate-900 ring-1 ring-slate-900/10 shadow-sm'
           : 'bg-white border-slate-200/80 hover:border-slate-300 hover:shadow-md'
@@ -26,7 +26,7 @@ export default function StartupCard({
       <div className="flex items-center justify-between gap-3">
         
         {/* Index Circle + Startup Name & Category */}
-        <div className="flex items-center gap-3 min-w-0">
+          <div className="flex items-center gap-3 min-w-0">
           
           {/* Index Circle */}
           {index && (
@@ -37,10 +37,14 @@ export default function StartupCard({
             </div>
           )}
 
+          <div className="w-12 h-12 rounded-xl bg-[#142039] text-white flex items-center justify-center font-extrabold text-lg shrink-0 shadow-sm" aria-hidden="true">
+            {(startup.name || '?').trim().charAt(0).toUpperCase()}
+          </div>
+
           {/* Startup Info */}
           <div className="min-w-0">
             <div className="flex items-center gap-2 flex-wrap">
-              <h3 className="font-bold text-sm text-slate-900 truncate leading-tight">
+              <h3 className="font-bold text-sm text-[#142039] truncate leading-tight">
                 {startup.name}
               </h3>
               {startup.sector && (

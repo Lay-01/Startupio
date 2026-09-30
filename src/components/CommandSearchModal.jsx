@@ -1,14 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Search, X, Building2, MapPin, Users, ArrowRight, Sparkles, Command } from 'lucide-react';
-import { searchStartups } from '../utils/search';
+import { Search, X, ArrowRight, Sparkles } from 'lucide-react';
+import { requestStartups } from '../utils/api';
 
 export default function CommandSearchModal({
   isOpen,
   onClose,
-  startups,
   onSelectStartup
 }) {
   const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -18,6 +21,31 @@ export default function CommandSearchModal({
       setQuery('');
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => {
+      setIsLoading(true);
+      setError('');
+      requestStartups({ page: '1', limit: '8', q: query }, { signal: controller.signal })
+        .then(data => {
+          if (controller.signal.aborted) return;
+          setResults(data.items);
+          setTotal(data.total);
+        })
+        .catch(requestError => {
+          if (!controller.signal.aborted) setError(requestError.message);
+        })
+        .finally(() => {
+          if (!controller.signal.aborted) setIsLoading(false);
+        });
+    }, query ? 180 : 0);
+    return () => {
+      clearTimeout(timeout);
+      controller.abort();
+    };
+  }, [isOpen, query]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -35,8 +63,6 @@ export default function CommandSearchModal({
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
-
-  const results = searchStartups(startups, query).slice(0, 8);
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-950/40 backdrop-blur-md">
@@ -57,7 +83,11 @@ export default function CommandSearchModal({
             type="text"
             placeholder="Search startups, founders, sectors, or addresses..."
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setResults([]);
+              setTotal(0);
+            }}
             className="flex-1 bg-transparent text-slate-900 placeholder:text-slate-400 font-medium text-sm focus:outline-none"
           />
           <kbd className="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold text-slate-400 bg-slate-100/80 px-2.5 py-1 rounded-lg border border-slate-200/60">
@@ -73,7 +103,11 @@ export default function CommandSearchModal({
 
         {/* Results List */}
         <div className="max-h-[60vh] overflow-y-auto p-2.5 space-y-1">
-          {results.length > 0 ? (
+          {error ? (
+            <div role="alert" className="py-12 px-4 text-center text-xs font-semibold text-rose-700">{error}</div>
+          ) : isLoading && results.length === 0 ? (
+            <div className="py-12 px-4 text-center text-xs font-semibold text-slate-500">Searching startups...</div>
+          ) : results.length > 0 ? (
             results.map((startup) => (
               <div
                 key={startup.id}
@@ -130,7 +164,7 @@ export default function CommandSearchModal({
             <span className="font-medium">Startup.io Discovery</span>
           </div>
           <div className="font-medium">
-            {results.length > 0 ? `Showing ${results.length} results` : 'No results'}
+            {results.length > 0 ? `Showing ${results.length} of ${total}` : 'No results'}
           </div>
         </div>
 

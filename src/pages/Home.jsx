@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import FilterBar from '../components/FilterBar';
@@ -9,13 +9,16 @@ import StartupBottomSheet from '../components/StartupBottomSheet';
 import CommandSearchModal from '../components/CommandSearchModal';
 import MobileNav from '../components/MobileNav';
 
-import rawStartups from '../data/startups.json';
-import { searchStartups } from '../utils/search';
-import { filterStartups, getUniqueSectors, getUniqueAreas, getUniqueEmployeeSizes, getUniquePrecisions } from '../utils/filters';
-import { exportStartupsToPDF } from '../utils/pdfExport';
+import { requestStartups } from '../utils/api';
 import { LayoutGrid, Settings } from 'lucide-react';
 
 export default function Home() {
+  const [metadata, setMetadata] = useState({ total: 0, categories: [], areas: [], employeeSizes: [], precisions: [] });
+  const [pageData, setPageData] = useState({ items: [], page: 1, limit: 20, total: 0, pages: 0 });
+  const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
+  const [dataError, setDataError] = useState('');
+  const [metadataError, setMetadataError] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilterBar, setShowFilterBar] = useState(false);
   const [isCommandOpen, setIsCommandOpen] = useState(false);
@@ -32,22 +35,52 @@ export default function Home() {
   // Navigation tabs ('map', 'startups', 'categories', 'settings')
   const [activeTab, setActiveTab] = useState('map');
 
-  const allSectors = useMemo(() => getUniqueSectors(rawStartups), []);
-  const allAreas = useMemo(() => getUniqueAreas(rawStartups), []);
-  const allEmployeeSizes = useMemo(() => getUniqueEmployeeSizes(rawStartups), []);
-  const allPrecisions = useMemo(() => getUniquePrecisions(rawStartups), []);
+  const allSectors = useMemo(() => metadata.categories.map(category => category.name), [metadata.categories]);
+  const allAreas = useMemo(() => metadata.areas.map(area => area.name), [metadata.areas]);
 
-  const filteredStartups = useMemo(() => {
-    let result = searchStartups(rawStartups, searchQuery);
-    result = filterStartups(result, {
+  useEffect(() => {
+    const controller = new AbortController();
+    requestStartups({ view: 'meta' }, { signal: controller.signal })
+      .then(data => setMetadata(data))
+      .catch(error => {
+        if (!controller.signal.aborted) setMetadataError(error.message);
+      });
+    return () => controller.abort();
+  }, []);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const params = new URLSearchParams({
+      page: String(page),
+      limit: '20',
+      q: searchQuery,
       sector: selectedSector,
       area: selectedArea,
       employeeSize: selectedEmployeeSize,
       precision: selectedPrecision,
-      verifiedOnly: verifiedOnly
+      verifiedOnly: String(verifiedOnly)
     });
-    return result;
-  }, [searchQuery, selectedSector, selectedArea, selectedEmployeeSize, selectedPrecision, verifiedOnly]);
+    setIsLoading(true);
+    setDataError('');
+    setPageData(current => ({ ...current, items: [], page, total: 0, pages: 0 }));
+    const timeout = setTimeout(() => {
+      requestStartups(params, { signal: controller.signal })
+        .then(data => {
+          if (!controller.signal.aborted) setPageData(data);
+        })
+        .catch(error => {
+          if (!controller.signal.aborted) setDataError(error.message);
+        })
+        .finally(() => {
+          if (!controller.signal.aborted) setIsLoading(false);
+        });
+    }, searchQuery ? 220 : 0);
+
+    return () => {
+      clearTimeout(timeout);
+      controller.abort();
+    };
+  }, [page, searchQuery, selectedSector, selectedArea, selectedEmployeeSize, selectedPrecision, verifiedOnly]);
 
   const activeFilterCount = useMemo(() => {
     let count = 0;
@@ -66,10 +99,34 @@ export default function Home() {
     setSelectedEmployeeSize('all');
     setSelectedPrecision('all');
     setVerifiedOnly(false);
+    setPage(1);
+    setSelectedStartup(null);
   };
 
-  const handleExportPDF = () => {
-    exportStartupsToPDF(filteredStartups, {
+  const updateFilter = (setter, value) => {
+    setter(value);
+    setPage(1);
+    setSelectedStartup(null);
+  };
+
+  const handleSearchChange = (value) => {
+    setSearchQuery(value);
+    setPage(1);
+    setSelectedStartup(null);
+  };
+
+  const handleMapSelectStartup = async (startup) => {
+    try {
+      const result = await requestStartups({ id: startup.id });
+      setSelectedStartup(result.item);
+    } catch (error) {
+      setDataError(error.message);
+    }
+  };
+
+  const handleExportPDF = async () => {
+    const { exportStartupsToPDF } = await import('../utils/pdfExport');
+    exportStartupsToPDF(pageData.items, {
       sector: selectedSector,
       area: selectedArea,
       employeeSize: selectedEmployeeSize,
@@ -80,7 +137,7 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen w-full flex overflow-hidden bg-[#F8FAFC] font-sans antialiased select-none text-slate-900">
+    <div className="app-shell w-full flex overflow-hidden bg-[#F8FAFC] font-sans antialiased select-none text-slate-900">
       
       {/* 1. Left Vertical Dark Navigation Sidebar (Desktop) */}
       <Sidebar
@@ -94,7 +151,7 @@ export default function Home() {
         {/* Top Header */}
         <Header
           searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
+          onSearchChange={handleSearchChange}
           onOpenCommandSearch={() => setIsCommandOpen(true)}
           areas={allAreas}
           selectedArea={selectedArea}
@@ -112,15 +169,15 @@ export default function Home() {
               employeeSizes={allEmployeeSizes}
               precisions={allPrecisions}
               selectedSector={selectedSector}
-              setSelectedSector={setSelectedSector}
+              setSelectedSector={(value) => updateFilter(setSelectedSector, value)}
               selectedArea={selectedArea}
-              setSelectedArea={setSelectedArea}
+              setSelectedArea={(value) => updateFilter(setSelectedArea, value)}
               selectedEmployeeSize={selectedEmployeeSize}
-              setSelectedEmployeeSize={setSelectedEmployeeSize}
+              setSelectedEmployeeSize={(value) => updateFilter(setSelectedEmployeeSize, value)}
               selectedPrecision={selectedPrecision}
-              setSelectedPrecision={setSelectedPrecision}
+              setSelectedPrecision={(value) => updateFilter(setSelectedPrecision, value)}
               verifiedOnly={verifiedOnly}
-              setVerifiedOnly={setVerifiedOnly}
+              setVerifiedOnly={(value) => updateFilter(setVerifiedOnly, value)}
               onClose={() => setShowFilterBar(false)}
               onReset={handleResetFilters}
               onExportPDF={handleExportPDF}
@@ -138,11 +195,18 @@ export default function Home() {
             
             {/* Left Directory Panel (Visible on Desktop OR Mobile List Tab) */}
             <div className={`
-              ${activeTab === 'startups' ? 'flex w-full z-20' : 'hidden md:flex md:w-[360px] lg:w-[380px] flex-none z-20'}
+              ${activeTab === 'startups' ? 'flex w-full z-20' : 'hidden md:flex md:w-[min(42vw,535px)] md:min-w-[320px] lg:w-[min(40vw,535px)] lg:min-w-[390px] xl:w-[535px] flex-none z-20'}
               h-full min-h-0
             `}>
               <StartupList
-                startups={filteredStartups}
+                startups={pageData.items}
+                totalCount={pageData.total}
+                page={page}
+                pageCount={pageData.pages}
+                isLoading={isLoading}
+                error={dataError}
+                onPageChange={setPage}
+                sectors={allSectors}
                 selectedStartup={selectedStartup}
                 onSelectStartup={(startup) => {
                   setSelectedStartup(startup);
@@ -152,9 +216,9 @@ export default function Home() {
                 }}
                 onHoverStartup={(startup) => setHoveredStartup(startup)}
                 selectedSector={selectedSector}
-                onSelectSector={setSelectedSector}
+                onSelectSector={(value) => updateFilter(setSelectedSector, value)}
                 searchQuery={searchQuery}
-                onSearchChange={setSearchQuery}
+                onSearchChange={handleSearchChange}
                 onToggleFilters={() => setShowFilterBar(prev => !prev)}
                 onResetFilters={handleResetFilters}
                 onExportPDF={handleExportPDF}
@@ -167,10 +231,17 @@ export default function Home() {
               ${activeTab === 'startups' ? 'hidden md:block' : 'block'}
             `}>
               <StartupMap
-                startups={filteredStartups}
+                filters={{
+                  query: searchQuery,
+                  sector: selectedSector,
+                  area: selectedArea,
+                  employeeSize: selectedEmployeeSize,
+                  precision: selectedPrecision,
+                  verifiedOnly
+                }}
                 selectedStartup={selectedStartup}
                 hoveredStartup={hoveredStartup}
-                onSelectStartup={(startup) => setSelectedStartup(startup)}
+                onSelectStartup={handleMapSelectStartup}
                 onResetView={() => setSelectedStartup(null)}
               />
             </div>
@@ -200,12 +271,14 @@ export default function Home() {
                 </div>
               </div>
 
+              {metadataError && <p role="alert" className="mb-4 text-sm font-semibold text-rose-700">{metadataError}</p>}
+
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                {allSectors.map((sector) => (
+                {metadata.categories.map(({ name: sector, count }) => (
                   <button
                     key={sector}
                     onClick={() => {
-                      setSelectedSector(sector);
+                      updateFilter(setSelectedSector, sector);
                       setActiveTab('map');
                     }}
                     className={`p-4 rounded-2xl border text-left transition-all duration-200 ${
@@ -216,7 +289,7 @@ export default function Home() {
                   >
                     <span className="font-bold text-sm block">{sector}</span>
                     <span className="text-xs text-slate-400 font-medium mt-1 block">
-                      {rawStartups.filter(s => s.sector === sector).length} startups
+                      {count.toLocaleString()} startups
                     </span>
                   </button>
                 ))}
@@ -244,22 +317,22 @@ export default function Home() {
                   <div className="mt-3 grid grid-cols-3 gap-3 text-center">
                     <div className="bg-slate-50 border border-slate-100 p-3 rounded-2xl">
                       <span className="text-[10px] font-bold text-slate-400 uppercase block">Total Startups</span>
-                      <span className="text-base font-extrabold text-slate-900">{rawStartups.length}</span>
+                      <span className="text-base font-extrabold text-slate-900">{metadata.total.toLocaleString()}</span>
                     </div>
                     <div className="bg-slate-50 border border-slate-100 p-3 rounded-2xl">
                       <span className="text-[10px] font-bold text-slate-400 uppercase block">Unique Sectors</span>
-                      <span className="text-base font-extrabold text-slate-900">{allSectors.length}</span>
+                      <span className="text-base font-extrabold text-slate-900">{metadata.categories.length}</span>
                     </div>
                     <div className="bg-slate-50 border border-slate-100 p-3 rounded-2xl">
                       <span className="text-[10px] font-bold text-slate-400 uppercase block">Unique Areas</span>
-                      <span className="text-base font-extrabold text-slate-900">{allAreas.length}</span>
+                      <span className="text-base font-extrabold text-slate-900">{metadata.areas.length}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="border-t border-slate-100 pt-5">
                   <h3 className="font-bold text-sm text-slate-900 mb-1">Export Data</h3>
-                  <p className="text-xs text-slate-500 mb-3">Download the current filtered dataset as a PDF directory document.</p>
+                    <p className="text-xs text-slate-500 mb-3">Download the current results page as a PDF directory document.</p>
                   <button
                     onClick={handleExportPDF}
                     className="px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition-colors shadow-sm"
@@ -299,12 +372,17 @@ export default function Home() {
       <CommandSearchModal
         isOpen={isCommandOpen}
         onClose={() => setIsCommandOpen(false)}
-        startups={rawStartups}
         onSelectStartup={(startup) => {
           setSelectedStartup(startup);
           setActiveTab('map');
         }}
       />
+
+      {metadataError && (
+        <div role="alert" className="fixed bottom-16 left-4 z-[60] max-w-sm rounded-lg bg-rose-50 border border-rose-200 px-4 py-3 text-xs font-semibold text-rose-800 shadow-lg">
+          Startup metadata could not be loaded: {metadataError}
+        </div>
+      )}
 
     </div>
   );

@@ -1,8 +1,8 @@
 import json
 
 def main():
-    echai = json.load(open('echai-bengaluru-startups.json', encoding='utf-8'))
-    existing = json.load(open('src/data/startups.json', encoding='utf-8'))
+    echai = json.load(open('server/data/echai-bengaluru-startups.json', encoding='utf-8'))
+    existing = json.load(open('server/data/startups.json', encoding='utf-8'))
 
     locs = [item.get('location') for item in echai if item.get('location')]
     unique_locs = sorted(list(set(locs)))

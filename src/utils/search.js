@@ -3,20 +3,32 @@
  * Searches across name, sector, description, founders, address, and city/area.
  */
 export function searchStartups(startups, query) {
-  if (!query || !query.trim()) {
+  const normalize = value => String(value ?? '').toLocaleLowerCase().replace(/\s+/g, ' ').trim();
+  const normalizedQuery = normalize(query);
+
+  if (!normalizedQuery) {
     return startups;
   }
 
-  const q = query.trim().toLowerCase();
-
   return startups.filter(startup => {
-    const nameMatch = startup.name?.toLowerCase().includes(q);
-    const sectorMatch = startup.sector?.toLowerCase().includes(q);
-    const descMatch = startup.description?.toLowerCase().includes(q);
-    const addressMatch = startup.address?.toLowerCase().includes(q);
-    const foundersMatch = Array.isArray(startup.founders) && 
-      startup.founders.some(f => f.toLowerCase().includes(q));
+    const searchableFields = [
+      startup.name,
+      startup.sector,
+      startup.description,
+      startup.address,
+      startup.area,
+      startup.city,
+      startup.employees,
+      startup.foundedYear,
+      startup.websiteUrl,
+      startup.linkedinUrl,
+      startup.careersUrl,
+      startup.applyUrl,
+      startup.evidenceNotes,
+      ...(Array.isArray(startup.verificationSources) ? startup.verificationSources : []),
+      ...(Array.isArray(startup.founders) ? startup.founders : [])
+    ];
 
-    return nameMatch || sectorMatch || descMatch || addressMatch || foundersMatch;
+    return searchableFields.some(value => normalize(value).includes(normalizedQuery));
   });
 }

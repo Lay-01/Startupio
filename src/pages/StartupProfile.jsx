@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import L from 'leaflet';
-import rawStartups from '../data/startups.json';
+import { requestStartups } from '../utils/api';
 import { getLocationPrecisionMeta } from '../utils/location';
 import { S_PROFILE_URL } from '../utils/config';
 import { 
@@ -19,7 +19,6 @@ import {
   Info,
   ChevronLeft,
   Calendar,
-  Shield,
   Sparkles,
   ArrowUpRight,
   Map
@@ -30,8 +29,25 @@ export default function StartupProfile() {
   const navigate = useNavigate();
   const mapContainerRef = useRef(null);
   const mapInstanceRef = useRef(null);
+  const [startup, setStartup] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState('');
 
-  const startup = rawStartups.find(s => s.id === startupId || s.id.toLowerCase() === startupId?.toLowerCase());
+  useEffect(() => {
+    const controller = new AbortController();
+    setStartup(null);
+    setIsLoading(true);
+    setLoadError('');
+    requestStartups({ id: startupId }, { signal: controller.signal })
+      .then(data => setStartup(data.item))
+      .catch(error => {
+        if (!controller.signal.aborted) setLoadError(error.message);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setIsLoading(false);
+      });
+    return () => controller.abort();
+  }, [startupId]);
 
   useEffect(() => {
     if (!startup || !mapContainerRef.current || mapInstanceRef.current) return;
@@ -43,11 +59,12 @@ export default function StartupProfile() {
       center: [lat, lng],
       zoom: 15,
       zoomControl: false,
-      attributionControl: false
+      attributionControl: true
     });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>'
     }).addTo(map);
 
     if (startup.latitude && startup.longitude) {
@@ -87,6 +104,14 @@ export default function StartupProfile() {
     };
   }, [startup]);
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
+        <p className="text-sm font-semibold text-slate-500">Loading startup profile...</p>
+      </div>
+    );
+  }
+
   if (!startup) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
@@ -94,9 +119,9 @@ export default function StartupProfile() {
           <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-50 flex items-center justify-center text-slate-300 mx-auto mb-5 border border-slate-200/50">
             <Building2 className="w-7 h-7" />
           </div>
-          <h2 className="font-black text-slate-900 text-lg">Startup Record Not Found</h2>
+          <h2 className="font-black text-slate-900 text-lg">{loadError ? 'Unable to Load Startup' : 'Startup Record Not Found'}</h2>
           <p className="text-sm text-slate-500 mt-2 mb-8 leading-relaxed">
-            We couldn't find a startup record matching "<span className="font-mono font-bold text-slate-700">{startupId}</span>".
+            {loadError || <>We couldn't find a startup record matching "<span className="font-mono font-bold text-slate-700">{startupId}</span>".</>}
           </p>
           <Link
             to="/"
@@ -132,7 +157,7 @@ export default function StartupProfile() {
           </button>
 
             <button
-              onClick={() => window.open(S_PROFILE_URL, "_blank")}
+              onClick={() => window.open(S_PROFILE_URL, "_blank", "noopener,noreferrer")}
               className="w-9 h-9 rounded-full bg-[#0F172A] hover:bg-slate-800 text-white font-bold text-sm flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer select-none"
               title="User Profile (S)"
             >
@@ -242,54 +267,6 @@ export default function StartupProfile() {
             </div>
 
           </div>
-
-          {/* Verification & Evidence Notes Block */}
-          {(startup.confidence || startup.evidenceNotes || (Array.isArray(startup.verificationSources) && startup.verificationSources.length > 0)) && (
-            <div className="py-6 border-b border-slate-100/80">
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-1.5">
-                  <Shield className="w-3 h-3" />
-                  Data Verification & Evidence
-                </h2>
-                {startup.confidence && (
-                  <span className={`text-[10px] font-bold px-3 py-1 rounded-full border ${
-                    startup.confidence.toLowerCase() === 'high' 
-                      ? 'bg-emerald-50 border-emerald-200/60 text-emerald-700' 
-                      : 'bg-amber-50 border-amber-200/60 text-amber-700'
-                  }`}>
-                    {startup.confidence.toUpperCase()} CONFIDENCE
-                  </span>
-                )}
-              </div>
-
-              {startup.evidenceNotes && (
-                <p className="text-xs text-slate-600 bg-slate-50/80 border border-slate-100 p-4 rounded-xl leading-relaxed mb-4 font-medium">
-                  {startup.evidenceNotes}
-                </p>
-              )}
-
-              {Array.isArray(startup.verificationSources) && startup.verificationSources.length > 0 && (
-                <div className="space-y-2">
-                  <span className="text-slate-400 font-semibold block text-[10px] uppercase tracking-wider">Verification Sources</span>
-                  <div className="flex flex-wrap gap-2">
-                    {startup.verificationSources.map((srcUrl, idx) => (
-                      <a
-                        key={idx}
-                        href={srcUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-800 bg-sky-50/80 border border-sky-100/60 px-3 py-1.5 rounded-lg hover:underline truncate max-w-md transition-colors"
-                      >
-                        <Globe className="w-3.5 h-3.5 shrink-0" />
-                        <span className="truncate">{srcUrl}</span>
-                        <ExternalLink className="w-3 h-3 shrink-0 opacity-70" />
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
 
           {/* Careers & Hiring */}
           <div className="pt-6">

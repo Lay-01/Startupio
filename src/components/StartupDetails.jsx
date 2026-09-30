@@ -115,7 +115,7 @@ export default function StartupDetails({ startup, onClose }) {
 
         {/* Metadata Grid */}
         <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl">
-          <div className="grid grid-cols-3 gap-3 text-center">
+          <div className="grid grid-cols-2 gap-3 text-center">
             <div>
               <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Founded</span>
               <span className="text-xs font-bold text-slate-900">
@@ -126,12 +126,6 @@ export default function StartupDetails({ startup, onClose }) {
               <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Team Size</span>
               <span className="text-xs font-bold text-slate-900">
                 {startup.employees || '10–50'}
-              </span>
-            </div>
-            <div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Stage</span>
-              <span className="text-xs font-bold text-slate-900">
-                {startup.confidence === 'high' ? 'Growth' : 'Early'}
               </span>
             </div>
           </div>

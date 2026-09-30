@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'toupdate.json'
-TARGET = ROOT / 'src' / 'data' / 'startups.json'
+TARGET = ROOT / 'server' / 'data' / 'startups.json'
 
 
 def slugify(value):
