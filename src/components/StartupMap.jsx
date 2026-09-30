@@ -82,6 +82,9 @@ export default function StartupMap({
 
     tileLayerRef.current = tileLayer;
 
+    const resizeObserver = new ResizeObserver(() => map.invalidateSize({ pan: false }));
+    resizeObserver.observe(mapContainerRef.current);
+
     const clusterGroup = L.layerGroup().addTo(map);
 
     mapInstanceRef.current = map;
@@ -126,6 +129,7 @@ export default function StartupMap({
     return () => {
       clearTimeout(fetchTimeout);
       requestController?.abort();
+      resizeObserver.disconnect();
       map.off('moveend', fetchViewport);
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();

@@ -13,6 +13,7 @@ export default function StartupList({
   page = 1,
   pageCount = 0,
   isLoading = false,
+  resultKey = '',
   error = '',
   onPageChange,
   selectedStartup, 
@@ -60,7 +61,7 @@ export default function StartupList({
   useEffect(() => {
     if (listRef.current) listRef.current.scrollTop = 0;
     setScrollTop(0);
-  }, [startups]);
+  }, [page, resultKey]);
 
   const firstVisibleIndex = Math.max(0, Math.min(
     startups.length,
@@ -71,7 +72,7 @@ export default function StartupList({
   const visibleStartups = startups.slice(firstVisibleIndex, lastVisibleIndex);
 
   return (
-    <div className={`h-full flex flex-col overflow-hidden bg-white ${
+    <div id="startup-directory" className={`h-full flex flex-col overflow-hidden bg-white ${
       mobileOverlay
         ? 'bg-white rounded-t-3xl shadow-2xl border-t border-slate-200/80'
         : 'border-r border-slate-200/80'
@@ -206,7 +207,7 @@ export default function StartupList({
         )}
       </div>
 
-      <div className="shrink-0 min-h-12 px-4 sm:px-5 border-t border-slate-200/80 bg-white flex items-center justify-between gap-2">
+      <div className="shrink-0 min-h-12 px-3 sm:px-5 border-t border-slate-200/80 bg-white flex items-center justify-between gap-2">
         <p className="min-w-0 text-[11px] text-slate-500 font-medium truncate">
           <span className="hidden sm:inline">Showing {totalCount ? (page - 1) * 20 + 1 : 0}-{Math.min(page * 20, totalCount)} of {totalCount.toLocaleString()} · </span>
           Page {pageCount ? page : 0} of {pageCount.toLocaleString()}

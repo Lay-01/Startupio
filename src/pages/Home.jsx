@@ -10,7 +10,7 @@ import CommandSearchModal from '../components/CommandSearchModal';
 import MobileNav from '../components/MobileNav';
 
 import { requestStartups } from '../utils/api';
-import { LayoutGrid, Settings } from 'lucide-react';
+import { LayoutGrid, Settings, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Home() {
   const [metadata, setMetadata] = useState({ total: 0, categories: [], areas: [], employeeSizes: [], precisions: [] });
@@ -22,6 +22,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilterBar, setShowFilterBar] = useState(false);
   const [isCommandOpen, setIsCommandOpen] = useState(false);
+  const [isDirectoryCollapsed, setIsDirectoryCollapsed] = useState(false);
 
   const [selectedSector, setSelectedSector] = useState('all');
   const [selectedArea, setSelectedArea] = useState('all');
@@ -37,6 +38,9 @@ export default function Home() {
 
   const allSectors = useMemo(() => metadata.categories.map(category => category.name), [metadata.categories]);
   const allAreas = useMemo(() => metadata.areas.map(area => area.name), [metadata.areas]);
+  const allEmployeeSizes = metadata.employeeSizes;
+  const allPrecisions = metadata.precisions;
+  const resultKey = JSON.stringify([searchQuery, selectedSector, selectedArea, selectedEmployeeSize, selectedPrecision, verifiedOnly]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -66,7 +70,9 @@ export default function Home() {
     const timeout = setTimeout(() => {
       requestStartups(params, { signal: controller.signal })
         .then(data => {
-          if (!controller.signal.aborted) setPageData(data);
+          if (!controller.signal.aborted) {
+            setPageData(data);
+          }
         })
         .catch(error => {
           if (!controller.signal.aborted) setDataError(error.message);
@@ -131,36 +137,27 @@ export default function Home() {
       area: selectedArea,
       employeeSize: selectedEmployeeSize,
       precision: selectedPrecision,
-      verifiedOnly: verifiedOnly,
-      searchQuery: searchQuery
+      verifiedOnly,
+      searchQuery
     });
   };
 
   return (
     <div className="app-shell w-full flex overflow-hidden bg-[#F8FAFC] font-sans antialiased select-none text-slate-900">
-      
-      {/* 1. Left Vertical Dark Navigation Sidebar (Desktop) */}
-      <Sidebar
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-      />
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {/* 2. Main Layout Area */}
       <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden relative">
-        
-        {/* Top Header */}
         <Header
           searchQuery={searchQuery}
           onSearchChange={handleSearchChange}
           onOpenCommandSearch={() => setIsCommandOpen(true)}
           areas={allAreas}
           selectedArea={selectedArea}
-          onSelectArea={setSelectedArea}
-          onToggleFilters={() => setShowFilterBar(prev => !prev)}
+          onSelectArea={value => updateFilter(setSelectedArea, value)}
+          onToggleFilters={() => setShowFilterBar(value => !value)}
           activeFilterCount={activeFilterCount}
         />
 
-        {/* Extended Filter Drawer */}
         {showFilterBar && (
           <div className="bg-white border-b border-slate-200/80 z-30 shadow-sm animate-in fade-in slide-in-from-top-2 duration-200">
             <FilterBar
@@ -195,8 +192,12 @@ export default function Home() {
             
             {/* Left Directory Panel (Visible on Desktop OR Mobile List Tab) */}
             <div className={`
-              ${activeTab === 'startups' ? 'flex w-full z-20' : 'hidden md:flex md:w-[min(42vw,535px)] md:min-w-[320px] lg:w-[min(40vw,535px)] lg:min-w-[390px] xl:w-[535px] flex-none z-20'}
-              h-full min-h-0
+              ${activeTab === 'startups'
+                ? 'flex w-full z-20'
+                : isDirectoryCollapsed
+                  ? 'hidden'
+                  : 'hidden md:flex md:w-[min(42vw,535px)] md:min-w-[320px] lg:w-[min(40vw,535px)] lg:min-w-[390px] xl:w-[535px] flex-none z-20'}
+              h-full min-h-0 transition-[width] duration-300 ease-in-out
             `}>
               <StartupList
                 startups={pageData.items}
@@ -204,6 +205,7 @@ export default function Home() {
                 page={page}
                 pageCount={pageData.pages}
                 isLoading={isLoading}
+                resultKey={resultKey}
                 error={dataError}
                 onPageChange={setPage}
                 sectors={allSectors}
@@ -224,6 +226,24 @@ export default function Home() {
                 onExportPDF={handleExportPDF}
               />
             </div>
+
+            {activeTab === 'map' && (
+              <button
+                type="button"
+                onClick={() => setIsDirectoryCollapsed(value => !value)}
+                className={`hidden md:flex absolute top-1/2 -translate-y-1/2 z-[450] h-10 w-8 items-center justify-center rounded-lg border border-slate-200 bg-white text-slate-600 shadow-md hover:bg-slate-50 hover:text-slate-900 transition-all ${
+                  isDirectoryCollapsed
+                    ? 'left-2'
+                    : 'left-[min(42vw,535px)] -translate-x-1/2 lg:left-[min(40vw,535px)] xl:left-[535px]'
+                }`}
+                aria-label={isDirectoryCollapsed ? 'Expand startup directory' : 'Collapse startup directory'}
+                aria-expanded={!isDirectoryCollapsed}
+                aria-controls="startup-directory"
+                title={isDirectoryCollapsed ? 'Expand startup directory' : 'Collapse startup directory'}
+              >
+                {isDirectoryCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
+              </button>
+            )}
 
             {/* Spatial Map Canvas */}
             <div className={`

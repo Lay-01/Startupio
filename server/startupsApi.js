@@ -7,6 +7,7 @@ const MAX_QUERY_LENGTH = 120;
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_REQUESTS = 120;
 const MAP_CELL_SIZE = 112;
+const MAX_MERCATOR_LATITUDE = 85.05112878;
 const rateLimitStore = new Map();
 
 function normalize(value) {
@@ -151,11 +152,31 @@ function parseBounds(value) {
   if (bounds.length !== 4 || !bounds.every(Number.isFinite)) {
     throw Object.assign(new Error('Bounding box must contain west,south,east,north coordinates.'), { statusCode: 400 });
   }
-  const [west, south, east, north] = bounds;
-  if (west < -180 || east > 180 || south < -85 || north > 85 || west >= east || south >= north) {
+  const [rawWest, rawSouth, rawEast, rawNorth] = bounds;
+  if (
+    Math.abs(rawWest) > 1_000_000 || Math.abs(rawEast) > 1_000_000 ||
+    Math.abs(rawSouth) > 1_000_000 || Math.abs(rawNorth) > 1_000_000 ||
+    rawWest >= rawEast || rawSouth >= rawNorth
+  ) {
     throw Object.assign(new Error('Bounding box coordinates are out of range.'), { statusCode: 400 });
   }
-  return { west, south, east, north };
+
+  const wrapLongitude = longitude => ((longitude + 180) % 360 + 360) % 360 - 180;
+  const west = wrapLongitude(rawWest);
+  const east = wrapLongitude(rawEast);
+  const south = Math.max(-MAX_MERCATOR_LATITUDE, rawSouth);
+  const north = Math.min(MAX_MERCATOR_LATITUDE, rawNorth);
+  const fullWorld = rawEast - rawWest >= 360;
+
+  return {
+    west,
+    south,
+    east,
+    north,
+    fullWorld,
+    crossesDateline: !fullWorld && west > east,
+    empty: south >= north
+  };
 }
 
 function mapFeatures(records, bounds, zoom) {
@@ -163,9 +184,11 @@ function mapFeatures(records, bounds, zoom) {
     if (record.latitude === null || record.longitude === null) return false;
     const latitude = Number(record.latitude);
     const longitude = Number(record.longitude);
-    return Number.isFinite(latitude) && Number.isFinite(longitude) &&
-      longitude >= bounds.west && longitude <= bounds.east &&
-      latitude >= bounds.south && latitude <= bounds.north;
+    const longitudeMatches = bounds.fullWorld || (bounds.crossesDateline
+      ? longitude >= bounds.west || longitude <= bounds.east
+      : longitude >= bounds.west && longitude <= bounds.east);
+    return !bounds.empty && Number.isFinite(latitude) && Number.isFinite(longitude) &&
+      longitudeMatches && latitude >= bounds.south && latitude <= bounds.north;
   });
 
   const scale = 256 * 2 ** zoom;
